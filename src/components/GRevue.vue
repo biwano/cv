@@ -19,3 +19,10 @@ export default {
   }
 };
 </script>
+<style>
+div.g-pass {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <span>{{ text }}</span>
+  <div class="g-pass">{{ text }}</div>
 </template>
 
 <script>

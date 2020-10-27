@@ -1,5 +1,5 @@
 <template>
-  <div><g-proxy v-for="(config, index) in children" :key="index" :config="config" :data=data></g-proxy></div>
+  <div><g-proxy v-for="(config, index) in children" :key="index" :config="config" :data="data"></g-proxy></div>
 </template>
 <script>
 import gMixin from "./gMixin";
