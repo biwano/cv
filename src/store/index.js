@@ -5,17 +5,23 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    generators: {}
+    templates: {}
   },
   mutations: {
-    generators(state, generators) {
-      state.generators = generators;
+    templates(state, templates) {
+      state.templates = templates;
+    },
+    locale(state, locale) {
+      state.locale = locale;
     }
   },
   actions: {},
   getters: {
-    generators(state) {
-      return state.generators;
+    templates(state) {
+      return state.templates;
+    },
+    locale(state) {
+      return state.locale;
     }
   },
   modules: {}

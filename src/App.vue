@@ -5,23 +5,26 @@
       <a href="mailto:bruno.ilponse@gmail.com">bruno.ilponse@gmail.com</a><br />
       <a href="www.github.com/biwano">Github</a>
     </div>
-    <generator url="header@config"></generator>
+
+    <g-revue template-url="root@static"></g-revue>
     <hr/>
-    <generator url="experiences@config"></generator>
+    <!-- <generator url="experiences@config"></generator> -->
   </div>
 </template>
 
 <script>
-import Generator from "./components/Generator.vue";
-import generators from "./generators";
+import GRevue from "./components/GRevue.vue";
+import templates from "./content/templates";
+import locale from "./content/locales";
 
 export default {
   name: "App",
   components: {
-    Generator
+    GRevue
   },
   created() {
-    this.$store.commit("generators", generators);
+    this.$store.commit("templates", templates);
+    this.$store.commit("locale", locale);
   }
 };
 </script>
