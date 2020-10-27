@@ -1,3 +1,3 @@
 export default { experience: `
-  <div>\${title} @ \${company}</div>
+  <div>{{data.title}} @ {{data.company}}</div>
 `}

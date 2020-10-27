@@ -1,27 +1,9 @@
-import xml from "xml2js";
+import Vue from "vue";
+import GRender from "./GRender.vue";
+
+var components = {};
 export default {
-  props: {
-    config: Object,
-    data: Object
-  },
-  computed: {
-    children() {
-      var children = [];
-      if (this.config && this.config.$$)
-        return this.config.$$.map(child => {
-          child["#name"] = child["#name"] == "__text__" ? "text" : child["#name"];
-          return child;
-        });
-      return children;
-    }
-  },
   methods: {
-    get_attr(attr) {
-      return this.config.$[attr];
-    },
-    get_text() {
-      return this.config._
-    },
     store_static(path) {
       var templates = this.$store.getters.templates;
       return templates[path];
@@ -45,11 +27,6 @@ export default {
         console.warn(`[FETCH] Generator store not found; url=${url}`);
         return;
       }
-      // list
-      /*
-      if (typeof text !== "string") {
-        text = text.join("");
-      }*/
       // not found
       if (text === undefined)
         console.warn(
@@ -59,28 +36,24 @@ export default {
       return text;
     },
     get_data_from_url(url) {
-      return this.get_text_from_url(url);
+      var data = this.get_text_from_url(url);
+      data = data ? data : {};
+      return data ? data : {};
     },
-    get_xml_from_url(url) {
-      return new Promise((resolve, reject) => {
-        var source = this.get_text_from_url(url);
-        if (source) {
-          return xml
-            .parseStringPromise(source, {
-              explicitRoot: false,
-              explicitChildren: true,
-              preserveChildrenOrder: true,
-              charsAsChildren: true
-            })
-            .then(r => resolve(r))
-            .catch(e => {
-              console.warn(`[XML parser] Cannot parse <${source}>: ${e}`);
-              reject();
-            });
-        }
-        console.warn(`[XML parser] Cannot parse => no source`);
-        reject();
-      });
+    async get_component_name(url) {
+      var key = url.replace("@", "__");
+      //vm.$options.components
+      if (components[key] === undefined) {
+        var template = this.get_text_from_url(url);
+        components[key] = await Vue.component(key, resolve => {
+          resolve({
+            props: ["data"],
+            template,
+            components: { GRender }
+          });
+        });
+      }
+      return key;
     }
   }
 };
