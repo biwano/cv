@@ -5,6 +5,12 @@ export default { root: `
     	<a href="mailto:bruno.ilponse@gmail.com">bruno.ilponse@gmail.com</a><br />
     	<a href="www.github.com/biwano">Github</a>
     </div>
-    <g-render-list template-url="experience@static" data-url="experiences@locale"></g-render-list>
+    <g-render-list template-url="static://experience" data-url="locale://experiences"></g-render-list>
+    <!--
+    <g-render-list 
+    	template-url="static://flicker" 
+    	data-url="https://www.mediawiki.org/w/api.php?action=opensearch&search=toto&origin=*">
+    </g-render-list>    
+    -->
 </div>
 `}

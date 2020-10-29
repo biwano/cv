@@ -2,22 +2,18 @@
   <div id="app">
     
 
-    <g-render template-url="root@static"></g-render>
+    <g-render template-url="static://root"></g-render>
     <hr/>
     <!-- <generator url="experiences@config"></generator> -->
   </div>
 </template>
 
 <script>
-import GRender from "./components/GRender.vue";
 import templates from "./content/templates";
 import locale from "./content/locales";
 
 export default {
   name: "App",
-  components: {
-    GRender
-  },
   created() {
     this.$store.commit("templates", templates);
     this.$store.commit("locale", locale);

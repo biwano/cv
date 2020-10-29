@@ -1,8 +1,8 @@
 <template>
-  <div class="g-pass" v-if="merged_data">
+  <div class="g-pass" v-if="context">
     <component
-      :is="component"
-      :data="merged_data"
+      :is="component.name"
+      :data="context"
     ></component>
   </div>
 </template>
@@ -13,22 +13,15 @@ export default {
   name: "g-render",
   mixins: [gMixin],
   asyncComputed: {
-    data_from_url() {
-      var data = this.dataUrl ? this.get_data_from_url(this.dataUrl) : {};
-      return data;
-    },
-    data_from_props() {
-      return this.data ? this.data : {};
-    },
-    merged_data() {
+    context() {
       var context;
-      if (this.component) {
+      if (this.component && this.component.name) {
         if (this.data_from_url) {
           context = Object.assign({}, this.data_from_props, this.data_from_url);
         } else {
           context = this.data_from_props;
         }
-        console.debug("[RENDER] LIST - ", this.component, context);
+        console.debug("[RENDER] ITEM - ", this.component.url, context);
       }
       return context;
     }
