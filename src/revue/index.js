@@ -17,23 +17,36 @@ export default {
           if (g_components[name] === undefined) {
             var gurl = Gurl(revue_options, url);
             var template = await gurl.fetch();
-            var component = await Vue.component(name, resolve => {
-              resolve({
-                props: ["data"],
-                template,
-                components: {
-                  GRender: () => import("./GRender.vue"),
-                  GRenderList: () => import("./GRenderList.vue")
-                }
+            console.log();
+            if (template === undefined) {
+              var parent =
+                this.$parent.templateUrl || this.$parent.$options.name;
+              console.error(
+                `[ERROR] REVUE - Template not found at url ${url} in ${parent}`
+              );
+            }
+            else {
+              var component = await Vue.component(name, resolve => {
+                resolve({
+                  props: ["data"],
+                  data() {
+                    return { templateUrl: url };
+                  },
+                  template,
+                  components: {
+                    GRender: () => import("./GRender.vue"),
+                    GRenderList: () => import("./GRenderList.vue")
+                  }
+                });
               });
-            });
-            g_components[name] = {
-              name,
-              url,
-              component
-            };
+              g_components[name] = {
+                name,
+                url,
+                component
+              };
+            }
+            console.info(`[DEBUG] REVUE - component ${name}=${url}`);
           }
-          console.log(g_components[name]);
           return g_components[name];
         }
       }

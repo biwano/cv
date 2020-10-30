@@ -1,5 +1,6 @@
 export default {
   props: {
+    parentUrl: String,
     templateUrl: String,
     dataUrl: String,
     data: Object

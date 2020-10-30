@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    
-
-    <g-render template-url="static://root"></g-render>
+    <g-render template-url="template://root" parent-url="app"></g-render>
     <hr/>
     <!-- <generator url="experiences@config"></generator> -->
   </div>
@@ -27,7 +25,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 /*a {
   text-decoration: none;

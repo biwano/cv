@@ -35,7 +35,7 @@ export default {
 </script>
 <style scoped>
 div.g-pass {
-  display: table-cell;
+  display: inline;
   margin: 0;
   padding: 0;
 }
