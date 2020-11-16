@@ -67,8 +67,10 @@ var Gurl = function(options, gurl) {
         return;
       }
       // success
+      /*
       if (data !== undefined)
         console.debug(`[DEBUG] FETCH - '${this.raw}'`, data);
+      */
       return data;
     },
     // inject more data into a data object 

@@ -1,6 +1,6 @@
 export default {profile: `
-	  <div>
-	  	<img alt="Vue logo" src="/photo.png" width="100px" style="float:right"/>
+	  <div @click="g_exec('reload')">
+	  	<img alt="Selfie" src="/photo.png" width="100px" style="float:right"/>
     	<h1 class="is-size-3">{{data.name}}</h1>
     	<h1 class="is-size-6">{{data.title}}</h1>
     	<g-render-list template-url="template://contact" data-url="locale://contact"></g-render-list>

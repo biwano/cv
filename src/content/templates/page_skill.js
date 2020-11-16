@@ -1,6 +1,5 @@
-export default { root: `
-<div style="margin-left:5px">
-	<g-render template-url="template://profile" data-url="locale://profile"></g-render>
+export default { page_skill: `
+<div>
 	<div class="columns">
 		<div class="column">
 			<span class="title is-6">SKILLS</span>
@@ -8,9 +7,9 @@ export default { root: `
 		    <g-render-list template-url="template://skill" data-url="locale://skills"></g-render-list>
 		</div>
 		<div class="column">
-			<span class="title is-6">EXPERIENCES</span>
+			<span class="title is-6">POSITIONS</span>
 			<hr/>
-		    <g-render-list template-url="template://experience" data-url="locale://experiences"></g-render-list>
+		    <g-render-list template-url="template://position" data-url="locale://positions"></g-render-list>
 		    <hr/>
 			<span class="title is-6">EDUCATION</span>
 			<hr/>

@@ -3,11 +3,14 @@ export default {
     parentUrl: String,
     templateUrl: String,
     dataUrl: String,
-    data: Object
+    data: Object,
+    ListIndex: String,
+    reload_trigger: Object
   },
   asyncComputed: {
     component() {
-      var component = this.g_component(this.templateUrl);
+      var component = this.reload_trigger;
+      component = this.g_component(this.templateUrl);
       return component;
     },
     data_from_url() {

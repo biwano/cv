@@ -21,7 +21,7 @@ export default {
         } else {
           context = this.data_from_props;
         }
-        console.debug("[RENDER] ITEM - ", this.component.url, context);
+        console.debug("[DEBUG] RENDER ITEM - ", this.component.url, context);
       }
       return context;
     }

@@ -5,6 +5,7 @@
         v-for="(item, index) in context"
         :is="component.name"
         :data="item"
+        :list_index="index"
         :key="index"
       ></component>
     </div>
@@ -26,7 +27,7 @@ export default {
             context[i] = Object.assign({}, this.data_from_props, context[i]);
           }
         }
-        console.debug("[RENDER] LIST - ", this.component.url, context);
+        console.debug("[DEBUG] RENDER LIST - ", this.component.url, context);
       }
       return context;
     }
