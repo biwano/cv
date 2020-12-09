@@ -1,14 +1,23 @@
 import GRender from "./GRender.vue";
 import GRenderList from "./GRenderList.vue";
 import GLink from "./GLink.vue";
+import GRevue from "./GRevue.vue";
 import Gurl from "./gurl.js";
 import md5 from "./md5";
 
 export default {
   install: function(Vue, revue_options) {
+    // Cache of loaded components
     var g_components = {};
+    // Bus
+    var bus = new Vue();
     Vue.mixin({
-      components: { GRender, GRenderList, GLink },
+      components: { GRender, GRenderList, GLink, GRevue },
+      computed: {
+        g_bus() {
+          return bus;
+        }
+      },
       methods: {
         g_url(raw) {
           return Gurl(revue_options, raw);
@@ -34,7 +43,7 @@ export default {
             } else {
               var component = await Vue.component(name, resolve => {
                 resolve({
-                  props: ["data"],
+                  props: ["data", "metadata"],
                   data() {
                     return { templateUrl: url };
                   },

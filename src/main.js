@@ -27,11 +27,11 @@ Vue.component("f-icon", FontAwesomeIcon);
 
 Vue.use(VueRouter);
 var routes = [
-  { path: "/", name: "revue", component: App },
-  { path: "/:template", name: "revue", component: App },
+  { path: "/", name: "home", component: App },
+  { path: "/:template", name: "template", component: App },
   {
     path: "/:template/:params",
-    name: "revue",
+    name: "template_with_param",
     component: App
   }
 ];
