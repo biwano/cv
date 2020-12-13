@@ -19,6 +19,10 @@ export default {
     ait: {
       name: "AIT Consulting",
       url: "https://silicom.fr"
+    },
+    sbcwi: {
+      name: "Sapphire Beach Resort",
+      url: "https://www.sbcwi.com/"
     }
   },
   education: {

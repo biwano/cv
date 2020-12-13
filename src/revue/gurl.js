@@ -31,7 +31,34 @@ var traverse = function(data, path) {
   // Other
   return res;
 };
-// url: <store>://<path>(::<subpath>)
+var is_item_valid = function(item, filter) {
+   var searchparams = new URLSearchParams(filter);
+   for (var key of searchparams.keys()) {
+    var item_value = traverse(item, key);
+    var search_value = searchparams.get(key);
+    if (Array.isArray(item_value)) {
+      if (!item_value.includes(search_value)) {
+        return false;
+      }
+    }
+    else {
+      if (!(item_value == search_value)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+var filter_items = function(data, filter) {
+  var filtered_data = {}
+  for (var key in data) {
+    if (is_item_valid(data[key], filter)) {
+      filtered_data[key] = data[key]
+    }
+  }
+  return filtered_data;
+}
+// url: <store>://<path>(::<filter>)
 var Gurl = function(options, gurl) {
   var regexp_without_sub = /((.*)(?=:\/\/):\/\/(.+))/;
   var regexp_with_sub = /((.*)(?=:\/\/):\/\/(.+))(?=::)::(.+)/;
@@ -40,12 +67,12 @@ var Gurl = function(options, gurl) {
   var raw = match[1];
   var store = match[2];
   var key = match[3];
-  var subpath = match.length > 3 ? match[4] : undefined;
+  var filter = match.length > 3 ? match[4] : undefined;
   return {
     raw,
     store,
     key,
-    subpath,
+    filter,
     // fetch raw data
     async fetch() {
       var data;
@@ -53,12 +80,22 @@ var Gurl = function(options, gurl) {
       if (func) {
         data = await func(this.key);
         if (data) {
-          if (this.subpath) {
-            data = traverse(data, this.subpath);
-            if (data === undefined)
+          if (this.filter) {
+            // Subpath
+            if (this.filter.search("=") == -1) {
+              data = traverse(data, this.filter);
+              if (data === undefined)
               console.warn(
-                `[WARN] FETCH - No subpath '${this.subpath}' - url=${this.raw}`
+                `[WARN] FETCH - No subpath '${this.filter}' - url=${this.raw}`
               );
+              // Add subpath information
+              else data.$subpath = this.filter;
+            }
+            // Filter
+            else {
+              data = filter_items(data, this.filter)
+            }
+           
           }
         } else
           console.warn(`[WARN] FETCH - No key '${this.key}' - url=${this.raw}`);

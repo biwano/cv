@@ -1,5 +1,5 @@
 <template>
-  <g-render :template-url="templateUrl" parent-url="app"></g-render>
+  <g-render :template-url="templateUrl" parent-url="app" :data="data"></g-render>
 </template>
 
 <script>
@@ -28,6 +28,11 @@ export default {
       if (template === undefined) template = "page_summary"
       this.templateUrl = `template://${template}`;
       console.log("gr");
+    }
+  },
+  computed: {
+    data() {
+      return { "id": this.$route.params.params };
     }
   }
 };
