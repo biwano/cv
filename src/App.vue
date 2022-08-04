@@ -1,16 +1,21 @@
 <script setup>
 import { RouterView } from "vue-router";
-import NavComponent from "@/components/NavComponent.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import NavComponent from "@/components/NavComponent.vue";
 </script>
 
 <template>
   <div class="bigdaddy">
-    <HeaderComponent class="bounceInDown animated"></HeaderComponent>
-
-    <div class="main content">
+    <HeaderComponent class="bounceInDown animated absolute"></HeaderComponent>
+    <div class="animated bounceInRight align-right triple-padded capitalize">
+      <h1 class="capitalize">Bruno Ilponse</h1>
+      <br />
+      <h3>Senior Software Engineer</h3>
+      <br />
       <NavComponent></NavComponent>
+    </div>
+    <div class="main content">
       <div class="clear">
         <RouterView v-slot="{ Component }">
           <Transition>
@@ -44,7 +49,6 @@ import FooterComponent from "@/components/FooterComponent.vue";
   position: relative;
   clear: both;
   text-align: justify;
-  top: -100px;
   min-height: 300px;
   width: 100%;
 }

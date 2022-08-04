@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div class="jumbotron wrapper">
     <img
@@ -6,19 +7,16 @@
       class="jumbotron image row"
     />
     <div class="jumbotron overlay"></div>
-    <div class="jumbotron overlay_2">
-      <div class="animated bounceInRight jumbotron align-right triple-padded capitalize">
-        <h1 class="capitalize">Bruno Ilponse</h1><br/>
-        <h3>Senior Software Engineer</h3><br/>
-      </div>
-    </div>
+    <div class="jumbotron overlay_2"></div>
   </div>
 </template>
 
 <style scoped>
 .jumbotron.wrapper {
-  max-height: 500px;
-  overflow:hidden;
+  width: 100%;
+  max-height: 300px;
+  max-width: 1024px;
+  overflow: hidden;
 }
 .jumbotron.image {
   -webkit-filter: saturate(75%);
