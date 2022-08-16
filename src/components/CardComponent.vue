@@ -15,34 +15,48 @@ const imgClass = computed(() => {
     "pad-right": isLeft.value,
   };
 });
+
 const containerClass = computed(() => {
   return {
     bounceInLeft: isLeft.value,
     bounceInRight: isRight.value,
   };
 });
+const subContainerClass = computed(() => {
+  return {
+    "flex-left": isLeft.value,
+    "flex-right": isRight.value,
+    bounceInLeft: isLeft.value,
+    bounceInRight: isRight.value,
+  };
+});
 </script>
+
 <template>
-  <div class="row">
+  <div :class="containerClass">
     <div
-      class="one animated bounceInLeft triple-padded"
-      :class="containerClass"
+      class="animated bounceInLeft triple-padded"
+      :class="subContainerClass"
     >
       <img :src="img" :class="imgClass" />
-
-      <h3>
-        <a v-if="link" :href="link" target="_blank">{{ title }}</a>
-        <span v-else>{{ title }}</span>
-      </h3>
-      <b v-if="date">{{ date }}<br /></b
-      >
-      <slot></slot>
+      <div class="content">
+        <h3>
+          <a v-if="link" :href="link" target="_blank">{{ title }}</a>
+          <span v-else>{{ title }}</span>
+        </h3>
+        <b v-if="date">{{ date }}<br /></b>
+        <slot></slot>
+      </div>
     </div>
+    <div class="clear"></div>
   </div>
 </template>
 
 <style scoped>
 img {
-  max-height: 128px;
+  max-width:  128px;
+}
+.subContainer {
+  display: table-cell;
 }
 </style>

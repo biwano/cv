@@ -5,7 +5,7 @@ import CardComponent from "@/components/CardComponent.vue";
   <div class="container">
     <div class="row">
       <div class="one animated bounceInLeft triple-padded">
-        <h1>Academic studies</h1>
+        <h1>Studies</h1>
       </div>
     </div>
     <CardComponent
@@ -15,7 +15,7 @@ import CardComponent from "@/components/CardComponent.vue";
     >
       <!-- Kubernetes -->
       <p>
-        <b>2021, 26h</b> :
+        <b>2021, 14h</b> :
         <a
           href="https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance-2/"
           target="_blank"
@@ -54,6 +54,17 @@ import CardComponent from "@/components/CardComponent.vue";
           >FORMEO</a
         >
       </p>
+
+      <!-- Formeo oracle -->
+      <p>
+        <b>2016, 35h </b> : Oracle 11G database administration by
+        <a
+          href="https://www.iform.fr/
+"
+          target="_blank"
+          >iForm</a
+        >
+      </p>
     </CardComponent>
     <CardComponent
       img="/images/telecom_sudparis.jpg"
@@ -67,12 +78,13 @@ import CardComponent from "@/components/CardComponent.vue";
     </CardComponent>
     <CardComponent
       img="/images/baimbridge.jpg"
-      img-position="right"
+      img-position="left"
       title="Baimbridge High School"
       date="2000-2003"
       link="https://lgtbaimbridge.fr/"
     >
-      Intensive fondation degree in Mathematics and Physics for French Engineering schools
+      Intensive fondation degree in Mathematics and Physics for French
+      Engineering schools
     </CardComponent>
     <CardComponent
       img="/images/providence.jpg"
@@ -86,12 +98,3 @@ import CardComponent from "@/components/CardComponent.vue";
   </div>
 </template>
 /images/telecom_sudparis.jpg
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>

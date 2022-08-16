@@ -24,3 +24,11 @@ body{
 .capitalize { 
   text-transform: capitalize;
 } 
+.flex-right {
+  display: flex;
+  flex-direction: row-reverse;
+}  
+.flex-left {
+  display: flex;
+  flex-direction: row;
+}  

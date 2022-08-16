@@ -6,7 +6,10 @@ import { RouterLink } from "vue-router";
     <ul>
       <li><RouterLink to="/">About me</RouterLink></li>
       <li>
-        <RouterLink to="/academic_studies">Academic studies</RouterLink>
+        <RouterLink to="/career">Career</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/academic_studies">Studies</RouterLink>
       </li>
     </ul>
   </nav>
