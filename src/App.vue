@@ -12,6 +12,11 @@ import NavComponent from "@/components/NavComponent.vue";
       <h1 class="capitalize">Bruno Ilponse</h1>
       <br />
       <h3>Senior Software Engineer</h3>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/bruno-ilponse-502414196" target="_blank"><i class="fa-brands 
+          fa-linkedin-in"></i></a>
+        </div>
+
       <br />
       <NavComponent></NavComponent>
     </div>
@@ -51,5 +56,9 @@ import NavComponent from "@/components/NavComponent.vue";
   text-align: justify;
   min-height: 300px;
   width: 100%;
+}
+.social {
+  position: relative;
+  top:  -15px;
 }
 </style>

@@ -14,7 +14,7 @@ import CardComponent from "@/components/CardComponent.vue";
       title="ISAE-SUPAERO"
       link="https://www.isae-supaero.fr/en/"
     >
-      <b>2019 - now</b> : EdTech architect and development team leader<br />
+      <b>Since 2019</b> : EdTech architect and development team leader<br />
       <b>2015 - 2019</b> : Fullstack software developer<br />
     </CardComponent>
     <CardComponent
@@ -59,5 +59,18 @@ import CardComponent from "@/components/CardComponent.vue";
     >
       IT and Telecom consultant for <a href="https://discoverflow.co/" target="_blank">UTS Caraïbes</a> (now Flow) and the <a href="https://www.sbcwi.com/" target="_blank">Sapphire Beach Club resort</a>
     </CardComponent>
+    <CardComponent
+      img-position="right"
+      title="Side jobs"
+      
+    >
+      <b>Since 2021</b> : Front end developer for <a target="_blank" href="https://www.klimadao.finance/">KlimaDAO&nbsp;</a><img src="/images/klimadao.png" class="miniImage"/><br/>
+      <b>2021</b> : Front end developer for  <a target="_blank" href="https://www.olympusdao.finance/">OlympusDAO</a>&nbsp;<img src="/images/olympusdao.png" class="miniImage"/><br/>
+    </CardComponent>
   </div>
 </template>
+<style scoped>
+  .miniImage {
+    max-width: 18px;
+  }
+  </style>
