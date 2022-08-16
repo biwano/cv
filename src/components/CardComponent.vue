@@ -31,10 +31,11 @@ const containerClass = computed(() => {
       <img :src="img" :class="imgClass" />
 
       <h3>
-        <a :href="link" target="_blank">{{ title }}</a>
+        <a v-if="link" :href="link" target="_blank">{{ title }}</a>
+        <span v-else>{{ title }}</span>
       </h3>
-      <b v-if="date">{{ date }}</b
-      ><br />
+      <b v-if="date">{{ date }}<br /></b
+      >
       <slot></slot>
     </div>
   </div>
