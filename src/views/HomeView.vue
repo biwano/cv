@@ -27,8 +27,11 @@
           autonomous organizations.
         </p>
         <p>
-        Having worked now for 12 years into software development activities and in many different situations, I feel like I
-        have not even started scratching the surface of this field. Consequently, I do not consider myself an expert of any particular language or framework. But I know I have tested my ability to adapt to any situation to the limit.
+          Having worked now for 12 years into software development activities
+          and in many different situations, I feel like I have not even started
+          scratching the surface of this field. Consequently, I do not consider
+          myself an expert of any particular language or framework. But I know I
+          have tested my ability to adapt to any situation to the limit.
         </p>
       </div>
       <div class="one half animated bounceInRight triple-padded">
