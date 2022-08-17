@@ -6,16 +6,17 @@
         <p>
           Born in 1982 in France, I started getting interrested in computers
           when I was 9 as my older brother got an Amstrad CPC 6128 for his
-          birthday. Soon after, I embarked into the 'programming' journey with him soon after by shamelessly copying code
-          found in computer magazines.
+          birthday. Soon after, I embarked into the 'programming' journey with
+          him soon after by shamelessly copying code found in computer
+          magazines.
         </p>
         <p>
           Time passed and I started learning C then C++ on an intel 80386 mainly
           trying to reproduce games like Bomberman. As the 3D acceleration cards
-          price started to fall in the 90s with the like of the Voodoo 3dfx I created
-          some games using OpenGL and understood the importance of maths at a
-          practical level with matrix calculus in particular. This led me to
-          prepare entry for the French Engineeringing schools after which I
+          price started to fall in the 90s with the like of the Voodoo 3dfx I
+          created some games using OpenGL and understood the importance of maths
+          at a practical level with matrix calculus in particular. This led me
+          to prepare entry for the French Engineeringing schools after which I
           ended up with a degree in... Telecommunications. Indeed it was all the
           rage at the time and I got dragged into the hype.
         </p>

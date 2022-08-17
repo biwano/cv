@@ -32,3 +32,6 @@ body{
   display: flex;
   flex-direction: row;
 }  
+.miniImage {
+  max-width: 18px;
+}

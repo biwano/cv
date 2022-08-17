@@ -13,9 +13,12 @@ import NavComponent from "@/components/NavComponent.vue";
       <br />
       <h3>Senior Software Engineer</h3>
       <div class="social">
-        <a href="https://www.linkedin.com/in/bruno-ilponse-502414196" target="_blank"><i class="fa-brands 
-          fa-linkedin-in"></i></a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/bruno-ilponse-502414196"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
 
       <br />
       <NavComponent></NavComponent>
@@ -59,6 +62,6 @@ import NavComponent from "@/components/NavComponent.vue";
 }
 .social {
   position: relative;
-  top:  -15px;
+  top: -15px;
 }
 </style>

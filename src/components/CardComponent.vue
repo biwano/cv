@@ -34,10 +34,7 @@ const subContainerClass = computed(() => {
 
 <template>
   <div :class="containerClass">
-    <div
-      class="animated bounceInLeft triple-padded"
-      :class="subContainerClass"
-    >
+    <div class="animated bounceInLeft triple-padded" :class="subContainerClass">
       <img :src="img" :class="imgClass" />
       <div class="content">
         <h3>
@@ -54,7 +51,8 @@ const subContainerClass = computed(() => {
 
 <style scoped>
 img {
-  max-width:  128px;
+  max-width: 128px;
+  max-height: 128px;
 }
 .subContainer {
   display: table-cell;

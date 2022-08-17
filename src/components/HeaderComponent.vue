@@ -3,7 +3,7 @@
   <div class="jumbotron wrapper">
     <img
       alt="Jumbotron"
-      src="@/assets/jumbotron.jpg"
+      src="/images/jumbotron.jpg"
       class="jumbotron image row"
     />
     <div class="jumbotron overlay"></div>

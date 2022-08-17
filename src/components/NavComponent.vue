@@ -6,6 +6,9 @@ import { RouterLink } from "vue-router";
     <ul>
       <li><RouterLink to="/">About me</RouterLink></li>
       <li>
+        <RouterLink to="/projects">Projects</RouterLink>
+      </li>
+      <li>
         <RouterLink to="/career">Career</RouterLink>
       </li>
       <li>

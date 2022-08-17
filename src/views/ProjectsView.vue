@@ -1,14 +1,15 @@
 <script setup>
 import CardListComponent from "@/components/CardListComponent.vue";
-import studies from "@/database/studies";
+import projects from "@/database/projects";
 </script>
 <template>
   <div class="container">
     <div class="row">
       <div class="one animated bounceInLeft triple-padded">
-        <h1>Studies</h1>
+        <h1>Projects</h1>
       </div>
     </div>
-    <CardListComponent :elems="studies"> </CardListComponent>
+    <CardListComponent :elems="projects"> </CardListComponent>
   </div>
 </template>
+<style scoped></style>
