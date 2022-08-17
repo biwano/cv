@@ -51,8 +51,10 @@ const subContainerClass = computed(() => {
         <b v-if="date">{{ date }}<br /></b>
         <slot></slot>
         <div v-if="level" class="level">
-          <span v-for="i in [...Array(level).keys()]"> &#9733; </span>
-          <span v-for="i in [...Array(5 - level).keys()]"> &#9734; </span>
+          <span v-for="i in [...Array(level).keys()]" :key="i"> &#9733; </span>
+          <span v-for="i in [...Array(5 - level).keys()]" :key="i">
+            &#9734;
+          </span>
         </div>
       </div>
     </div>

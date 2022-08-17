@@ -1,6 +1,7 @@
 <script setup>
 import CardListComponent from "@/components/CardListComponent.vue";
-import studies from "@/database/studies";
+import { useDatabase } from "@/hooks";
+const { getCategoryItems } = useDatabase();
 </script>
 <template>
   <div class="container">
@@ -9,6 +10,6 @@ import studies from "@/database/studies";
         <h1>Studies</h1>
       </div>
     </div>
-    <CardListComponent :elems="studies"> </CardListComponent>
+    <CardListComponent :elems="getCategoryItems('study')"> </CardListComponent>
   </div>
 </template>

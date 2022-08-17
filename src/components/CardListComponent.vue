@@ -1,8 +1,8 @@
 <script setup>
 import CardComponent from "@/components/CardComponent.vue";
-import useTextHighlght from "@/hooks/useTextHighlight";
+import { useTextHighlight } from "@/hooks";
 
-const { highlightText } = useTextHighlght();
+const { highlightText } = useTextHighlight();
 defineProps(["elems"]);
 </script>
 <template>

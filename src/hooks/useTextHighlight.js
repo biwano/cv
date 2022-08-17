@@ -1,17 +1,15 @@
-import { jobs, projects, studies, skills, links } from "@/database";
+import database from "@/database";
 
 export default function () {
   function highlightText(text) {
-    [jobs, projects, studies, skills, links].forEach((category) => {
-      for (const key in category) {
-        if (text) {
-          text = text.replaceAll(
-            `{${key}}`,
-            `<a target="_blank" href="${category[key].link}">${category[key].title}</a>`
-          );
-        }
+    if (text) {
+      for (const key in database) {
+        text = text.replaceAll(
+          `{${key}}`,
+          `<a target="_blank" href="${database[key].link}">${database[key].title}</a>`
+        );
       }
-    });
+    }
     return text;
   }
   return {

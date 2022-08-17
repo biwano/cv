@@ -1,5 +1,6 @@
 export default {
   naas: {
+    category: "project",
     title: "Nuggets as a Service ecosystem",
     img: "/images/naas.png",
     position: "left",
@@ -14,6 +15,7 @@ export default {
     `,
   },
   web3: {
+    category: "project",
     title: "Web3",
     img: "/images/metamask.png",
     position: "right",
@@ -23,6 +25,7 @@ export default {
     `,
   },
   cosinus: {
+    category: "project",
     title: "Cosinus",
     position: "left",
     date: "2015 - 2019",
@@ -31,6 +34,7 @@ export default {
     `,
   },
   redmine: {
+    category: "project",
     title: "Redmine",
     position: "right",
     img: "/images/redmine.jpg",
@@ -41,6 +45,7 @@ export default {
     `,
   },
   appyuser: {
+    category: "project",
     title: "appYuser",
     img: "/images/appyuser.png",
     position: "left",
@@ -51,12 +56,14 @@ export default {
     `,
   },
   litiges: {
+    category: "project",
     title: "Litiges",
     position: "right",
     date: "2010 - 2011",
     content: `I took part on the development of Litiges, an application written in {spring} by a team of five. The main thing I learned from this experience is to carefully choose your development framework so compilation cycles stay as short as possible.`,
   },
   "mobile-number-portability": {
+    category: "project",
     title: "Mobile number portability",
     position: "left",
     date: "2006 - 2008",
@@ -64,6 +71,7 @@ export default {
     For this mission, I was {uts} representative at the inter-operator working groups to define the technical and business protocols. I was also coordinating {uts} teams and subcontractors to develop the necessary software applications and hardware configurations to support the protocol.`,
   },
   "mobile-number-licences": {
+    category: "project",
     title: "Mobile number frequency licences",
     position: "right",
     date: "2007 - 2009",

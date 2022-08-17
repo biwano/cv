@@ -1,5 +1,6 @@
 export default {
   "telecom-sudparis": {
+    category: "study",
     title: "TELECOM SudParis",
     img: "/images/telecom_sudparis.jpg",
     position: "left",
@@ -9,6 +10,7 @@ export default {
       Auditing.`,
   },
   baimbridge: {
+    category: "study",
     title: "Baimbridge High School",
     img: "/images/baimbridge.jpg",
     position: "right",
@@ -18,6 +20,7 @@ export default {
       Engineering schools.`,
   },
   providence: {
+    category: "study",
     title: "Providence High School",
     img: "/images/providence.jpg",
     position: "left",
@@ -26,6 +29,7 @@ export default {
     content: `Bachelor level degree with Mathematics and Physics options.`,
   },
   "advanced-studies": {
+    category: "study",
     title: "Advanced training",
     img: "/images/brain.jpg",
     position: "right",

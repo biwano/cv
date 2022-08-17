@@ -1,6 +1,7 @@
 <script setup>
 import CardListComponent from "@/components/CardListComponent.vue";
-import jobs from "@/database/jobs";
+import { useDatabase } from "@/hooks";
+const { getCategoryItems } = useDatabase();
 </script>
 <template>
   <div class="container">
@@ -9,7 +10,7 @@ import jobs from "@/database/jobs";
         <h1>Career</h1>
       </div>
     </div>
-    <CardListComponent :elems="jobs"> </CardListComponent>
+    <CardListComponent :elems="getCategoryItems('job')"> </CardListComponent>
   </div>
 </template>
 <style scoped></style>

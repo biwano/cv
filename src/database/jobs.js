@@ -1,5 +1,6 @@
 export default {
   "isae-supaero": {
+    category: "job",
     title: "ISAE-SUPAERO",
     img: "/images/isae.png",
     position: "left",
@@ -8,6 +9,7 @@ export default {
       <b>2015 - 2019</b> : Fullstack software developer<br />`,
   },
   quadran: {
+    category: "job",
     title: "QUADRAN",
     img: "/images/quadran.png",
     position: "left",
@@ -19,6 +21,7 @@ export default {
       <a href="https://www.quadran.eu/appyuser/">appYuser</a> application<br />`,
   },
   "sopra-steria": {
+    category: "job",
     title: "SOPRA-STERIA",
     img: "/images/sopra.jpg",
     position: "left",
@@ -27,6 +30,7 @@ export default {
       <b>2015 - 2019</b> : Fullstack software developer<br />`,
   },
   silicom: {
+    category: "job",
     title: "SILICOM",
     img: "/images/silicom.png",
     position: "left",
@@ -38,6 +42,7 @@ export default {
       at <a href="https://sfr.fr" target="_blank">SFR</a>.`,
   },
   "ait-consulting": {
+    category: "job",
     title: "AIT Consulting",
     img: "/images/ait.png",
     position: "left",
@@ -51,6 +56,7 @@ export default {
       >`,
   },
   "side-jobs": {
+    category: "job",
     title: "Side jobs",
     img: "/images/anonymous.png",
     position: "right",
