@@ -15,6 +15,7 @@ defineProps(["elems"]);
       :title="elem.title"
       :date="elem.date"
       :link="elem.link"
+      :level="elem.level"
     >
       <span v-html="highlightText(elem.content)"></span>
     </CardComponent>

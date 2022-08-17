@@ -1,6 +1,13 @@
 <script setup>
 import { computed } from "vue";
-const props = defineProps(["img-position", "title", "date", "img", "link"]);
+const props = defineProps([
+  "img-position",
+  "title",
+  "date",
+  "img",
+  "link",
+  "level",
+]);
 const position = computed(() =>
   props.imgPosition ? props.imgPosition : "left"
 );
@@ -43,6 +50,10 @@ const subContainerClass = computed(() => {
         </h3>
         <b v-if="date">{{ date }}<br /></b>
         <slot></slot>
+        <div v-if="level" class="level">
+          <span v-for="i in [...Array(level).keys()]"> &#9733; </span>
+          <span v-for="i in [...Array(5 - level).keys()]"> &#9734; </span>
+        </div>
       </div>
     </div>
     <div class="clear"></div>
@@ -56,5 +67,8 @@ img {
 }
 .subContainer {
   display: table-cell;
+}
+.level {
+  font-size: 25px;
 }
 </style>

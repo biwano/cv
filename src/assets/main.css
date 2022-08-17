@@ -34,4 +34,6 @@ body{
 }  
 .miniImage {
   max-width: 18px;
+  width: auto;
+  height: auto;
 }

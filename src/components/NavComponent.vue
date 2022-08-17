@@ -9,6 +9,9 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/projects">Projects</RouterLink>
       </li>
       <li>
+        <RouterLink to="/skills">Skills</RouterLink>
+      </li>
+      <li>
         <RouterLink to="/career">Career</RouterLink>
       </li>
       <li>
