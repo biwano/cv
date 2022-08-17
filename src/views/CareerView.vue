@@ -6,7 +6,7 @@ const { getCategoryItems } = useDatabase();
 <template>
   <div class="container">
     <div class="row">
-      <div class="one animated bounceInLeft triple-padded">
+      <div class="one animated bounceInRight triple-padded">
         <h1>Career</h1>
       </div>
     </div>

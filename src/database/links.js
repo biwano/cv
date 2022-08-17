@@ -23,4 +23,12 @@ export default {
     title: "UTS Caraibes",
     link: "https://discoverflow.co/",
   },
+  lucene: {
+    title: "Lucene",
+    link: "https://lucene.apache.org/",
+  },
+  xapi: {
+    title: "xAPI",
+    link: "https://xapi.com/",
+  }
 };

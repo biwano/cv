@@ -36,8 +36,8 @@ export default {
     img: "/images/drupal.png",
     level: 4,
     content:
-      "A CMS written in {php} with the {laravel} framework which helped up speed up considerably the development of the {naas} content editor.",
-    tags: ["php", "cms"],
+      "A content management system written in {php} with the {laravel} framework which helped up speed up considerably the development of the {naas} content editor.",
+    tags: ["php", "application"],
   },
   php: {
     category: "skill",
@@ -55,13 +55,26 @@ export default {
     link: "https://moodle.com/",
     img: "/images/moodle.png",
     level: 4,
-    content: `Moodle is the learning management syste used at {isae-suapero}. I developed two plugins for this application. A reporting tool called Hyrbridmeter and the {naas} content viewer`,
+    content: `Moodle is the learning management system used at {isae-suapero}. I developed two plugins for this application. A reporting tool called Hyrbridmeter and the {naas} content viewer`,
     tags: ["php", "application"],
   },
   elasticsearch: {
     category: "skill",
     title: "Elasticsearch",
     link: "https://www.elastic.co/",
+    img: "/images/elasticsearch.png",
+    level: 4,
+    content: `A highly and easily scalagble noSQL database backed by {lucene} which is very efficient for fulltext search. I find the query language is very powerful. I used it in the {naas} and {appyuser} projects. In particular I wrote {python} scripts to migrate data from {traxlrs} to {elasticsearch}`,
+    tags: ["database", "nosql"],
+  },
+  traxlrs: {
+    category: "skill",
+    title: "TraxLRS",
+    link: "https://traxlrs.com/",
+    img: "/images/traxlrs.png",
+    level: 5,
+    content: `A fully compliant {xapi} server we use for the {naas}.`,
+    tags: ["database"],
   },
   naas: {
     category: "skill",

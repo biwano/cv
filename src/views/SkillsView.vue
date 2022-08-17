@@ -33,7 +33,7 @@ const items = computed(() => {
 <template>
   <div class="container">
     <div class="row">
-      <div class="one animated bounceInLeft triple-padded">
+      <div class="one animated bounceInRight triple-padded">
         <h1>Skills</h1>
         <span
           v-for="tag in getCategoryTags('skill')"
@@ -51,5 +51,7 @@ const items = computed(() => {
 <style scoped>
 .button {
   margin-right: 5px;
+  text-transform: uppercase;
+  font-size:  smaller;
 }
 </style>
