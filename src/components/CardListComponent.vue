@@ -1,6 +1,5 @@
 <script setup>
 import CardComponent from "@/components/CardComponent.vue";
-import { useDatabase } from "@/hooks";
 
 defineProps(["elems"]);
 </script>

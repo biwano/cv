@@ -11,7 +11,7 @@ import NavComponent from "@/components/NavComponent.vue";
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
       <br />
-      <h3>Senior Software Engineer</h3>
+      <h3>Senior Fullstack Software Developer</h3>
       <div class="social">
         <a
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"

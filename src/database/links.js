@@ -3,10 +3,6 @@ export default {
     title: "Microlearning",
     link: "https://mlearn.universeh.eu/",
   },
-  naas: {
-    title: "NaaS",
-    link: "https://www.naas-edu.eu/",
-  },
   airbus: {
     title: "Airbus",
     link: "https://www.airbus.com/",

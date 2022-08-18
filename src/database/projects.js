@@ -1,7 +1,7 @@
 export default {
   naas: {
     category: "project",
-    title: "Nuggets as a Service ecosystem",
+    title: "Nuggets as a Service",
     img: "/images/naas.png",
     position: "left",
     link: "https://www.isae-supaero.fr/en/",
@@ -28,6 +28,7 @@ export default {
   cosinus: {
     category: "project",
     title: "Cosinus",
+    img: "/images/isae.png",
     position: "left",
     date: "2015 - 2019",
     content: `Cosinus is an application that enables {isae-supaero} students and employees to manage their account.<br/>
@@ -38,7 +39,7 @@ export default {
     category: "project",
     title: "Redmine",
     position: "right",
-    img: "/images/redmine.jpg",
+    img: "/images/redmine.png",
     link: "https://www.redmine.org/",
     date: "2015 - 2019",
     content: `I developped a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong suite is that it can be easily extended through plugins and offers application programming interfaces.

@@ -40,7 +40,10 @@ export default function () {
     for (var level = 5; level >= 1; level--) {
       for (const key in database) {
         const elem = database[key];
-        if (elem.category == category && elem.level == level) {
+        if (
+          elem.category == category &&
+          (elem.level == level || (level == 1 && elem.level === undefined))
+        ) {
           items[key] = elem;
         }
       }
