@@ -18,6 +18,7 @@ export default {
     category: "project",
     title: "Web3",
     img: "/images/metamask.png",
+    link: "https://fr.wikipedia.org/wiki/Web3",
     position: "right",
     date: "2021 - now",
     content: `I started studying blockchains during the rise of the decentralized finance in 2020. I submitted bug fixes or small features for some of the front end applications I was trying and naturaly got involved with the development teams.

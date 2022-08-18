@@ -52,6 +52,6 @@ const items = computed(() => {
 .button {
   margin-right: 5px;
   text-transform: uppercase;
-  font-size:  smaller;
+  font-size: smaller;
 }
 </style>

@@ -6,7 +6,9 @@ export default {
     position: "left",
     link: "https://www.isae-supaero.fr/en/",
     content: `<b>Since 2019</b> : EdTech architect and development team leader<br />
-      <b>2015 - 2019</b> : Fullstack software developer<br />`,
+      <b>2015 - 2019</b> : Fullstack software developer<br />
+      <b>2014 - </b> : Part time teacher in Web development for master's degree level students<br />
+      `,
   },
   quadran: {
     category: "job",

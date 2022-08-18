@@ -1,5 +1,26 @@
 import database from "@/database";
 
+function highlightTextFromSource(text) {
+  if (text) {
+    for (const key in database) {
+      var replace;
+      if (database[key].link) {
+        replace = `<a target="_blank" href="${database[key].link}">${database[key].title}</a>`;
+      } else {
+        replace = database[key].title;
+        console.log(`key ${key} as no link`);
+      }
+      text = text.replaceAll(`{${key}}`, replace);
+    }
+  }
+  return text;
+}
+
+for (const key in database) {
+  const elem = database[key];
+  elem.content = highlightTextFromSource(elem.content);
+}
+
 export default function () {
   function getCategoryTags(category) {
     const tags = [];
@@ -16,24 +37,18 @@ export default function () {
   }
   function getCategoryItems(category) {
     const items = {};
-    for (const key in database) {
-      const elem = database[key];
-      if (elem.category == category) {
-        items[key] = elem;
+    for (var level = 5; level >= 1; level--) {
+      for (const key in database) {
+        const elem = database[key];
+        if (elem.category == category && elem.level == level) {
+          items[key] = elem;
+        }
       }
     }
     return items;
   }
   function highlightText(text) {
-    if (text) {
-      for (const key in database) {
-        text = text.replaceAll(
-          `{${key}}`,
-          `<a target="_blank" href="${database[key].link}">${database[key].title}</a>`
-        );
-      }
-    }
-    return text;
+    return highlightTextFromSource(text);
   }
   return {
     getCategoryTags,
