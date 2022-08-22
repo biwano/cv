@@ -26,6 +26,7 @@ import { RouterLink } from "vue-router";
   width: fit-content;
   float: right;
   background-color: var(--color-secondary);
+  position: relative;
 }
 .nav a {
   background-color: var(--color-secondary);

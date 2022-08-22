@@ -8,7 +8,7 @@ function highlightTextFromSource(text) {
         replace = `<a target="_blank" href="${database[key].link}">${database[key].title}</a>`;
       } else {
         replace = database[key].title;
-        console.log(`key ${key} as no link`);
+        //console.log(`key ${key} has no link`);
       }
       text = text.replaceAll(`{${key}}`, replace);
     }
