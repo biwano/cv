@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row">
       <div class="one half animated bounceInLeft triple-padded">
         <h1>About me</h1>
@@ -78,7 +78,7 @@
         <h1>System administration</h1>
         <p>
           I mostly worked in small teams. Thus, I had to acquire a set of system
-          administration skills to %3C%3Cget%20things%20done%3E%3E.
+          administration skills to get things done.
         </p>
         <p>
           In particular I feel confident with <b>Centos 7 & 8</b> system

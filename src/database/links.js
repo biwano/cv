@@ -91,4 +91,8 @@ export default {
     title: "Flask",
     link: "https://flask.palletsprojects.com/",
   },
+  sentry: {
+    title: "Sentry",
+    link: "https://sentry.io/",
+  },
 };

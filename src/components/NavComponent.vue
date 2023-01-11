@@ -27,10 +27,14 @@ import { RouterLink } from "vue-router";
   float: right;
   background-color: var(--color-secondary);
   position: relative;
+  color: var(--color-primary);
+  min-width: 12px;
+  box-shadow: 2px 2px 2px var(--color-secondary);
 }
 .nav a {
   background-color: var(--color-secondary);
-  color: #ddd;
+  color: var(--color-primary);
+  
 }
 .nav a:hover {
   background-color: var(--color-primary);

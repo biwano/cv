@@ -51,6 +51,7 @@ const items = computed(() => {
 <style scoped>
 .button {
   margin-right: 5px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   font-size: smaller;
 }

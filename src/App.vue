@@ -40,7 +40,6 @@ onBeforeUnmount(() => {
     ></NavComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
-      <br />
       <h3>Senior Fullstack Software Developer</h3>
       <div class="social">
         <a
@@ -54,13 +53,13 @@ onBeforeUnmount(() => {
       <NavComponent ref="navNormalElement"></NavComponent>
     </div>
     <div class="main content">
-      <div class="clear">
-        <RouterView v-slot="{ Component }">
+      <RouterView v-slot="{ Component }">
+      <div style="position:relative" >
           <Transition>
             <component :is="Component" />
           </Transition>
-        </RouterView>
       </div>
+    </RouterView>
     </div>
     <FooterComponent></FooterComponent>
   </div>
@@ -69,9 +68,13 @@ onBeforeUnmount(() => {
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
   position: absolute;
-  width: 100%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  max-width: 1200px; 
 }
 .v-enter-from,
 .v-leave-to {
@@ -104,4 +107,5 @@ onBeforeUnmount(() => {
   position: relative;
   top: -15px;
 }
+
 </style>

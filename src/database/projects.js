@@ -4,10 +4,10 @@ export default {
     title: "Nuggets as a Service",
     img: "/images/naas.png",
     position: "left",
-    link: "https://www.isae-supaero.fr/en/",
+    link: "https://online.isae.fr/resources/naas/index.html",
     date: "2019 - now",
-    content: `The {naas} ecosystem is a set of programs designed to enable the creation and publication of reusable educationnal content.
-    This ecosystem includes a webservice server written in JAVA with the {vertx},
+    content: `The {naas} ecosystem is a set of applications designed to enable the creation and publication of reusable educational content.
+    This ecosystem includes a webservice server written in JAVA with the {vertx} framework,
     A generic {microlearning} server written in Python for the backend and {vuejs} for the frontend that enable visualizing the content
     a PHP content editor based on {drupal}, a {moodle} activity plugin that facilitates importing the content,
     a statistics server leveraging {elasticsearch} for providing content usage statistics.<br/>
@@ -21,8 +21,8 @@ export default {
     link: "https://fr.wikipedia.org/wiki/Web3",
     position: "right",
     date: "2021 - now",
-    content: `I started studying blockchains during the rise of the decentralized finance in 2020. I submitted bug fixes or small features for some of the front end applications I was trying and naturaly got involved with the development teams.
-    These piecces of code are usually produced with {react} and or {nextjs}. Some of the works I have done include devevloping web interfaces to smart contracts, implementing multilinguism with {lingui} and {translationio}, setting up notification frameworks.
+    content: `I started studying blockchains during the rise of decentralized finance in 2020. I submitted bug fixes or small features for some of the web3 applications I was trying and naturaly got involved with the development teams.
+    These pieces of code are usually produced with {react} and or {nextjs}. Some of the works I have done include devevloping web interfaces to smart contracts, implementing multilinguism with {lingui} and {translationio}, setting up the {sentry} error logging frameworks.
     `,
   },
   cosinus: {
@@ -42,7 +42,7 @@ export default {
     img: "/images/redmine.png",
     link: "https://www.redmine.org/",
     date: "2015 - 2019",
-    content: `I developped a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong suite is that it can be easily extended through plugins and offers application programming interfaces.
+    content: `I developped a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong side is that it can be easily extended through plugins and offers application programming interfaces.
     In particular, I setup a ticketing service for IT issues which encountered a great success and incited the deployment of this application throughout the organisation.
     `,
   },
@@ -54,7 +54,7 @@ export default {
     date: "2011 - 2015",
     link: "https://www.quadran.eu/appyuser/",
     content: `As I was working as a performance consultant at {airbus}. {quadran} wanted to launch a tool to industrialize user satisfaction evaluation {apdex}.
-    I designed a system based on a {javascript} client used to capture application performance from the browser point of view, a {java} server to store the data in an {elasticsearch} database and a webclient written in {angular} to visualize this data. It was my first time working with reactive javascript technology and what a mindblower it was!
+    I designed a system based on a {javascript} client used to capture application performance from the browser, a {java} server to store the data in an {elasticsearch} database and a webclient written in {angular} for visualizing this data. It was my first time working with reactive javascript technology and what a mindblower it was!
     `,
   },
   litiges: {
@@ -62,7 +62,7 @@ export default {
     title: "Litiges",
     position: "right",
     date: "2010 - 2011",
-    content: `I took part on the development of Litiges, an application written in {spring} by a team of five. The main thing I learned from this experience is to carefully choose your development framework so compilation cycles stay as short as possible.`,
+    content: `I took part on the development of Litiges, an application written in {spring} by a team of five. The main thing I learned from this experience is to carefully choose your development tools to have fast compilation cycles. Web developers should not be waiting for code to compile.`,
   },
   "mobile-number-portability": {
     category: "project",
@@ -78,6 +78,6 @@ export default {
     position: "right",
     date: "2007 - 2009",
     content: `During my years at {ait-consulting} we succesfully applied for Mobile Number Frequency Licences on the territories of Guadeloupe, Martinique and Guyana.
-    My role in this project was to define with contractors the hardware infrastructure, plan the signal coverage of these territories and help establish the business model.`,
+    My role in this project was to design and negotiate the hardware infrastructure with contractors, plan the signal coverage of the territories and help establish the business model.`,
   },
 };

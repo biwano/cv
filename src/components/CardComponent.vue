@@ -43,7 +43,9 @@ const subContainerClass = computed(() => {
 <template>
   <div :class="containerClass">
     <div class="animated bounceInLeft triple-padded" :class="subContainerClass">
-      <img :src="img" :class="imgClass" />
+      <div class="img-container">
+        <img :src="img" :class="imgClass" />
+      </div>
       <div class="content">
         <h3>
           <a v-if="link" :href="link" target="_blank">{{ title }}</a>
@@ -71,6 +73,9 @@ const subContainerClass = computed(() => {
 img {
   max-width: 128px;
   max-height: 128px;
+}
+.img-container {
+  min-width: 128px;
 }
 .subContainer {
   display: table-cell;

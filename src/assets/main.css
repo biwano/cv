@@ -9,12 +9,13 @@
   --color-secondary: rgb(var(--color-secondary-r),var(--color-secondary-g),var(--color-secondary-b), 1);
 }
 
-
-body{
-  background-color: var(--color-secondary);
+body, html {
+  /*ackground-color: var(--color-secondary);*/
+  background: var(--color-secondary) url("/images/background.png") repeat;
   color: var(--color-primary);
 } 
-.clear{
+
+.clear {
   clear:both;
 }
 .vertical-cener {
@@ -36,4 +37,10 @@ body{
   max-width: 18px;
   width: auto;
   height: auto;
+}
+.nav button.hamburger {
+  color: var(--color-primary);
+}
+h1, h3 {
+  text-shadow: 1px 1px 2px var(--color-secondary);
 }
