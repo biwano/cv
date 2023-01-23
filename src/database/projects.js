@@ -22,7 +22,7 @@ export default {
     position: "right",
     date: "2021 - now",
     content: `I started studying blockchains during the rise of decentralized finance in 2020. I submitted bug fixes or small features for some of the web3 applications I was trying and naturally got involved with the development teams.
-    These pieces of code are usually produced with {react} and or {nextjs}. Some of the works I have done include developing web interfaces to smart contracts, implementing multilinguism with {lingui} and {translationio}, setting up the {sentry} error logging frameworks.
+    These pieces of code are usually produced with {react} and or {nextjs}. Some of the works I have done include developing web interfaces to smart contracts, implementing localization with {lingui} and {translationio}, setting up the {sentry} error logging frameworks.
     `,
   },
   cosinus: {
@@ -42,7 +42,7 @@ export default {
     img: "/images/redmine.png",
     link: "https://www.redmine.org/",
     date: "2015 - 2019",
-    content: `I developped a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong side is that it can be easily extended through plugins and offers application programming interfaces.
+    content: `I developed a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong side is that it can be easily extended through plugins and offers application programming interfaces.
     I setup a ticketing service for IT issues which encountered a great success and incited the deployment of this application throughout the organization.
     `,
   },
@@ -74,10 +74,10 @@ export default {
   },
   "mobile-number-licences": {
     category: "project",
-    title: "Mobile number frequency licences",
+    title: "Mobile number frequency licenses",
     position: "right",
     date: "2007 - 2009",
-    content: `During my years at {ait-consulting} we successfully applied for Mobile Number Frequency Licences on the territories of Guadeloupe, Martinique and Guyana.
+    content: `During my years at {ait-consulting} we successfully applied for Mobile Number Frequency Licenses on the territories of Guadeloupe, Martinique and Guyana.
     My role in this project was to design and negotiate the hardware infrastructure with contractors, plan the signal coverage of the territories and help establish the business model.`,
   },
 };
