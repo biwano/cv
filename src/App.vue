@@ -54,12 +54,12 @@ onBeforeUnmount(() => {
     </div>
     <div class="main content">
       <RouterView v-slot="{ Component }">
-      <div style="position:relative" >
+        <div style="position: relative">
           <Transition>
             <component :is="Component" />
           </Transition>
-      </div>
-    </RouterView>
+        </div>
+      </RouterView>
     </div>
     <FooterComponent></FooterComponent>
   </div>
@@ -70,11 +70,11 @@ onBeforeUnmount(() => {
 .v-leave-active {
   transition: opacity 1s ease;
   position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  max-width: 1200px; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
 .v-enter-from,
 .v-leave-to {
@@ -107,5 +107,4 @@ onBeforeUnmount(() => {
   position: relative;
   top: -15px;
 }
-
 </style>

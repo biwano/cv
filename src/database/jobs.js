@@ -40,7 +40,7 @@ export default {
     date: "2010 - 2011",
     content: `Product Line Leader - Responsible for enforcing
       <a href="https://www.itlibrary.org/" target="_blank">ITIL</a> processes
-      around networking equipments supervision tools and solving crisis events
+      around networking equipment supervision tools and solving crisis events
       at <a href="https://sfr.fr" target="_blank">SFR</a>.`,
   },
   "ait-consulting": {

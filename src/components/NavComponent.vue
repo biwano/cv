@@ -34,7 +34,6 @@ import { RouterLink } from "vue-router";
 .nav a {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  
 }
 .nav a:hover {
   background-color: var(--color-primary);
