@@ -17,6 +17,9 @@ import { RouterLink } from "vue-router";
       <li>
         <RouterLink to="/academic_studies">Studies</RouterLink>
       </li>
+      <li>
+        <a class="noicon" href="/images/cv.pdf" target="_blank">Resume </a>
+      </li>
     </ul>
   </nav>
 </template>
@@ -38,5 +41,9 @@ import { RouterLink } from "vue-router";
 .nav a:hover {
   background-color: var(--color-primary);
   color: black;
+}
+a img {
+  height: 32px;
+  transition: height 0.4s;
 }
 </style>
