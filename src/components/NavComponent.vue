@@ -17,9 +17,6 @@ import { RouterLink } from "vue-router";
       <li>
         <RouterLink to="/academic_studies">Studies</RouterLink>
       </li>
-      <li>
-        <a class="noicon" href="/images/cv.pdf" target="_blank">Resume </a>
-      </li>
     </ul>
   </nav>
 </template>
