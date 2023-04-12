@@ -28,8 +28,7 @@ export default {
     img: "/images/sopra.jpg",
     position: "left",
     link: "https://www.soprasteria.com/fr",
-    content: `<b>Since 2019</b> : EdTech architect and development team leader<br />
-      <b>2015 - 2019</b> : Fullstack software developer<br />`,
+    content: `<b>2011</b> : JAVA/J2EE Developer (Spring, Hibernate)<br />`
   },
   silicom: {
     category: "job",

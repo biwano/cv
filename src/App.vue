@@ -12,7 +12,6 @@ let scrollWatcher = () => {
   const navNormal = navNormalElement.value.$el;
   const navFixed = navFixedElement.value.$el;
   const rect = navNormal.getBoundingClientRect();
-  console.log(rect.bottom);
   if (rect.top < 0) {
     navNormal.classList.add("invisible");
     navFixed.classList.remove("invisible");
