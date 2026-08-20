@@ -4,6 +4,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import NavComponent from "@/components/NavComponent.vue";
 import LinkedInIconComponent from "@/components/LinkedInIconComponent.vue";
+import FileIconComponent from "@/components/FileIconComponent.vue";
 </script>
 
 <template>
@@ -14,20 +15,24 @@ import LinkedInIconComponent from "@/components/LinkedInIconComponent.vue";
       <h3>Senior Fullstack Software Developer</h3>
       <div class="title-row">
         <a
-          class="social"
+          class="social cv-download"
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <LinkedInIconComponent />
+        LinkedIn
+        <LinkedInIconComponent />
         </a>
+        |
         <a
           class="social cv-download"
           href="/images/cv.pdf"
           download="Bruno-Ilponse-CV.pdf"
-          >Download CV</a
         >
+        CV
+        <FileIconComponent />
+        </a>
       </div>
     </div>
     <div class="nav-sticky">
@@ -95,6 +100,7 @@ h3 {
   margin-top: 0.4rem;
 }
 .cv-download {
+  gap: 0.35em;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;

@@ -27,6 +27,9 @@ import { RouterLink } from "vue-router";
   background-color: var(--color-secondary);
   color: var(--color-primary);
   min-width: 12px;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  overflow: hidden;
   box-shadow: 2px 2px 2px var(--color-secondary);
 }
 
