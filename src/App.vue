@@ -14,6 +14,7 @@ const contactOpen = ref(false);
 
 <template>
   <div class="bigdaddy">
+    <a class="skip-to-content" href="#main-content">Skip to content</a>
     <JumbotronComponent
       class="bounceInDown animated absolute"
     ></JumbotronComponent>
@@ -55,7 +56,7 @@ const contactOpen = ref(false);
     <div class="nav-sticky">
       <NavComponent></NavComponent>
     </div>
-    <div class="main content">
+    <div id="main-content" class="main content" tabindex="-1">
       <RouterView v-slot="{ Component }">
         <Transition name="fade" mode="out-in">
           <component :is="Component" />
@@ -75,6 +76,38 @@ const contactOpen = ref(false);
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  z-index: 1000;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.5em 1em;
+  clip: auto;
+  overflow: visible;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
 }
 
 .bigdaddy {
@@ -97,6 +130,10 @@ const contactOpen = ref(false);
   clear: both;
   text-align: justify;
   width: 100%;
+}
+
+.main.content:focus {
+  outline: none;
 }
 .social {
   display: inline-flex;

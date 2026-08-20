@@ -2,9 +2,9 @@
 
 Fresh review of the Vue CV site (`/opt/biwano/cv`) as of **2026-08-20 (evening rerun)**. Prior wave (content URL fixes, Web3Forms env key wiring, modal a11y, SEO meta titles/descriptions, sticky nav / footer spacing, README, skill-star ARIA, dead CardComponent markup, unused `cv.webp`/`metamask.webp`, etc.) is done. This list is what remains, verified against current source.
 
-**Prior open item still applies:** **#16** (mobile header density). **#11** (`robots.txt` / sitemap) was marked fixed in the prior audit but **regressed / never landed in source** — reopened below.
+**#11** (`robots.txt` / sitemap) was marked fixed in the prior audit but **regressed / never landed in source** — reopened below.
 
-Won’t-dos (not recommended again): contact form auto-close after success; lint in CI; projects without logos; unused `links.js` entries; scrubbing the Web3Forms key in `.env.example`. See [AGENTS.md](../AGENTS.md).
+Won’t-dos (not recommended again): contact form auto-close after success; lint in CI; projects without logos; unused `links.js` entries; scrubbing the Web3Forms key in `.env.example`; extra `:focus-visible` rings beyond color swaps; mobile header density pass. See [AGENTS.md](../AGENTS.md).
 
 ---
 
@@ -40,7 +40,7 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 
 ## UX / polish
 
-9. **Mobile header density** *(prior #16 — still open)* — Absolute jumbotron (`JumbotronComponent.vue`, up to `min(1280px, 100vw)`), right-aligned title + social row (`App.vue`), and sticky nav (`NavComponent.vue`) have **no narrow-viewport layout pass** beyond global `.one.half` stacking. Busy on small screens; check overlap, wrap, and tap targets.
+9. ~~**Mobile header density**~~ *(prior #16)* — Won’t do: leave jumbotron / title+social / sticky nav as-is on narrow viewports; see [AGENTS.md](../AGENTS.md).
 
 10. ~~**Decorative job mini-logos lack `alt`**~~ — Fixed: Carbonmark / KlimaDAO / OlympusDAO mini-logos use `alt=""`.
 
@@ -61,7 +61,7 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 ## Nice-to-haves
 
 15. ~~**Per-route `og:url` / canonical**~~ — Fixed: `index.html` ships `link[rel=canonical]`; router `afterEach` updates `og:url` and canonical from `VITE_SITE_URL` + route path.
-16. Skip-to-content link; visible `:focus-visible` styles beyond color swaps on nav/social.
+16. ~~**Skip-to-content / `:focus-visible`**~~ — Skip link fixed (`App.vue` → `#main-content`). Won’t do: visible `:focus-visible` styles beyond existing color swaps on nav/social; see [AGENTS.md](../AGENTS.md).
 17. ~~Empty-state / reserved space for cards without `img`~~ — Won’t do (same as #1); see [AGENTS.md](../AGENTS.md).
 18. ~~Drop unused `links.js` keys (#5)~~ — Won’t do; see [AGENTS.md](../AGENTS.md).
 
@@ -72,7 +72,6 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 | Priority | Item | Why |
 | --- | --- | --- |
 | High | **#7** robots + sitemap in `public/` (or build plugin) | SEO regression; nothing in source today |
-| Medium | **#9 / #16** mobile header pass | Real UX on phones |
 | Low | **#3** | Fragile school URL |
 
-Do **not** re-open: contact auto-close; lint in CI; projects without logos / collapsing empty image column; unused `links.js` keys (`lingui`, `translationio`, `perl`, `sentry`); Web3Forms key scrub/rotate in `.env.example` (public client key); resolved content URLs (web3, Nuxeo, Kubernetes course, React/Angular/JS, ISAE teaching line, appYuser `rel`); modal focus trap; unused WebP cleanup already done; mini-logo `alt`; home heading hierarchy; skill empty stars; per-route `og:url` / canonical.
+Do **not** re-open: contact auto-close; lint in CI; projects without logos / collapsing empty image column; unused `links.js` keys (`lingui`, `translationio`, `perl`, `sentry`); Web3Forms key scrub/rotate in `.env.example` (public client key); extra `:focus-visible` rings beyond color swaps; mobile header density pass; resolved content URLs (web3, Nuxeo, Kubernetes course, React/Angular/JS, ISAE teaching line, appYuser `rel`); modal focus trap; unused WebP cleanup already done; mini-logo `alt`; home heading hierarchy; skill empty stars; per-route `og:url` / canonical; skip-to-content.

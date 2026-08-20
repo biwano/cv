@@ -2,7 +2,7 @@
 
 Personal CV / portfolio site built with Vue 3 and Vite.
 
-## Setup
+## Recommended IDE Setup
 
 ```sh
 npm install
@@ -32,29 +32,3 @@ Edit `.env` with your values (see below). `.env` is gitignored.
 1. Set env vars in the build environment (at least `VITE_SITE_URL` for correct social previews).
 2. Run `npm run build`.
 3. Serve the contents of `dist/` as a static site.
-
-### History-mode rewrite
-
-Vue Router uses `createWebHistory`, so the host must serve `index.html` for unknown paths. Without this, deep links (`/skills`, `/career`, etc.) fail on refresh or direct open.
-
-**nginx**
-
-```nginx
-location / {
-  try_files $uri $uri/ /index.html;
-}
-```
-
-**Apache** (`.htaccess` in the site root)
-
-```apache
-FallbackResource /index.html
-```
-
-**Netlify** (`public/_redirects`)
-
-```
-/*    /index.html   200
-```
-
-**Vercel / Cloudflare Pages** — enable the SPA / single-page fallback so all routes rewrite to `index.html`.

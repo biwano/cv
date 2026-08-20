@@ -11,6 +11,9 @@
 - Projects without logos: do not add logos for Litiges / mobile-number projects, and do not collapse the empty image column to “fix” uneven cards.
 - Unused `links.js` entries: do not remove `lingui`, `translationio`, `perl`, or `sentry` just because they are unused as `{…}` placeholders.
 - Web3Forms key in `.env.example`: do not scrub or rotate it; the access key is a public client-side key (restrict by domain in the Web3Forms dashboard if needed).
+- How to serve: do not document SPA history-mode rewrites or host-specific serve configs (nginx, Apache, Netlify, Vercel, etc.) in the README or elsewhere.
+- Focus rings: do not add visible `:focus-visible` styles beyond the existing color swaps on nav/social (and similar) links.
+- Mobile header: do not add a narrow-viewport layout pass for the jumbotron, title/social row, or sticky nav.
 
 ## Design
 
