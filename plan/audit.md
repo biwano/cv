@@ -32,8 +32,8 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 
 ## Tech / deploy
 
-17. **History-mode hosting** — `createWebHistory` needs a server fallback to `index.html` for deep links (`/skills`, etc.). Document the required rewrite for whatever hosts this site.
-18. **README is still the Vue template** — Replace boilerplate with a short project README (dev/build, env vars, deploy notes).
+17. ~~**History-mode hosting**~~ — Fixed: README documents SPA fallback (`try_files` / `FallbackResource` / Netlify `_redirects` / host SPA mode).
+18. ~~**README is still the Vue template**~~ — Fixed: project README covers setup, scripts, env vars, and history-mode deploy notes (`.env.example` restored).
 19. **AIT Consulting employer link** — Points at a third-party directory (`listcompany.org`), not an official company site. Prefer a better source or no link.
 
 ## Nice-to-haves
