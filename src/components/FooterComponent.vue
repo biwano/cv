@@ -2,18 +2,8 @@
   <div class="bounceInUp animated row fixed bottom daddy">
     <div class="align-center">
       Built with
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://vuejs.org/"
+      <a target="_blank" rel="noopener noreferrer" href="https://vuejs.org/"
         >VueJS 3</a
-      >
-      and
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://groundworkcss.github.io/"
-        >GroundworkCss 2</a
       >
     </div>
   </div>
@@ -22,5 +12,6 @@
 .daddy {
   background-color: var(--color-secondary);
   opacity: 75%;
+  padding: 0.5rem 1rem;
 }
 </style>

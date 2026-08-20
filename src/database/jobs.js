@@ -33,7 +33,7 @@ export default {
     img: "/images/sopra.webp",
     position: "left",
     link: "https://www.soprasteria.com/fr",
-    content: `<b>2011</b> : JAVA/J2EE Developer (Spring, Hibernate)<br />`
+    content: `<b>2011</b> : JAVA/J2EE Developer (Spring, Hibernate)<br />`,
   },
   silicom: {
     category: "job",

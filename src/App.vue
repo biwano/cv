@@ -3,6 +3,7 @@ import { RouterView } from "vue-router";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import NavComponent from "@/components/NavComponent.vue";
+import LinkedInIconComponent from "@/components/LinkedInIconComponent.vue";
 </script>
 
 <template>
@@ -17,8 +18,10 @@ import NavComponent from "@/components/NavComponent.vue";
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"
           target="_blank"
           rel="noopener noreferrer"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
+          aria-label="LinkedIn"
+        >
+          <LinkedInIconComponent />
+        </a>
         <a
           class="social cv-download"
           href="/images/cv.pdf"

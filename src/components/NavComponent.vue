@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <nav class="nav small-tablet" title="Menu">
+  <nav class="nav" title="Menu">
     <ul>
       <li><RouterLink to="/">About me</RouterLink></li>
       <li>
@@ -29,21 +29,36 @@ import { RouterLink } from "vue-router";
   min-width: 12px;
   box-shadow: 2px 2px 2px var(--color-secondary);
 }
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .nav a {
+  display: inline-block;
+  padding: 0.25em 1em;
+  line-height: 1.5;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
-.nav a:hover {
+
+.nav a:hover,
+.nav a:focus {
   background-color: var(--color-primary);
   color: black;
+  text-decoration: none;
 }
+
 .nav a.router-link-active {
-  background-color: #3498db;
+  background-color: var(--button-blue);
   color: #fff;
   font-weight: 700;
-}
-a img {
-  height: 32px;
-  transition: height 0.4s;
 }
 </style>

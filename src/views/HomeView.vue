@@ -36,9 +36,9 @@ const mode = ref("short");
         <div class="one half animated bounceInLeft triple-padded">
           <h1>About me</h1>
           <p>
-            Senior fullstack developer with <b>15 years</b> in software, after an
-            early start with computers at nine and a path through telecoms into
-            programming.
+            Senior fullstack developer with <b>15 years</b> in software, after
+            an early start with computers at nine and a path through telecoms
+            into programming.
           </p>
           <ul>
             <li>
@@ -77,7 +77,8 @@ const mode = ref("short");
               <b>Forge</b>/<b>Foundry</b>, plus <b>web3.js</b> and <b>viem</b>
             </li>
             <li>
-              <b>JAVA</b> with Spring and VertX; deployed on Tomcat, JBoss, Jetty
+              <b>JAVA</b> with Spring and VertX; deployed on Tomcat, JBoss,
+              Jetty
             </li>
             <li>
               <b>PHP</b> via Drupal, Wordpress, and Laravel; Apache and Nginx
@@ -184,16 +185,17 @@ const mode = ref("short");
           </p>
           <p>
             In all my projects, I developed both the back-end and the front-end.
-            This enabled me to also progress in the various Web technologies, ie.
+            This enabled me to also progress in the various Web technologies,
+            ie.
             <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, <b>Typescript</b>,
             <b>Vue.js</b>, <b>Angular</b>, and lately <b>React</b>.
           </p>
           <p>
             In recent years, I also worked with <b>Solidity</b> to develop smart
             contracts on Ethereum and compatible chains, covering ERC20 tokens,
-            NFTs and DeFi. I used tools such as <b>Forge</b> and
-            <b>Foundry</b>, and integrated contracts with web apps using
-            <b>web3.js</b> and <b>viem</b>.
+            NFTs and DeFi. I used tools such as <b>Forge</b> and <b>Foundry</b>,
+            and integrated contracts with web apps using <b>web3.js</b> and
+            <b>viem</b>.
           </p>
           <p>
             I used the <b>JAVA</b> programming language in many contexts, first
@@ -235,8 +237,7 @@ const mode = ref("short");
           <p>
             Particular applications I remember having configured include
             <b>Apache</b>, <b>Nginx</b>, as web-servers, reverse proxies or WSGI
-            servers but also <b>Tomcat</b>, <b>Jenkins</b>,
-            <b>Sonarqube</b>.
+            servers but also <b>Tomcat</b>, <b>Jenkins</b>, <b>Sonarqube</b>.
           </p>
           <p>
             Moreover I worked on configuring the continuous integration systems
@@ -265,7 +266,8 @@ const mode = ref("short");
         <div class="one half animated bounceInRight triple-padded">
           <h1>Hobbies</h1>
           <p>
-            In no specific order: Roller hockey, Board games, Macro economy, Video games.
+            In no specific order: Roller hockey, Board games, Macro economy,
+            Video games.
           </p>
         </div>
       </div>

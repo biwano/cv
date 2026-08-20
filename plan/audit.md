@@ -28,7 +28,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Performance & tech debt
 
-16. **Legacy stack** — jQuery 1.10 + Modernizr 2.6 + full Groundwork (~700KB) for layout/nav that Vue could own.
+16. ~~**Legacy stack**~~ — Fixed: removed jQuery, Modernizr, and Groundwork; layout/nav/buttons/animations live in Vue + `main.css`.
 17. ~~**Heavy images**~~ — Fixed: all card/skill logos resized (≤256px, minis ≤64px) and converted to WebP; site images ~2.8MB → ~0.45MB.
 18. ~~Unused **Pinia counter** store~~ — Fixed: removed `src/stores/counter.js`, Pinia setup, and the `pinia` dependency.
 19. ~~**Route fade layout jump**~~ — Fixed: `Transition mode="out-in"` fade (no absolute positioning / `min-height` band-aid).
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–15, #17, #19, and #22 done. Next easy pick: legacy stack (#16).
+Items 1–19 and #22 done. Remaining: contact CTA (#20), career timeline (#21), Vite/Vue upgrade (#23).
