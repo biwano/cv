@@ -30,7 +30,6 @@ import { RouterLink } from "vue-router";
   border: 1px solid var(--color-primary);
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 2px 2px 2px var(--color-secondary);
 }
 
 .nav ul {

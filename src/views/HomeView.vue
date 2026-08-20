@@ -61,7 +61,7 @@ const mode = ref("short");
           </ul>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Development languages</h1>
+          <h1>Software</h1>
           <p>
             Fullstack on every project — backend and frontend — across many
             languages and frameworks.
@@ -178,7 +178,7 @@ const mode = ref("short");
           </p>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Development languages</h1>
+          <h1>Software</h1>
           <p>
             Working in various companies gave me the opportunity to use many
             languages and frameworks.

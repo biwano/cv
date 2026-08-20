@@ -1,5 +1,5 @@
 <script setup>
-import CardListComponent from "@/components/CardListComponent.vue";
+import TimelineComponent from "@/components/TimelineComponent.vue";
 import { useDatabase } from "@/hooks";
 const { getCategoryItems } = useDatabase();
 </script>
@@ -10,7 +10,7 @@ const { getCategoryItems } = useDatabase();
         <h1>Career</h1>
       </div>
     </div>
-    <CardListComponent :elems="getCategoryItems('job')"> </CardListComponent>
+    <TimelineComponent :elems="getCategoryItems('job')" />
   </div>
 </template>
 <style scoped></style>
