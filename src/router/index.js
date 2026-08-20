@@ -10,6 +10,23 @@ const setMetaContent = (selector, content) => {
   if (el) el.setAttribute("content", content);
 };
 
+const setCanonicalHref = (href) => {
+  let el = document.querySelector('link[rel="canonical"]');
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", "canonical");
+    document.head.appendChild(el);
+  }
+  el.setAttribute("href", href);
+};
+
+const siteOrigin = (import.meta.env.VITE_SITE_URL || "").replace(/\/$/, "");
+
+const absoluteUrlForRoute = (fullPath) => {
+  const path = fullPath === "/" ? "/" : fullPath.replace(/\/$/, "") || "/";
+  return siteOrigin ? `${siteOrigin}${path}` : path;
+};
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -72,6 +89,7 @@ router.afterEach((to) => {
     typeof to.meta.description === "string"
       ? to.meta.description
       : DEFAULT_DESCRIPTION;
+  const url = absoluteUrlForRoute(to.path);
 
   document.title = title;
   setMetaContent('meta[name="description"]', description);
@@ -79,6 +97,8 @@ router.afterEach((to) => {
   setMetaContent('meta[name="twitter:description"]', description);
   setMetaContent('meta[property="og:title"]', title);
   setMetaContent('meta[name="twitter:title"]', title);
+  setMetaContent('meta[property="og:url"]', url);
+  setCanonicalHref(url);
 });
 
 export default router;

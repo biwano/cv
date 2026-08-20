@@ -4,7 +4,7 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of **2026-08-20 (evening r
 
 **Prior open item still applies:** **#16** (mobile header density). **#11** (`robots.txt` / sitemap) was marked fixed in the prior audit but **regressed / never landed in source** — reopened below.
 
-Won’t-dos (not recommended again): contact form auto-close after success; lint in CI; projects without logos. See [AGENTS.md](../AGENTS.md).
+Won’t-dos (not recommended again): contact form auto-close after success; lint in CI; projects without logos; unused `links.js` entries; scrubbing the Web3Forms key in `.env.example`. See [AGENTS.md](../AGENTS.md).
 
 ---
 
@@ -16,19 +16,15 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 
 3. **Providence High School link fragile** — `studies.js` `providence.link` points at an `education.gouv.fr` annuaire URL that returns **HTTP 403** (curl with a normal browser User-Agent). Prefer a stable school page or drop the link if none exists.
 
-4. **Copy / branding nits** *(low)* —
-   - `skills.js` React: duplicated “in 2021” (“…with the {web3} projects in 2021”).
-   - `skills.js` Viem: “A typescript library” → TypeScript.
-   - `skills.js` Spring: “Spring express” is unclear (Boot? MVC?).
-   - Mixed brand spellings: **VueJS** (`skills.js` title, footer) vs **Vue.js** (`HomeView.vue`); **Wordpress** vs WordPress; **Gitlab** / **Sonarqube** / **UTS Caraibes** title casing in `links.js`.
+4. ~~**Copy / branding nits**~~ *(low)* — Fixed: React “in 2021” duplication; Viem TypeScript casing; Spring Boot wording; Vue.js / WordPress / GitLab / SonarQube / UTS Caraïbes brand spellings.
 
-5. **Unused `links.js` entries** — `lingui`, `translationio`, `perl`, and `sentry` are never referenced as `{…}` placeholders anywhere in content. Dead data only (harmless, but clutter).
+5. ~~**Unused `links.js` entries**~~ — Won’t do: leave `lingui`, `translationio`, `perl`, and `sentry` in `links.js` even if unused as `{…}` placeholders; see [AGENTS.md](../AGENTS.md).
 
 ---
 
 ## Contact form & secrets
 
-6. **Real Web3Forms key in `.env.example`** — `.env.example` ships `VITE_WEB3FORMS_ACCESS_KEY=0c53b7f4-…` (full UUID). Example files should use a placeholder; rotate the key if this file is shared or ever committed, and keep domain restriction in the Web3Forms dashboard. Runtime wiring via `import.meta.env` in `ContactFormComponent.vue` is fine.
+6. ~~**Real Web3Forms key in `.env.example`**~~ — Won’t do: the access key is a public client-side key (fine in `.env.example`); restrict by domain in the Web3Forms dashboard if needed; see [AGENTS.md](../AGENTS.md).
 
 *(Verified still good: no hard-coded key in components; missing-key error path; honeypot; success stays open until user closes.)*
 
@@ -38,7 +34,7 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 
 7. **`robots.txt` / sitemap missing from source** *(prior #11 — reopened)* — Prior audit claimed a Vite plugin emits these from `VITE_SITE_URL`. Current `vite.config.js` only loads `@vitejs/plugin-vue`. A clean `vite build` produces **neither** `robots.txt` nor `sitemap.xml`. Stale `dist/` copies (if present) used `https://example.com` and are not regenerated. Add static `public/robots.txt` + `public/sitemap.xml`, or restore a build step that substitutes `VITE_SITE_URL`.
 
-8. *(Verified OK)* Route `meta.title` / `meta.description` + `router.afterEach` updates document title and description / OG / Twitter description+title. `index.html` `%VITE_SITE_URL%` substitutes correctly when `.env` is set (spot-checked build → `https://cv.ilponse.com/…`).
+8. *(Verified OK)* Route `meta.title` / `meta.description` + `router.afterEach` updates document title, description / OG / Twitter title+description, and (see **#15**) `og:url` + canonical. `index.html` `%VITE_SITE_URL%` substitutes correctly when `.env` is set (spot-checked build → `https://cv.ilponse.com/…`).
 
 ---
 
@@ -46,11 +42,11 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 
 9. **Mobile header density** *(prior #16 — still open)* — Absolute jumbotron (`JumbotronComponent.vue`, up to `min(1280px, 100vw)`), right-aligned title + social row (`App.vue`), and sticky nav (`NavComponent.vue`) have **no narrow-viewport layout pass** beyond global `.one.half` stacking. Busy on small screens; check overlap, wrap, and tap targets.
 
-10. **Decorative job mini-logos lack `alt`** — Inline `<img class="miniImage">` in `jobs.js` (Carbonmark / KlimaDAO / OlympusDAO) have no `alt` (should be `alt=""` if decorative beside the text link, or a short label).
+10. ~~**Decorative job mini-logos lack `alt`**~~ — Fixed: Carbonmark / KlimaDAO / OlympusDAO mini-logos use `alt=""`.
 
-11. **Home page heading hierarchy** — `HomeView.vue` uses multiple `<h1>`s per view (“About me”, “Software”, “System administration”, …). Prefer one page `<h1>` and `<h2>` for sections.
+11. ~~**Home page heading hierarchy**~~ — Fixed: one `<h1>` (“About me”) per mode; other sections are `<h2>` (styled like former section titles).
 
-12. **Skill level stars are filled-only** — `CardComponent.vue` renders `level` filled stars with `aria-label` “Skill level: N out of 5” (good) but no empty stars, so the “of 5” scale is less obvious visually.
+12. ~~**Skill level stars are filled-only**~~ — Fixed: always render 5 stars; empty ones muted via opacity; existing `aria-label` unchanged.
 
 ---
 
@@ -64,10 +60,10 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 
 ## Nice-to-haves
 
-15. Per-route `og:url` / canonical (router currently updates titles/descriptions only; crawlers mainly see `index.html` anyway).
+15. ~~**Per-route `og:url` / canonical**~~ — Fixed: `index.html` ships `link[rel=canonical]`; router `afterEach` updates `og:url` and canonical from `VITE_SITE_URL` + route path.
 16. Skip-to-content link; visible `:focus-visible` styles beyond color swaps on nav/social.
 17. ~~Empty-state / reserved space for cards without `img`~~ — Won’t do (same as #1); see [AGENTS.md](../AGENTS.md).
-18. Drop unused `links.js` keys (#5) when touching that file.
+18. ~~Drop unused `links.js` keys (#5)~~ — Won’t do; see [AGENTS.md](../AGENTS.md).
 
 ---
 
@@ -76,8 +72,7 @@ Won’t-dos (not recommended again): contact form auto-close after success; lint
 | Priority | Item | Why |
 | --- | --- | --- |
 | High | **#7** robots + sitemap in `public/` (or build plugin) | SEO regression; nothing in source today |
-| High | **#6** scrub/rotate key in `.env.example` | Accidental secret distribution |
 | Medium | **#9 / #16** mobile header pass | Real UX on phones |
-| Low | **#3**, **#4**, **#10**, **#11** | Accuracy / a11y polish |
+| Low | **#3** | Fragile school URL |
 
-Do **not** re-open: contact auto-close; lint in CI; projects without logos / collapsing empty image column; resolved content URLs (web3, Nuxeo, Kubernetes course, React/Angular/JS, ISAE teaching line, appYuser `rel`); modal focus trap; unused WebP cleanup already done.
+Do **not** re-open: contact auto-close; lint in CI; projects without logos / collapsing empty image column; unused `links.js` keys (`lingui`, `translationio`, `perl`, `sentry`); Web3Forms key scrub/rotate in `.env.example` (public client key); resolved content URLs (web3, Nuxeo, Kubernetes course, React/Angular/JS, ISAE teaching line, appYuser `rel`); modal focus trap; unused WebP cleanup already done; mini-logo `alt`; home heading hierarchy; skill empty stars; per-route `og:url` / canonical.

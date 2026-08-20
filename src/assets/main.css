@@ -70,11 +70,15 @@ h6 {
 h1 {
   font-size: 2.33333em;
 }
+h2 {
+  font-size: 2.33333em;
+}
 h3 {
   font-size: 1.5em;
 }
 
 h1,
+h2,
 h3 {
   text-shadow: 1px 1px 2px var(--color-secondary);
 }

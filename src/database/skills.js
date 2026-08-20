@@ -10,7 +10,7 @@ export default {
   },
   vuejs: {
     category: "skill",
-    title: "VueJS",
+    title: "Vue.js",
     link: "https://vuejs.org/",
     img: "/images/vuejs.webp",
     content:
@@ -105,11 +105,11 @@ export default {
   },
   sonarqube: {
     category: "skill",
-    title: "Sonarqube",
+    title: "SonarQube",
     link: "https://www.sonarqube.org/",
     img: "/images/sonarqube.webp",
     level: 2,
-    content: `Code quality analysis tool. I started using Sonarqube very recently to statically analyse the code for the {naas} and run unit tests.`,
+    content: `Code quality analysis tool. I started using SonarQube very recently to statically analyse the code for the {naas} and run unit tests.`,
     tags: ["tools"],
   },
   oracle: {
@@ -199,7 +199,7 @@ export default {
     link: "https://spring.io/projects/spring-framework/",
     img: "/images/spring.webp",
     level: 2,
-    content: `Web server framework. I do not have a lot of experience with {spring}. When I used it in the {litiges} project, I found it bloated. Nevertheless I took a look at the Spring express when I was designing the {naas} architecture and it looks like a decent iteration.`,
+    content: `Web server framework. I do not have a lot of experience with {spring}. When I used it in the {litiges} project, I found it bloated. Nevertheless I took a look at Spring Boot when I was designing the {naas} architecture and it looks like a decent iteration.`,
     tags: ["java", "frameworks"],
   },
   react: {
@@ -208,7 +208,7 @@ export default {
     link: "https://react.dev/",
     img: "/images/react.webp",
     level: 4,
-    content: `A very decent web framework. I started using React in 2021 with the {web3} projects in 2021. I think it suffers from its long history but it is still very convenient. It is also very powerful with Server Side Rendering frameworks like {nextjs}`,
+    content: `A very decent web framework. I started using React in 2021 with the {web3} projects. I think it suffers from its long history but it is still very convenient. It is also very powerful with Server Side Rendering frameworks like {nextjs}`,
     tags: ["javascript", "frameworks"],
   },
   nextjs: {
@@ -280,7 +280,7 @@ export default {
     link: "https://viem.sh/",
     img: "/images/viem.webp",
     level: 3,
-    content: `A typescript library for interacting with Ethereum. I used {viem} in the {carbonmark} frontend to read and write smart contracts from the browser.`,
+    content: `A TypeScript library for interacting with Ethereum. I used {viem} in the {carbonmark} frontend to read and write smart contracts from the browser.`,
     tags: ["javascript", "web3"],
   },
   fastify: {

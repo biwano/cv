@@ -62,7 +62,7 @@ const mode = ref("short");
           </ul>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Software</h1>
+          <h2>Software</h2>
           <p>
             Fullstack on every project — backend and frontend — across many
             languages and frameworks.
@@ -82,7 +82,7 @@ const mode = ref("short");
               Jetty
             </li>
             <li>
-              <b>PHP</b> via Drupal, Wordpress, and Laravel; Apache and Nginx
+              <b>PHP</b> via Drupal, WordPress, and Laravel; Apache and Nginx
             </li>
             <li><b>Ruby</b> / Rails modules for Redmine</li>
             <li>
@@ -94,7 +94,7 @@ const mode = ref("short");
       </div>
       <div class="row">
         <div class="one half animated bounceInLeft triple-padded">
-          <h1>System administration</h1>
+          <h2>System administration</h2>
           <p>
             Small teams meant owning ops as well as code — installation,
             configuration, and CI.
@@ -106,7 +106,7 @@ const mode = ref("short");
             </li>
             <li>
               Configured <b>Apache</b>, <b>Nginx</b>, Tomcat, Jenkins, and
-              Sonarqube
+              SonarQube
             </li>
             <li>CI on recent projects with <b>Jenkins</b> and <b>GitHub</b></li>
             <li>
@@ -116,7 +116,7 @@ const mode = ref("short");
           </ul>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Other skills</h1>
+          <h2>Other skills</h2>
           <p>
             Consulting background and small-company roles built soft skills
             alongside the stack.
@@ -128,7 +128,7 @@ const mode = ref("short");
               <b>Scrum</b> for the team’s constraints
             </li>
           </ul>
-          <h1>Hobbies</h1>
+          <h2>Hobbies</h2>
           <ul>
             <li>Roller hockey</li>
             <li>Board games</li>
@@ -179,7 +179,7 @@ const mode = ref("short");
           </p>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Software</h1>
+          <h2>Software</h2>
           <p>
             Working in various companies gave me the opportunity to use many
             languages and frameworks.
@@ -206,7 +206,7 @@ const mode = ref("short");
             <b>Jetty</b>
           </p>
           <p>
-            Using CMSes and Frameworks like Drupal, Wordpress and Laravel, I am
+            Using CMSes and Frameworks like Drupal, WordPress and Laravel, I am
             also familiar with <b>PHP</b> and web server configuration such as
             Apache and Nginx.
           </p>
@@ -224,7 +224,7 @@ const mode = ref("short");
       </div>
       <div class="row">
         <div class="one half animated bounceInLeft triple-padded">
-          <h1>System administration</h1>
+          <h2>System administration</h2>
           <p>
             I mostly worked in small teams. Thus, I had to acquire a set of
             system administration skills to get things done.
@@ -238,7 +238,7 @@ const mode = ref("short");
           <p>
             Particular applications I remember having configured include
             <b>Apache</b>, <b>Nginx</b>, as web-servers, reverse proxies or WSGI
-            servers but also <b>Tomcat</b>, <b>Jenkins</b>, <b>Sonarqube</b>.
+            servers but also <b>Tomcat</b>, <b>Jenkins</b>, <b>SonarQube</b>.
           </p>
           <p>
             Moreover I worked on configuring the continuous integration systems
@@ -252,7 +252,7 @@ const mode = ref("short");
           </p>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Other skills</h1>
+          <h2>Other skills</h2>
           <p>
             Since I worked in small companies and having a background in
             consulting, I could develop other skills, in particular: Requirement
@@ -265,7 +265,7 @@ const mode = ref("short");
           </p>
         </div>
         <div class="one half animated bounceInRight triple-padded">
-          <h1>Hobbies</h1>
+          <h2>Hobbies</h2>
           <p>
             In no specific order: Roller hockey, Board games, Macroeconomics,
             Video games.

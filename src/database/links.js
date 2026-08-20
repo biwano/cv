@@ -16,7 +16,7 @@ export default {
     link: "https://www.arcep.fr/",
   },
   uts: {
-    title: "UTS Caraibes",
+    title: "UTS Caraïbes",
     link: "https://discoverflow.co/",
   },
   lucene: {
@@ -56,7 +56,7 @@ export default {
     link: "https://online.isae.fr/resources/hybridmeter/",
   },
   gitlab: {
-    title: "Gitlab",
+    title: "GitLab",
     link: "https://gitlab.com/",
   },
   github: {

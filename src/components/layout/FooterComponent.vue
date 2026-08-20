@@ -3,7 +3,7 @@
     <div class="align-center">
       Built with
       <a target="_blank" rel="noopener noreferrer" href="https://vuejs.org/"
-        >VueJS 3</a
+        >Vue.js 3</a
       >
     </div>
   </div>

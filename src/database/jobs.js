@@ -10,21 +10,21 @@ export default {
         rel="noopener noreferrer"
         href="https://www.carbonmark.com/"
         >Carbonmark&nbsp;</a
-      ><img src="/images/carbonmark.webp" class="miniImage" /><br />
+      ><img src="/images/carbonmark.webp" class="miniImage" alt="" /><br />
       <b>2021 - 2023</b> : Front end developer for
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.klimadao.finance/"
         >KlimaDAO&nbsp;</a
-      ><img src="/images/klimadao.webp" class="miniImage" /><br />
+      ><img src="/images/klimadao.webp" class="miniImage" alt="" /><br />
       <b>2021</b> : Front end developer for
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.olympusdao.finance/"
         >OlympusDAO</a
-      >&nbsp;<img src="/images/olympusdao.webp" class="miniImage" /><br />`,
+      >&nbsp;<img src="/images/olympusdao.webp" class="miniImage" alt="" /><br />`,
   },
   "isae-supaero": {
     category: "job",

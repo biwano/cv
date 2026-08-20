@@ -68,9 +68,13 @@ const levelLabel = computed(() =>
           :aria-label="levelLabel"
         >
           <span aria-hidden="true">
-            <span v-for="i in [...Array(level).keys()]" :key="i">
-              &#9733;
-            </span>
+            <span
+              v-for="i in MAX_LEVEL"
+              :key="i"
+              class="star"
+              :class="{ empty: i > Number(level) }"
+              >&#9733;</span
+            >
           </span>
         </div>
       </div>
@@ -98,5 +102,8 @@ img {
 }
 .level {
   font-size: 25px;
+}
+.level .star.empty {
+  opacity: 0.25;
 }
 </style>
