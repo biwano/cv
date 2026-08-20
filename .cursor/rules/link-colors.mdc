@@ -12,6 +12,7 @@ Site default (`main.css`):
 
 - default / visited: `#489ac1` (`--link`)
 - hover / focus: `#198d98` (`--link-hover`)
+- no underline (default or hover)
 
 ```css
 /* ❌ BAD — forces body text color */

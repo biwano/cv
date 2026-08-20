@@ -108,7 +108,7 @@ a:visited {
 a:hover,
 a:focus {
   color: var(--link-hover);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Layout */

@@ -35,11 +35,11 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Nice-to-haves
 
-20. Contact CTA (email / Calendly) in the header.
+20. ~~**Contact CTA**~~ — Fixed: header “Contact” opens a Web3Forms modal (email stays off-page; set `VITE_WEB3FORMS_ACCESS_KEY`).
 21. ~~**Career timeline**~~ — Fixed: `CareerView` uses `TimelineComponent` (vertical rail + markers) instead of alternating cards.
 22. ~~**`prefers-reduced-motion`**~~ — Fixed: near-instant animations/transitions in `main.css` when the OS preference is set.
 23. ~~**Vite / Vue upgrade**~~ — Fixed: Vue 3.5, Vue Router 4.6, Vite 8, `@vitejs/plugin-vue` 6.
 
 ## Suggested quick wins
 
-Items 1–19 and #21–23 done. Remaining: contact CTA (#20).
+Items 1–23 done.

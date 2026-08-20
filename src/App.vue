@@ -1,15 +1,20 @@
 <script setup>
+import { ref } from "vue";
 import { RouterView } from "vue-router";
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import NavComponent from "@/components/NavComponent.vue";
-import LinkedInIconComponent from "@/components/LinkedInIconComponent.vue";
-import FileIconComponent from "@/components/FileIconComponent.vue";
+import JumbotronComponent from "@/components/layout/JumbotronComponent.vue";
+import FooterComponent from "@/components/layout/FooterComponent.vue";
+import NavComponent from "@/components/layout/NavComponent.vue";
+import LinkedInIconComponent from "@/components/icons/LinkedInIconComponent.vue";
+import FileIconComponent from "@/components/icons/FileIconComponent.vue";
+import MailIconComponent from "@/components/icons/MailIconComponent.vue";
+import ContactFormComponent from "@/components/ContactFormComponent.vue";
+
+const contactOpen = ref(false);
 </script>
 
 <template>
   <div class="bigdaddy">
-    <HeaderComponent class="bounceInDown animated absolute"></HeaderComponent>
+    <JumbotronComponent class="bounceInDown animated absolute"></JumbotronComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
       <h3>Senior Fullstack Software Developer</h3>
@@ -33,6 +38,16 @@ import FileIconComponent from "@/components/FileIconComponent.vue";
           CV
           <FileIconComponent />
         </a>
+        |
+        <a
+          class="social cv-download"
+          href="#contact"
+          role="button"
+          @click.prevent="contactOpen = true"
+        >
+          Contact
+          <MailIconComponent />
+        </a>
       </div>
     </div>
     <div class="nav-sticky">
@@ -46,6 +61,7 @@ import FileIconComponent from "@/components/FileIconComponent.vue";
       </RouterView>
     </div>
     <FooterComponent></FooterComponent>
+    <ContactFormComponent :open="contactOpen" @close="contactOpen = false" />
   </div>
 </template>
 
