@@ -29,7 +29,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 ## Performance & tech debt
 
 16. **Legacy stack** — jQuery 1.10 + Modernizr 2.6 + full Groundwork (~700KB) for layout/nav that Vue could own.
-17. **Heavy images** — `background.png` (~670KB), `baimbridge.jpg` (~590KB); compress and/or use WebP.
+17. ~~**Heavy images**~~ — Fixed: all card/skill logos resized (≤256px, minis ≤64px) and converted to WebP; site images ~2.8MB → ~0.45MB.
 18. ~~Unused **Pinia counter** store~~ — Fixed: removed `src/stores/counter.js`, Pinia setup, and the `pinia` dependency.
 19. Route fade uses absolute positioning (`min-height: 300px` band-aid in `App.vue`); can cause layout jump.
 
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–15 done. Next easy picks: legacy stack (#16), image weight (#17), or route fade (#19).
+Items 1–15 and #17 done. Next easy picks: legacy stack (#16) or route fade (#19).

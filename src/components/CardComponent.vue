@@ -42,7 +42,7 @@ const subContainerClass = computed(() => {
   <div :class="containerClass">
     <div class="animated bounceInLeft triple-padded" :class="subContainerClass">
       <div class="img-container">
-        <img :src="img" :alt="title" :class="imgClass" />
+        <img v-if="img" :src="img" :alt="title" :class="imgClass" />
       </div>
       <div class="content">
         <h3>

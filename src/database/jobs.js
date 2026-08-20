@@ -2,7 +2,7 @@ export default {
   "isae-supaero": {
     category: "job",
     title: "ISAE-SUPAERO",
-    img: "/images/isae.png",
+    img: "/images/isae.webp",
     position: "left",
     link: "https://www.isae-supaero.fr/en/",
     content: `<b>Since 2019</b> : EdTech architect and development team leader<br />
@@ -13,7 +13,7 @@ export default {
   quadran: {
     category: "job",
     title: "QUADRAN",
-    img: "/images/quadran.png",
+    img: "/images/quadran.webp",
     position: "left",
     link: "https://www.quadran.eu/",
     date: "2011 - 2015",
@@ -30,7 +30,7 @@ export default {
   "sopra-steria": {
     category: "job",
     title: "SOPRA-STERIA",
-    img: "/images/sopra.jpg",
+    img: "/images/sopra.webp",
     position: "left",
     link: "https://www.soprasteria.com/fr",
     content: `<b>2011</b> : JAVA/J2EE Developer (Spring, Hibernate)<br />`
@@ -38,7 +38,7 @@ export default {
   silicom: {
     category: "job",
     title: "SILICOM",
-    img: "/images/silicom.png",
+    img: "/images/silicom.webp",
     position: "left",
     link: "https://www.silicom.fr",
     date: "2010 - 2011",
@@ -58,7 +58,7 @@ export default {
   "ait-consulting": {
     category: "job",
     title: "AIT Consulting",
-    img: "/images/ait.png",
+    img: "/images/ait.webp",
     position: "left",
     link: "https://www.listcompany.org/Ait_Consulting_Ltd_Info.html",
     date: "2006 - 2009",
@@ -80,7 +80,7 @@ export default {
   "side-jobs": {
     category: "job",
     title: "Side jobs",
-    img: "/images/anonymous.png",
+    img: "/images/anonymous.webp",
     position: "right",
     content: ` <b>Since 2021</b> : Front end developer for
       <a
@@ -88,13 +88,13 @@ export default {
         rel="noopener noreferrer"
         href="https://www.klimadao.finance/"
         >KlimaDAO&nbsp;</a
-      ><img src="/images/klimadao.png" class="miniImage" /><br />
+      ><img src="/images/klimadao.webp" class="miniImage" /><br />
       <b>2021</b> : Front end developer for
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.olympusdao.finance/"
         >OlympusDAO</a
-      >&nbsp;<img src="/images/olympusdao.png" class="miniImage" /><br />`,
+      >&nbsp;<img src="/images/olympusdao.webp" class="miniImage" /><br />`,
   },
 };

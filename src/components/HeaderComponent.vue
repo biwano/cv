@@ -3,7 +3,7 @@
   <div class="jumbotron wrapper">
     <img
       alt="Bruno Ilponse"
-      src="/images/jumbotron.jpg"
+      src="/images/jumbotron.webp"
       class="jumbotron image row"
     />
     <div class="jumbotron overlay"></div>

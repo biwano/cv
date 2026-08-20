@@ -11,7 +11,7 @@
 
 body, html {
   /*ackground-color: var(--color-secondary);*/
-  background: var(--color-secondary) url("/images/background.png") repeat;
+  background: var(--color-secondary) url("/images/background.webp") repeat;
   color: var(--color-primary);
 } 
 

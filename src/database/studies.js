@@ -2,7 +2,7 @@ export default {
   "telecom-sudparis": {
     category: "study",
     title: "TELECOM SudParis",
-    img: "/images/telecom_sudparis.jpg",
+    img: "/images/telecom_sudparis.webp",
     position: "left",
     date: "2003-2006",
     link: "https://www.telecom-sudparis.eu/",
@@ -12,7 +12,7 @@ export default {
   baimbridge: {
     category: "study",
     title: "Baimbridge High School",
-    img: "/images/baimbridge.jpg",
+    img: "/images/baimbridge.webp",
     position: "right",
     date: "2000-2003",
     link: "https://lgtbaimbridge.fr/",
@@ -22,7 +22,7 @@ export default {
   providence: {
     category: "study",
     title: "Providence High School",
-    img: "/images/providence.jpg",
+    img: "/images/providence.webp",
     position: "left",
     date: "1998-2000",
     link: "https://www.education.gouv.fr/annuaire/97139/les-abymes/lycee/9710921z/lycee-general-et-technologique-felix-proto.html",
@@ -31,7 +31,7 @@ export default {
   "advanced-studies": {
     category: "study",
     title: "Advanced training",
-    img: "/images/brain.jpg",
+    img: "/images/brain.webp",
     position: "right",
     content: `<!-- Kubernetes -->
       <p>

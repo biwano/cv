@@ -2,7 +2,7 @@ export default {
   carbonmark: {
     category: "project",
     title: "Carbonmark",
-    img: "/images/carbonmark.png",
+    img: "/images/carbonmark.webp",
     link: "https://app.carbonmark.com",
     position: "left",
     date: "2023 - now",
@@ -14,7 +14,7 @@ export default {
   naas: {
     category: "project",
     title: "Nuggets as a Service",
-    img: "/images/naas.png",
+    img: "/images/naas.webp",
     position: "right",
     link: "https://online.isae.fr/resources/naas/index.html",
     date: "2019 - now",
@@ -29,7 +29,7 @@ export default {
   cosinus: {
     category: "project",
     title: "Cosinus",
-    img: "/images/isae.png",
+    img: "/images/isae.webp",
     position: "left",
     date: "2015 - 2019",
     content: `Cosinus is an application that enables {isae-supaero} students and employees to manage their account.<br/>
@@ -40,7 +40,7 @@ export default {
     category: "project",
     title: "Redmine",
     position: "right",
-    img: "/images/redmine.png",
+    img: "/images/redmine.webp",
     link: "https://www.redmine.org/",
     date: "2015 - 2019",
     content: `I developed a series of applications based on redmine for the {isae-supaero}. {redmine} is a project management application written in {rails}. Its strong side is that it can be easily extended through plugins and offers application programming interfaces.
@@ -50,7 +50,7 @@ export default {
   appyuser: {
     category: "project",
     title: "appYuser",
-    img: "/images/appyuser.png",
+    img: "/images/appyuser.webp",
     position: "left",
     date: "2011 - 2015",
     link: "https://www.quadran.eu/appyuser/",
