@@ -70,7 +70,7 @@ export default {
   nuxeo: {
     category: "skill",
     title: "Nuxeo",
-    link: "https://www.nuxeo.com/",
+    link: "https://doc.nuxeo.com/",
     img: "/images/nuxeo.webp",
     level: 3,
     content: `Nuxeo is a very powerful document management system we use for the {naas} project as a technical layer thanks to its comprehensive API.`,

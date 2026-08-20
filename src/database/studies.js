@@ -33,11 +33,11 @@ export default {
     title: "Advanced training",
     img: "/images/brain.webp",
     position: "right",
-    content: `<!-- Kubernetes -->
+    content: `      <!-- Kubernetes -->
       <p>
         <b>2021, 14h</b> :
         <a
-          href="https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance-2/"
+          href="https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance/"
           target="_blank"
           rel="noopener noreferrer"
           >Advanced Kubernetes training</a

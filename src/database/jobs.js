@@ -36,7 +36,7 @@ export default {
     <b>Since 2022</b> : Technical advisor<br />
     <b>2019 - 2022</b> : EdTech architect and development team leader<br />
       <b>2015 - 2019</b> : Fullstack software developer<br />
-      <b>2014 - </b> : Part time teacher in Web development for master's degree level students<br />
+      <b>Since 2014</b> : Part time teacher in Web development for master's degree level students<br />
       `,
   },
   quadran: {
@@ -53,7 +53,13 @@ export default {
         >Airbus</a
       ><br />
       Architect and fullstack software developer for the
-      <a href="https://www.quadran.eu/appyuser/">appYuser</a> application<br />`,
+      <a
+        href="https://www.quadran.eu/appyuser/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >appYuser</a
+      >
+      application<br />`,
   },
   "sopra-steria": {
     category: "job",

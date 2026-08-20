@@ -14,7 +14,7 @@ const botcheck = ref(false);
 const status = ref("idle"); // idle | sending | success | error
 const errorMessage = ref("");
 
-const accessKey = "0c53b7f4-b478-4f51-a3e7-3468be3716de";
+const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 function close() {
   emit("close");
@@ -33,7 +33,7 @@ watch(
       status.value = "idle";
       errorMessage.value = "";
     }
-  }
+  },
 );
 
 onMounted(() => {
@@ -204,7 +204,7 @@ async function onSubmit() {
 
 .contact-dialog {
   width: min(28rem, 100%);
-  background: var(--color-secondary);
+  background: var(--color-secondary) url("/images/background.webp") repeat;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
   border-radius: 4px;

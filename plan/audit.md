@@ -1,45 +1,48 @@
 # Site audit — improvement backlog
 
-Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for impact; not an implementation order unless noted.
+Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). Prior wave (content fixes, sticky nav, meta tags, WebP images, contact modal, timeline, Vue/Vite upgrade, etc.) is done; this list is what remains.
 
 ## Content & accuracy (fix first)
 
-1. ~~**Wrong skill links**~~ — Fixed: Apache → httpd.apache.org, Nginx → nginx.org, Django → djangoproject.com.
-2. ~~**Drupal ≠ Laravel**~~ — Fixed: removed incorrect Laravel claim from Drupal skill copy.
-3. ~~**Stale “12 years”**~~ — Fixed: About now says 15 years (career from ~2010–2011).
-4. ~~**Broken study URLs**~~ — Fixed: removed newlines inside INSA, FORMEO, and iForm `href`s.
-5. ~~**Angular naming**~~ — Fixed: skill title is “Angular”; copy still distinguishes Angular 1 / 2.
-6. ~~**`cv.pdf` exists but isn’t linked**~~ — Fixed: “Download CV” next to LinkedIn in `App.vue`.
+1. ~~**`{web3}` placeholder is unresolved**~~ — Fixed: `web3` link entry → ethereum.org/developers.
+2. ~~**Broken training URL**~~ — Fixed: course href → [kubernetes-avance](https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance/) (dropped the old `-2` slug).
+3. ~~**Nuxeo skill link dead**~~ — Fixed: skill URL → `https://doc.nuxeo.com/`.
+4. **Stale / weak skill URLs** — React still uses `fr.reactjs.org` (prefer `https://react.dev/`); Angular still uses `angular.io` (prefer `https://angular.dev/`). Optional: replace marketing `javascript.com` with MDN.
+5. ~~**Career HTML inconsistency**~~ — Fixed: ISAE teaching line is “Since 2014”; Quadran appYuser has `target` + `rel`.
+6. **Copy polish** — Minor spelling/branding: “Javascript” → JavaScript, “Github” → GitHub, “Centos” → CentOS, “Macro economy” → Macroeconomics, “VertX” casing vs Vert.x docs.
+
+## Contact form & secrets
+
+7. ~~**Web3Forms key hard-coded**~~ — Fixed: reads `VITE_WEB3FORMS_ACCESS_KEY`; `.env.example` added (local `.env` gitignored). Restrict the key to your domain in the Web3Forms dashboard.
+8. **Modal a11y gaps** — Dialog has `role="dialog"` / Escape-to-close, but no focus move into the dialog on open, no focus trap, no restore-focus on close, and no `overflow: hidden` on `body` while open.
+
+## SEO & sharing
+
+9. ~~**Relative Open Graph image**~~ — Fixed: `og:image` / `twitter:image` / `og:url` use `%VITE_SITE_URL%` (set absolute origin at build time).
+10. **Static document title** — Title never changes per route (`About` / `Projects` / …). Use `router.afterEach` or per-route `meta.title`.
+11. **No `robots.txt` / sitemap** — Fine for a tiny personal site, but worth adding if you care about search discovery.
 
 ## UX / polish
 
-7. ~~**Sticky nav**~~ — Fixed: single sticky `NavComponent` in `App.vue` (no duplicate + scroll JS).
-8. ~~**Skills filters**~~ — Fixed: tag chips are `<button type="button">` with `aria-pressed` in `SkillsView.vue`.
-9. ~~**Card images**~~ — Fixed: cards use title as `alt`; jumbotron alt is “Bruno Ilponse”.
-10. ~~**External links**~~ — Fixed: `rel="noopener noreferrer"` on `target="_blank"` links (components + `useDatabase.js` + job/study HTML).
-11. ~~**Active route**~~ — Fixed: nav uses `router-link-active` styling in `NavComponent.vue`.
-12. ~~**About page**~~ — Fixed: “In short” (default) / “Full story” tabs in `HomeView.vue`; short view uses bullets.
+12. **Projects without logos** — Litiges, Mobile number portability, and Mobile number frequency licenses have no `img`; cards look uneven next to logo’d entries.
+13. **Unused assets** — `public/images/cv.webp` and `metamask.webp` are unreferenced; remove or use.
+14. **Skill level stars** — Star row is decorative only (no accessible name / numeric alternative). Screen readers get little from `★★★`.
+15. **Fixed footer overlap** — Footer is `position: fixed`; body `padding-bottom: 3rem` may still clip tall last cards on small viewports—verify.
+16. **Mobile header density** — Absolute jumbotron + right-aligned title + sticky nav is busy on narrow screens; worth a quick pass for overlap and tap targets.
 
-## SEO & discoverability
+## Tech / deploy
 
-13. ~~**Meta / social**~~ — Fixed: description, Open Graph, and Twitter card tags in `index.html`.
-14. ~~**Invalid font canonicals**~~ — Fixed: removed mistaken `rel="canonical"` on font files.
-15. ~~**Page title**~~ — Fixed: `Bruno Ilponse · Senior Fullstack Developer`.
-
-## Performance & tech debt
-
-16. ~~**Legacy stack**~~ — Fixed: removed jQuery, Modernizr, and Groundwork; layout/nav/buttons/animations live in Vue + `main.css`.
-17. ~~**Heavy images**~~ — Fixed: all card/skill logos resized (≤256px, minis ≤64px) and converted to WebP; site images ~2.8MB → ~0.45MB.
-18. ~~Unused **Pinia counter** store~~ — Fixed: removed `src/stores/counter.js`, Pinia setup, and the `pinia` dependency.
-19. ~~**Route fade layout jump**~~ — Fixed: `Transition mode="out-in"` fade (no absolute positioning / `min-height` band-aid).
+17. **History-mode hosting** — `createWebHistory` needs a server fallback to `index.html` for deep links (`/skills`, etc.). Document the required rewrite for whatever hosts this site.
+18. **README is still the Vue template** — Replace boilerplate with a short project README (dev/build, env vars, deploy notes).
+19. **AIT Consulting employer link** — Points at a third-party directory (`listcompany.org`), not an official company site. Prefer a better source or no link.
 
 ## Nice-to-haves
 
-20. ~~**Contact CTA**~~ — Fixed: header “Contact” opens a Web3Forms modal (email stays off-page; set `VITE_WEB3FORMS_ACCESS_KEY`).
-21. ~~**Career timeline**~~ — Fixed: `CareerView` uses `TimelineComponent` (vertical rail + markers) instead of alternating cards.
-22. ~~**`prefers-reduced-motion`**~~ — Fixed: near-instant animations/transitions in `main.css` when the OS preference is set.
-23. ~~**Vite / Vue upgrade**~~ — Fixed: Vue 3.5, Vue Router 4.6, Vite 8, `@vitejs/plugin-vue` 6.
+20. **Per-route meta description** — Same static description for every view; optional `meta` updates for Projects / Career.
+21. **Contact success → auto-close** — After send, keep the success message briefly then close, or add an explicit “Done” control.
+22. **Dead-code comments** — Empty star outline and tags blocks commented out in `CardComponent.vue`; delete if abandoned.
+23. **Lint in CI** — `npm run lint` exists locally; no CI config in-repo yet.
 
 ## Suggested quick wins
 
-Items 1–23 done.
+Items **1**, **2**, **3**, **5**, **7**, **9** done. Set `VITE_SITE_URL` in `.env` / CI before production builds so social previews resolve.

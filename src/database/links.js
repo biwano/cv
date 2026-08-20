@@ -95,4 +95,8 @@ export default {
     title: "Sentry",
     link: "https://sentry.io/",
   },
+  web3: {
+    title: "web3",
+    link: "https://ethereum.org/developers/",
+  },
 };

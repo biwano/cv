@@ -14,7 +14,9 @@ const contactOpen = ref(false);
 
 <template>
   <div class="bigdaddy">
-    <JumbotronComponent class="bounceInDown animated absolute"></JumbotronComponent>
+    <JumbotronComponent
+      class="bounceInDown animated absolute"
+    ></JumbotronComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
       <h3>Senior Fullstack Software Developer</h3>
