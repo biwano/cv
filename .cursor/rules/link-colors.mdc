@@ -1,0 +1,28 @@
+---
+description: Keep text/social links on the default site link colors
+globs: src/**/*.{vue,css}
+alwaysApply: false
+---
+
+# Link colors
+
+Text links (including header controls like “Download CV”) must use the same colors as other content links. Do not override with `color: inherit`, body text color, or one-off accents.
+
+Site default (Groundwork):
+
+- default / visited: `#489ac1`
+- hover / focus: `#198d98`
+
+```css
+/* ❌ BAD — forces body text color */
+.cv-download {
+  color: inherit;
+}
+
+/* ✅ GOOD — leave color unset so `a` / `a:hover` styles apply */
+.cv-download {
+  font-size: 0.85rem;
+}
+```
+
+Nav is an exception: it intentionally uses `--color-primary` / `--color-secondary` for its own contrast.

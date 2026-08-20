@@ -39,14 +39,20 @@ onBeforeUnmount(() => {
     ></NavComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
+      <h3>Senior Fullstack Software Developer</h3>
       <div class="title-row">
-        <h3>Senior Fullstack Software Developer</h3>
         <a
           class="social"
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"
           target="_blank"
           ><i class="fa-brands fa-linkedin-in"></i
         ></a>
+        <a
+          class="social cv-download"
+          href="/images/cv.pdf"
+          download="Bruno-Ilponse-CV.pdf"
+          >Download CV</a
+        >
       </div>
 
       <br />
@@ -111,14 +117,21 @@ onBeforeUnmount(() => {
   line-height: 1;
   text-decoration: none;
 }
+h3 {
+  margin-bottom: 0.25rem;
+  line-height: 1.15;
+}
 .title-row {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.6rem;
+  margin-top: 0.4rem;
 }
-.title-row h3 {
-  margin: 0;
-  line-height: 1;
+.cv-download {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 </style>

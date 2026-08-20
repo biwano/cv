@@ -57,8 +57,7 @@ export default {
       <p>
         <b>2020, 28h</b> : Machine learning for data science by
         <a
-          href="https://www.insa-toulouse.fr/fr/index.html
-"
+          href="https://www.insa-toulouse.fr/fr/index.html"
           target="_blank"
           >INSA Toulouse</a
         >
@@ -67,23 +66,13 @@ export default {
       <!-- Formeo management -->
       <p>
         <b>2020, 18.5h </b> : Management basics by
-        <a
-          href="https://formeo.fr
-"
-          target="_blank"
-          >FORMEO</a
-        >
+        <a href="https://formeo.fr" target="_blank">FORMEO</a>
       </p>
 
       <!-- Formeo oracle -->
       <p>
         <b>2016, 35h </b> : Oracle 11G database administration by
-        <a
-          href="https://www.iform.fr/
-"
-          target="_blank"
-          >iForm</a
-        >
+        <a href="https://www.iform.fr/" target="_blank">iForm</a>
       </p>`,
   },
 };

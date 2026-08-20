@@ -29,7 +29,7 @@
           <b>decentralized autonomous organizations</b>.
         </p>
         <p>
-          Having worked now for <b>12 years</b> into
+          Having worked now for <b>15 years</b> into
           <b>software development</b> activities and in many different
           situations, I feel like I have not even started scratching the surface
           of this field. Consequently, I do not consider myself an expert of any

@@ -45,7 +45,7 @@ export default {
     img: "/images/drupal.png",
     level: 3,
     content:
-      "A content management system written in {php} with the {laravel} framework which helped us speed up considerably the development of the {naas} content editor.",
+      "A content management system written in {php} which helped us speed up considerably the development of the {naas} content editor.",
     tags: ["php", "cms"],
   },
   php: {
@@ -186,11 +186,11 @@ export default {
   },
   angular: {
     category: "skill",
-    title: "AngularJS",
+    title: "Angular",
     link: "https://angular.io/",
     img: "/images/angular.png",
     level: 2,
-    content: `Javascript framework. Angular 1 was great. It was my first experience with a reactive javascript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerful, yet, it made things difficult for no reason.`,
+    content: `Javascript framework. Angular 1 (AngularJS) was great. It was my first experience with a reactive javascript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerful, yet, it made things difficult for no reason.`,
     tags: ["javascript", "frameworks"],
   },
   spring: {
@@ -241,7 +241,7 @@ export default {
   apache: {
     category: "skill",
     title: "Apache",
-    link: "https://kubernetes.io",
+    link: "https://httpd.apache.org/",
     img: "/images/apache.png",
     level: 3,
     content: `I deployed Apache in many contexts. As a webserver, reverse proxy or WSGI server.`,
@@ -250,7 +250,7 @@ export default {
   nginx: {
     category: "skill",
     title: "Nginx",
-    link: "https://kubernetes.io",
+    link: "https://nginx.org/",
     img: "/images/nginx.png",
     level: 3,
     content: `These last years I used nginx over apache given the nice performance reviews. I made some deployments mostly as a webserver or reverse proxy for the {naas} {kubernetes} cluster.`,
@@ -259,7 +259,7 @@ export default {
   django: {
     category: "skill",
     title: "Django",
-    link: "https://kubernetes.io",
+    link: "https://www.djangoproject.com/",
     img: "/images/django.png",
     level: 4,
     content: `I usually use Django for backend servers. I used it for the {microlearning} server for instance. I also coupled it with {django-rest}. For smaller projects {flask} is good though.`,
