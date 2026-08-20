@@ -42,8 +42,9 @@ const mode = ref("short");
           </p>
           <ul>
             <li>
-              Born in <b>1982</b> in France; learned to code by copying magazine
-              listings with my brother, then <b>C/C++</b> and OpenGL games.
+              Born in <b>1982</b> in France; learned to code by copying basic
+              listings from magazines then moved to <b>C/C++</b> and OpenGL
+              games.
             </li>
             <li>
               Engineering degree in Telecommunications, then four years as a

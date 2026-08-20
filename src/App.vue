@@ -21,8 +21,8 @@ import FileIconComponent from "@/components/FileIconComponent.vue";
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-        LinkedIn
-        <LinkedInIconComponent />
+          LinkedIn
+          <LinkedInIconComponent />
         </a>
         |
         <a
@@ -30,8 +30,8 @@ import FileIconComponent from "@/components/FileIconComponent.vue";
           href="/images/cv.pdf"
           download="Bruno-Ilponse-CV.pdf"
         >
-        CV
-        <FileIconComponent />
+          CV
+          <FileIconComponent />
         </a>
       </div>
     </div>

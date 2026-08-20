@@ -4,11 +4,20 @@ defineProps(["elems"]);
 
 <template>
   <ol class="timeline">
-    <li v-for="(elem, key) of elems" :key="key" class="timeline-item animated bounceInRight">
+    <li
+      v-for="(elem, key) of elems"
+      :key="key"
+      class="timeline-item animated bounceInRight"
+    >
       <div class="timeline-marker" aria-hidden="true"></div>
       <div class="timeline-body">
         <div class="timeline-heading">
-          <img v-if="elem.img" class="timeline-logo" :src="elem.img" :alt="elem.title" />
+          <img
+            v-if="elem.img"
+            class="timeline-logo"
+            :src="elem.img"
+            :alt="elem.title"
+          />
           <div class="timeline-meta">
             <h3>
               <a

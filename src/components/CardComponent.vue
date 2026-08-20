@@ -10,7 +10,7 @@ const props = defineProps([
   "tags",
 ]);
 const position = computed(() =>
-  props.imgPosition ? props.imgPosition : "left"
+  props.imgPosition ? props.imgPosition : "left",
 );
 const isLeft = computed(() => position.value == "left");
 const isRight = computed(() => position.value == "right");

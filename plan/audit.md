@@ -38,8 +38,8 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 20. Contact CTA (email / Calendly) in the header.
 21. ~~**Career timeline**~~ — Fixed: `CareerView` uses `TimelineComponent` (vertical rail + markers) instead of alternating cards.
 22. ~~**`prefers-reduced-motion`**~~ — Fixed: near-instant animations/transitions in `main.css` when the OS preference is set.
-23. Vite 3 / Vue 3.2 are dated — upgrade when convenient (not urgent for a CV site).
+23. ~~**Vite / Vue upgrade**~~ — Fixed: Vue 3.5, Vue Router 4.6, Vite 8, `@vitejs/plugin-vue` 6.
 
 ## Suggested quick wins
 
-Items 1–19, #21, and #22 done. Remaining: contact CTA (#20), Vite/Vue upgrade (#23).
+Items 1–19 and #21–23 done. Remaining: contact CTA (#20).
