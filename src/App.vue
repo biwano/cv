@@ -3,40 +3,11 @@ import { RouterView } from "vue-router";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import NavComponent from "@/components/NavComponent.vue";
-import { ref, onMounted, onBeforeUnmount } from "vue";
-
-const navNormalElement = ref(null);
-const navFixedElement = ref(null);
-
-let scrollWatcher = () => {
-  const navNormal = navNormalElement.value.$el;
-  const navFixed = navFixedElement.value.$el;
-  const rect = navNormal.getBoundingClientRect();
-  if (rect.top < 0) {
-    navNormal.classList.add("invisible");
-    navFixed.classList.remove("invisible");
-  } else {
-    navNormal.classList.remove("invisible");
-    navFixed.classList.add("invisible");
-  }
-};
-
-onMounted(() => {
-  window.addEventListener("scroll", scrollWatcher);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("scroll", scrollWatcher);
-});
 </script>
 
 <template>
   <div class="bigdaddy">
     <HeaderComponent class="bounceInDown animated absolute"></HeaderComponent>
-    <NavComponent
-      ref="navFixedElement"
-      class="navFixed invisible"
-    ></NavComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
       <h3>Senior Fullstack Software Developer</h3>
@@ -55,9 +26,9 @@ onBeforeUnmount(() => {
           >Download CV</a
         >
       </div>
-
-      <br />
-      <NavComponent ref="navNormalElement"></NavComponent>
+    </div>
+    <div class="nav-sticky">
+      <NavComponent></NavComponent>
     </div>
     <div class="main content">
       <RouterView v-slot="{ Component }">
@@ -93,16 +64,16 @@ onBeforeUnmount(() => {
   height: fit-content;
 }
 
-.navFixed {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  margin-right: 30px;
+.nav-sticky {
+  position: sticky;
+  top: 0;
   z-index: 500;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 30px 30px;
+  clear: both;
 }
-.invisible {
-  visibility: hidden;
-}
+
 .main.content {
   position: relative;
   clear: both;

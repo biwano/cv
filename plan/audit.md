@@ -13,7 +13,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## UX / polish
 
-7. **Sticky nav** — Two `NavComponent` instances plus scroll JS in `App.vue`; `position: sticky` would be simpler and more reliable.
+7. ~~**Sticky nav**~~ — Fixed: single sticky `NavComponent` in `App.vue` (no duplicate + scroll JS).
 8. ~~**Skills filters**~~ — Fixed: tag chips are `<button type="button">` with `aria-pressed` in `SkillsView.vue`.
 9. ~~**Card images**~~ — Fixed: cards use title as `alt`; jumbotron alt is “Bruno Ilponse”.
 10. ~~**External links**~~ — Fixed: `rel="noopener noreferrer"` on `target="_blank"` links (components + `useDatabase.js` + job/study HTML).
@@ -30,7 +30,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 16. **Legacy stack** — jQuery 1.10 + Modernizr 2.6 + full Groundwork (~700KB) for layout/nav that Vue could own.
 17. **Heavy images** — `background.png` (~670KB), `baimbridge.jpg` (~590KB); compress and/or use WebP.
-18. Unused **Pinia counter** store (`src/stores/counter.js` — Vite template leftover).
+18. ~~Unused **Pinia counter** store~~ — Fixed: removed `src/stores/counter.js`, Pinia setup, and the `pinia` dependency.
 19. Route fade uses absolute positioning (`min-height: 300px` band-aid in `App.vue`); can cause layout jump.
 
 ## Nice-to-haves
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–6 and 8–11 done. Next easy picks: sticky nav (#7), About scanability (#12), meta/title (#13–15).
+Items 1–11 done. Next easy picks: About scanability (#12), meta/title (#13–15).

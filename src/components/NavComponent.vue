@@ -24,9 +24,7 @@ import { RouterLink } from "vue-router";
 <style scoped>
 .nav {
   width: fit-content;
-  float: right;
   background-color: var(--color-secondary);
-  position: relative;
   color: var(--color-primary);
   min-width: 12px;
   box-shadow: 2px 2px 2px var(--color-secondary);
