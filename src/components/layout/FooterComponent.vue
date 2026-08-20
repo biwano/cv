@@ -1,12 +1,12 @@
 <template>
-  <div class="bounceInUp animated row fixed bottom daddy">
+  <footer class="bounceInUp animated row fixed bottom daddy">
     <div class="align-center">
       Built with
       <a target="_blank" rel="noopener noreferrer" href="https://vuejs.org/"
         >Vue.js 3</a
       >
     </div>
-  </div>
+  </footer>
 </template>
 <style>
 .daddy {

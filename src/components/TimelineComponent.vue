@@ -17,6 +17,7 @@ defineProps(["elems"]);
             class="timeline-logo"
             :src="elem.img"
             :alt="elem.title"
+            loading="lazy"
           />
           <div class="timeline-meta">
             <h3>

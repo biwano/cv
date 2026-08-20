@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <nav class="nav" title="Menu">
+  <nav class="nav" aria-label="Main">
     <ul>
       <li><RouterLink to="/">About me</RouterLink></li>
       <li>

@@ -1,77 +1,33 @@
 # Site audit — improvement backlog
 
-Fresh review of the Vue CV site (`/opt/biwano/cv`) as of **2026-08-20 (evening rerun)**. Prior wave (content URL fixes, Web3Forms env key wiring, modal a11y, SEO meta titles/descriptions, sticky nav / footer spacing, README, skill-star ARIA, dead CardComponent markup, unused `cv.webp`/`metamask.webp`, etc.) is done. This list is what remains, verified against current source.
-
-**#11** (`robots.txt` / sitemap) was marked fixed in the prior audit but **regressed / never landed in source** — reopened below.
-
-Won’t-dos (not recommended again): contact form auto-close after success; lint in CI; projects without logos; unused `links.js` entries; scrubbing the Web3Forms key in `.env.example`; extra `:focus-visible` rings beyond color swaps; mobile header density pass. See [AGENTS.md](../AGENTS.md).
+Fresh review as of **2026-08-20**. Only open work below. Won’t-dos: [AGENTS.md](../AGENTS.md).
 
 ---
 
-## Content & accuracy
+## High
 
-1. ~~**Projects without logos**~~ — Won’t do: leave Litiges / mobile-number cards without `img` (and keep the empty image column); see [AGENTS.md](../AGENTS.md).
-
-2. ~~**Silicom employer URL rebranded**~~ — Fixed: card links to neverhack.com; blurb notes SILICOM is now Neverhack France.
-
-3. **Providence High School link fragile** — `studies.js` `providence.link` points at an `education.gouv.fr` annuaire URL that returns **HTTP 403** (curl with a normal browser User-Agent). Prefer a stable school page or drop the link if none exists.
-
-4. ~~**Copy / branding nits**~~ *(low)* — Fixed: React “in 2021” duplication; Viem TypeScript casing; Spring Boot wording; Vue.js / WordPress / GitLab / SonarQube / UTS Caraïbes brand spellings.
-
-5. ~~**Unused `links.js` entries**~~ — Won’t do: leave `lingui`, `translationio`, `perl`, and `sentry` in `links.js` even if unused as `{…}` placeholders; see [AGENTS.md](../AGENTS.md).
+1. **`robots.txt` / `sitemap.xml` missing from source** — `public/` has neither; `vite.config.js` has no generator. Stale `dist/` copies still say `https://example.com`. Add `public/robots.txt` + `public/sitemap.xml` (or a build step using `VITE_SITE_URL`) covering `/`, `/projects`, `/skills`, `/career`, `/academic_studies`.
 
 ---
 
-## Contact form & secrets
+## Medium
 
-6. ~~**Real Web3Forms key in `.env.example`**~~ — Won’t do: the access key is a public client-side key (fine in `.env.example`); restrict by domain in the Web3Forms dashboard if needed; see [AGENTS.md](../AGENTS.md).
-
-*(Verified still good: no hard-coded key in components; missing-key error path; honeypot; success stays open until user closes.)*
+2. **Deploy must set `VITE_SITE_URL`** — `index.html` substitutes `%VITE_SITE_URL%` for OG/canonical. Rebuild/deploy with `VITE_SITE_URL=https://cv.ilponse.com` so production never ships `example.com` placeholders (especially after #1).
 
 ---
 
-## SEO & sharing
+## Low
 
-7. **`robots.txt` / sitemap missing from source** *(prior #11 — reopened)* — Prior audit claimed a Vite plugin emits these from `VITE_SITE_URL`. Current `vite.config.js` only loads `@vitejs/plugin-vue`. A clean `vite build` produces **neither** `robots.txt` nor `sitemap.xml`. Stale `dist/` copies (if present) used `https://example.com` and are not regenerated. Add static `public/robots.txt` + `public/sitemap.xml`, or restore a build step that substitutes `VITE_SITE_URL`.
+3. **No SPA history fallback in repo** — History mode router; no `public/_redirects` (or equivalent). Optional: add `/* /index.html 200` for Netlify-style hosts. Do not document host rewrites in the README ([AGENTS.md](../AGENTS.md)).
 
-8. *(Verified OK)* Route `meta.title` / `meta.description` + `router.afterEach` updates document title, description / OG / Twitter title+description, and (see **#15**) `og:url` + canonical. `index.html` `%VITE_SITE_URL%` substitutes correctly when `.env` is set (spot-checked build → `https://cv.ilponse.com/…`).
-
----
-
-## UX / polish
-
-9. ~~**Mobile header density**~~ *(prior #16)* — Won’t do: leave jumbotron / title+social / sticky nav as-is on narrow viewports; see [AGENTS.md](../AGENTS.md).
-
-10. ~~**Decorative job mini-logos lack `alt`**~~ — Fixed: Carbonmark / KlimaDAO / OlympusDAO mini-logos use `alt=""`.
-
-11. ~~**Home page heading hierarchy**~~ — Fixed: one `<h1>` (“About me”) per mode; other sections are `<h2>` (styled like former section titles).
-
-12. ~~**Skill level stars are filled-only**~~ — Fixed: always render 5 stars; empty ones muted via opacity; existing `aria-label` unchanged.
+4. **Contact control is a faux button** — `App.vue` Contact is `<a href="#contact" role="button">` without `aria-expanded` / dialog popup semantics; Space often won’t activate. Prefer `<button type="button">` (styled like `.social`) or add keyboard + ARIA wired to `contactOpen`.
 
 ---
 
-## Tech / deploy
-
-13. **No SPA fallback asset in repo** — README documents nginx / Apache / Netlify `_redirects` / host SPA mode, but there is **no** `public/_redirects` (or equivalent) checked in. Fine if the host is configured manually; easy miss on Netlify/Cloudflare-style deploys.
-
-14. *(Verified OK)* Image inventory: all `public/images/*` are referenced; no missing refs. History-mode deploy notes and project README are present. Footer `--footer-space` / safe-area still in `main.css`.
-
----
-
-## Nice-to-haves
-
-15. ~~**Per-route `og:url` / canonical**~~ — Fixed: `index.html` ships `link[rel=canonical]`; router `afterEach` updates `og:url` and canonical from `VITE_SITE_URL` + route path.
-16. ~~**Skip-to-content / `:focus-visible`**~~ — Skip link fixed (`App.vue` → `#main-content`). Won’t do: visible `:focus-visible` styles beyond existing color swaps on nav/social; see [AGENTS.md](../AGENTS.md).
-17. ~~Empty-state / reserved space for cards without `img`~~ — Won’t do (same as #1); see [AGENTS.md](../AGENTS.md).
-18. ~~Drop unused `links.js` keys (#5)~~ — Won’t do; see [AGENTS.md](../AGENTS.md).
-
----
-
-## Suggested quick wins
+## Suggested order
 
 | Priority | Item | Why |
 | --- | --- | --- |
-| High | **#7** robots + sitemap in `public/` (or build plugin) | SEO regression; nothing in source today |
-| Low | **#3** | Fragile school URL |
-
-Do **not** re-open: contact auto-close; lint in CI; projects without logos / collapsing empty image column; unused `links.js` keys (`lingui`, `translationio`, `perl`, `sentry`); Web3Forms key scrub/rotate in `.env.example` (public client key); extra `:focus-visible` rings beyond color swaps; mobile header density pass; resolved content URLs (web3, Nuxeo, Kubernetes course, React/Angular/JS, ISAE teaching line, appYuser `rel`); modal focus trap; unused WebP cleanup already done; mini-logo `alt`; home heading hierarchy; skill empty stars; per-route `og:url` / canonical; skip-to-content.
+| High | **#1** robots + sitemap | Nothing in source; SEO regression |
+| Medium | **#2** rebuild with `VITE_SITE_URL` | Avoid bad OG/canonical in prod |
+| Optional | **#3–#4** | Polish |

@@ -19,8 +19,8 @@ const contactOpen = ref(false);
       class="bounceInDown animated absolute"
     ></JumbotronComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
-      <h1 class="capitalize">Bruno Ilponse</h1>
-      <h3>Senior Fullstack Software Developer</h3>
+      <p class="site-name capitalize">Bruno Ilponse</p>
+      <p class="site-tagline">Senior Fullstack Software Developer</p>
       <div class="title-row">
         <a
           class="social cv-download"
@@ -35,8 +35,9 @@ const contactOpen = ref(false);
         |
         <a
           class="social cv-download"
-          href="/images/cv.pdf"
-          download="Bruno-Ilponse-CV.pdf"
+          href="/cv.html"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           CV
           <FileIconComponent />
@@ -143,9 +144,19 @@ const contactOpen = ref(false);
   line-height: 1;
   text-decoration: none;
 }
-h3 {
-  margin-bottom: 0.25rem;
+.site-name {
+  margin: 0 0 15px;
+  font-size: 2.33333em;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px var(--color-secondary);
+}
+.site-tagline {
+  margin: 0 0 0.25rem;
+  font-size: 1.5em;
+  font-weight: normal;
   line-height: 1.15;
+  text-shadow: 1px 1px 2px var(--color-secondary);
 }
 .title-row {
   display: flex;

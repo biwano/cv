@@ -79,6 +79,15 @@ const router = createRouter({
           "Technical skills of Bruno Ilponse — fullstack languages, frameworks, and tools.",
       },
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "not_found",
+      component: () => import("../views/NotFoundView.vue"),
+      meta: {
+        title: `Page not found · ${SITE_TITLE}`,
+        description: "This page does not exist.",
+      },
+    },
   ],
 });
 
@@ -98,6 +107,7 @@ router.afterEach((to) => {
   setMetaContent('meta[property="og:title"]', title);
   setMetaContent('meta[name="twitter:title"]', title);
   setMetaContent('meta[property="og:url"]', url);
+  setMetaContent('meta[name="twitter:url"]', url);
   setCanonicalHref(url);
 });
 

@@ -35,17 +35,19 @@ const items = computed(() => {
     <div class="row">
       <div class="one animated bounceInRight triple-padded">
         <h1>Skills</h1>
-        <button
-          v-for="tag in getCategoryTags('skill')"
-          :key="tag"
-          type="button"
-          class="button"
-          :class="buttonClass(tag)"
-          :aria-pressed="selected_tag === tag"
-          @click="click(tag)"
-        >
-          {{ tag }}
-        </button>
+        <div role="group" aria-label="Filter skills by tag">
+          <button
+            v-for="tag in getCategoryTags('skill')"
+            :key="tag"
+            type="button"
+            class="button"
+            :class="buttonClass(tag)"
+            :aria-pressed="selected_tag === tag"
+            @click="click(tag)"
+          >
+            {{ tag }}
+          </button>
+        </div>
       </div>
     </div>
     <CardListComponent :elems="items"> </CardListComponent>

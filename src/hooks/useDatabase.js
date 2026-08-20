@@ -8,7 +8,6 @@ function highlightTextFromSource(text) {
         replace = `<a target="_blank" rel="noopener noreferrer" href="${database[key].link}">${database[key].title}</a>`;
       } else {
         replace = database[key].title;
-        //console.log(`key ${key} has no link`);
       }
       text = text.replaceAll(`{${key}}`, replace);
     }
@@ -50,12 +49,8 @@ export default function () {
     }
     return items;
   }
-  function highlightText(text) {
-    return highlightTextFromSource(text);
-  }
   return {
     getCategoryTags,
     getCategoryItems,
-    highlightText,
   };
 }

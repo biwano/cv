@@ -25,7 +25,7 @@ export default {
     img: "/images/providence.webp",
     position: "left",
     date: "1998-2000",
-    link: "https://www.education.gouv.fr/annuaire/97139/les-abymes/lycee/9710921z/lycee-general-et-technologique-felix-proto.html",
+    link: "https://felixproto.lyc.ac-guadeloupe.fr/",
     content: `Bachelor level degree with Mathematics and Physics options.`,
   },
   "advanced-studies": {

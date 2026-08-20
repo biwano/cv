@@ -9,7 +9,7 @@ const props = defineProps([
   "level",
 ]);
 const position = computed(() =>
-  props.imgPosition ? props.imgPosition : "left",
+  props.imgPosition ? props.imgPosition : "left"
 );
 const isLeft = computed(() => position.value == "left");
 const isRight = computed(() => position.value == "right");
@@ -38,7 +38,7 @@ const subContainerClass = computed(() => {
 
 const MAX_LEVEL = 5;
 const levelLabel = computed(() =>
-  props.level ? `Skill level: ${props.level} out of ${MAX_LEVEL}` : "",
+  props.level ? `Skill level: ${props.level} out of ${MAX_LEVEL}` : ""
 );
 </script>
 
@@ -46,7 +46,13 @@ const levelLabel = computed(() =>
   <div :class="containerClass">
     <div class="animated bounceInLeft triple-padded" :class="subContainerClass">
       <div class="img-container">
-        <img v-if="img" :src="img" :alt="title" :class="imgClass" />
+        <img
+          v-if="img"
+          :src="img"
+          :alt="title"
+          :class="imgClass"
+          loading="lazy"
+        />
       </div>
       <div class="content">
         <h3>
@@ -61,12 +67,7 @@ const levelLabel = computed(() =>
         </h3>
         <b v-if="date">{{ date }}<br /></b>
         <slot></slot>
-        <div
-          v-if="level"
-          class="level"
-          role="img"
-          :aria-label="levelLabel"
-        >
+        <div v-if="level" class="level" role="img" :aria-label="levelLabel">
           <span aria-hidden="true">
             <span
               v-for="i in MAX_LEVEL"
@@ -96,9 +97,6 @@ img {
 }
 .animated.triple-padded {
   align-items: center;
-}
-.subContainer {
-  display: table-cell;
 }
 .level {
   font-size: 25px;
