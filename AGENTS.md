@@ -8,6 +8,7 @@
 
 - Contact form: do not auto-close the modal after a successful send (and do not add a “Done” control that only closes). Leave the success message visible until the user closes the dialog themselves.
 - Lint in CI: do not add CI that runs `npm run lint` (or other lint jobs). Lint stays local only.
+- Projects without logos: do not add logos for Litiges / mobile-number projects, and do not collapse the empty image column to “fix” uneven cards.
 
 ## Design
 

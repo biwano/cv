@@ -73,7 +73,7 @@ export default {
     category: "job",
     title: "SILICOM",
     img: "/images/silicom.webp",
-    link: "https://www.silicom.fr",
+    link: "https://neverhack.com/",
     date: "2010 – 2011",
     content: `Product Line Leader - Responsible for enforcing
       <a
@@ -86,6 +86,13 @@ export default {
       crisis events at
       <a href="https://sfr.fr" target="_blank" rel="noopener noreferrer"
         >SFR</a
+      >.
+      <br />Now
+      <a
+        href="https://neverhack.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Neverhack France</a
       >.`,
   },
   "ait-consulting": {
