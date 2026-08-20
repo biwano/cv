@@ -14,7 +14,6 @@ defineProps(["elems"]);
       :date="elem.date"
       :link="elem.link"
       :level="elem.level"
-      :tags="elem.tags"
     >
       <span v-html="elem.content"></span>
     </CardComponent>

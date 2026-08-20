@@ -88,7 +88,7 @@ const contactOpen = ref(false);
   z-index: 500;
   display: flex;
   justify-content: flex-end;
-  padding: 0 30px 30px;
+  padding: 0 30px;
   clear: both;
 }
 

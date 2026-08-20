@@ -27,7 +27,7 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 12. **Projects without logos** — Litiges, Mobile number portability, and Mobile number frequency licenses have no `img`; cards look uneven next to logo’d entries.
 13. ~~**Unused assets**~~ — Fixed: removed unreferenced `cv.webp` and `metamask.webp` (CV download still uses `cv.pdf`).
 14. **Skill level stars** — Star row is decorative only (no accessible name / numeric alternative). Screen readers get little from `★★★`.
-15. **Fixed footer overlap** — Footer is `position: fixed`; body `padding-bottom: 3rem` may still clip tall last cards on small viewports—verify.
+15. ~~**Fixed footer overlap**~~ — Fixed: `--footer-space` (4.5rem + safe-area) on `body` / `scroll-padding-bottom`; footer gets safe-area padding and `z-index`.
 16. **Mobile header density** — Absolute jumbotron + right-aligned title + sticky nav is busy on narrow screens; worth a quick pass for overlap and tap targets.
 
 ## Tech / deploy
@@ -38,9 +38,9 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 
 ## Nice-to-haves
 
-20. **Per-route meta description** — Same static description for every view; optional `meta` updates for Projects / Career.
-21. **Contact success → auto-close** — After send, keep the success message briefly then close, or add an explicit “Done” control.
-22. **Dead-code comments** — Empty star outline and tags blocks commented out in `CardComponent.vue`; delete if abandoned.
+20. ~~**Per-route meta description**~~ — Fixed: each route sets `meta.description`; `router.afterEach` updates `description` / `og:description` / `twitter:description` (and titles).
+21. ~~**Contact success → auto-close**~~ — Won’t do: keep success visible until the user closes; see [AGENTS.md](../AGENTS.md).
+22. ~~**Dead-code comments**~~ — Fixed: removed abandoned empty-star and tags markup from `CardComponent.vue` (and unused `tags` prop wiring).
 23. **Lint in CI** — `npm run lint` exists locally; no CI config in-repo yet.
 
 ## Suggested quick wins

@@ -7,7 +7,6 @@ const props = defineProps([
   "img",
   "link",
   "level",
-  "tags",
 ]);
 const position = computed(() =>
   props.imgPosition ? props.imgPosition : "left",
@@ -59,15 +58,8 @@ const subContainerClass = computed(() => {
         <slot></slot>
         <div v-if="level" class="level">
           <span v-for="i in [...Array(level).keys()]" :key="i"> &#9733; </span>
-          <!--<span v-for="i in [...Array(4 - level).keys()]" :key="i">
-            &#9734;
-          </span>-->
         </div>
-        <!--
-        <div v-if="tags">
-          <span v-for="tag in tags" :key="tag"> {{ tag }} &nbsp;</span>
-        </div>
-      --></div>
+      </div>
     </div>
     <div class="clear"></div>
   </div>

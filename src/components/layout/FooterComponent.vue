@@ -13,5 +13,6 @@
   background-color: var(--color-secondary);
   opacity: 75%;
   padding: 0.5rem 1rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
 }
 </style>
