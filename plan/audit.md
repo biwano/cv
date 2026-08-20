@@ -22,9 +22,9 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## SEO & discoverability
 
-13. No **meta description**, Open Graph, or Twitter cards (`index.html`).
-14. Invalid `<link rel="canonical">` on font files in `index.html` (canonical is for page URLs).
-15. Page title is only the name — e.g. `Bruno Ilponse · Senior Fullstack Developer` would help search/share.
+13. ~~**Meta / social**~~ — Fixed: description, Open Graph, and Twitter card tags in `index.html`.
+14. ~~**Invalid font canonicals**~~ — Fixed: removed mistaken `rel="canonical"` on font files.
+15. ~~**Page title**~~ — Fixed: `Bruno Ilponse · Senior Fullstack Developer`.
 
 ## Performance & tech debt
 
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–11 done. Next easy picks: About scanability (#12), meta/title (#13–15).
+Items 1–11 and 13–15 done. Next easy picks: About scanability (#12).
