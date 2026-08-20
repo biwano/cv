@@ -39,9 +39,10 @@ onBeforeUnmount(() => {
     ></NavComponent>
     <div class="animated bounceInRight align-right triple-padded capitalize">
       <h1 class="capitalize">Bruno Ilponse</h1>
-      <h3>Senior Fullstack Software Developer</h3>
-      <div class="social">
+      <div class="title-row">
+        <h3>Senior Fullstack Software Developer</h3>
         <a
+          class="social"
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"
           target="_blank"
           ><i class="fa-brands fa-linkedin-in"></i
@@ -103,7 +104,21 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 .social {
-  position: relative;
-  top: -15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-decoration: none;
+}
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+.title-row h3 {
+  margin: 0;
+  line-height: 1;
 }
 </style>

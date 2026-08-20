@@ -274,6 +274,15 @@ export default {
     content: `The main language for smart contracts on Ethereum-compatible chains. I used {solidity} to implement the blockchain infrastructure of the {carbonmark} marketplace.`,
     tags: ["languages", "web3"],
   },
+  viem: {
+    category: "skill",
+    title: "Viem",
+    link: "https://viem.sh/",
+    img: "/images/viem.png",
+    level: 3,
+    content: `A typescript library for interacting with Ethereum. I used {viem} in the {carbonmark} frontend to read and write smart contracts from the browser.`,
+    tags: ["javascript", "web3"],
+  },
   fastify: {
     category: "skill",
     title: "Fastify",
