@@ -23,13 +23,9 @@
         margin: 0;
         padding: 0;
         color: var(--ink);
-        font-family:
-          "Segoe UI",
-          Helvetica,
-          Arial,
-          sans-serif;
-        font-size: 10.5pt;
-        line-height: 1.35;
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 11.5pt;
+        line-height: 1.45;
         background: #e8e8e8;
       }
 
@@ -74,23 +70,23 @@
 
       .sidebar {
         background: var(--sidebar-bg);
-        padding: 1.35rem 1rem 1.1rem;
+        padding: 1.75rem 1.35rem 1.5rem;
       }
 
       .main {
-        padding: 1.25rem 1.15rem 1.1rem 1.25rem;
+        padding: 1.75rem 1.5rem 1.5rem 1.6rem;
       }
 
       h1 {
         margin: 0;
-        font-size: 1.55rem;
+        font-size: 1.7rem;
         letter-spacing: 0.02em;
         line-height: 1.15;
         text-transform: uppercase;
       }
 
       .role {
-        margin: 0.2rem 0 0.85rem;
+        margin: 0.35rem 0 1rem;
         font-size: 0.95rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -99,95 +95,88 @@
 
       .meta {
         list-style: none;
-        margin: 0 0 1rem;
+        margin: 0 0 1.15rem;
         padding: 0;
-        font-size: 0.78rem;
+        font-size: 0.88rem;
         color: var(--muted);
       }
 
       .meta li {
         display: flex;
         align-items: flex-start;
-        gap: 0.45rem;
-        margin-bottom: 0.35rem;
+        gap: 0.5rem;
+        margin-bottom: 0.45rem;
       }
 
       .meta .icon,
       .section-title .icon {
         flex: 0 0 auto;
-        width: 1rem;
-        height: 1rem;
-        margin-top: 0.12rem;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-top: 0.15rem;
       }
 
       .section {
-        margin-top: 0.95rem;
+        margin-top: 1.25rem;
       }
 
       .section-title {
         display: flex;
         align-items: center;
-        gap: 0.4rem;
-        margin: 0 0 0.45rem;
-        font-size: 0.82rem;
+        gap: 0.45rem;
+        margin: 0 0 0.65rem;
+        font-size: 0.95rem;
         font-weight: 700;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         border-bottom: 1px solid var(--rule);
-        padding-bottom: 0.2rem;
+        padding-bottom: 0.3rem;
       }
 
       .logos {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.55rem 0.65rem;
-        justify-content: flex-start;
-        margin: 0.35rem 0 0.15rem;
+        gap: 0.75rem 1rem;
+        margin: 0.45rem 0 0.2rem;
       }
 
       .logo {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 3.1rem;
+        width: 3.6rem;
         text-align: center;
-        font-size: 0.62rem;
+        font-size: 0.72rem;
         font-weight: 600;
         color: var(--muted);
       }
 
       .logo img {
-        width: 2.35rem;
-        height: 2.35rem;
+        width: 2.6rem;
+        height: 2.6rem;
         object-fit: contain;
-        margin-bottom: 0.15rem;
+        margin-bottom: 0.2rem;
       }
 
       .skill-group {
-        margin: 0.35rem 0 0.45rem;
+        margin: 0.45rem 0 0.55rem;
       }
 
       .skill-group h3 {
-        margin: 0 0 0.1rem;
-        font-size: 0.78rem;
+        margin: 0 0 0.2rem;
+        font-size: 0.88rem;
         font-weight: 700;
       }
 
-      .skill-group ul,
-      .hobbies {
+      .skill-group p {
         margin: 0;
-        padding-left: 1.05rem;
-        font-size: 0.76rem;
-      }
-
-      .skill-group li,
-      .hobbies li {
-        margin-bottom: 0.08rem;
+        font-size: 0.84rem;
+        line-height: 1.45;
       }
 
       .employer {
-        margin: 0.55rem 0 0.2rem;
-        font-size: 0.88rem;
+        margin: 0.7rem 0 0.3rem;
+        font-size: 0.95rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.02em;
@@ -197,28 +186,20 @@
         margin-top: 0.25rem;
       }
 
-      .roles {
+      .roles,
+      .training {
         margin: 0;
-        padding-left: 1.05rem;
-        font-size: 0.78rem;
+        padding-left: 1.15rem;
+        font-size: 0.88rem;
       }
 
-      .roles li {
-        margin-bottom: 0.28rem;
+      .roles li,
+      .training li {
+        margin-bottom: 0.35rem;
       }
 
       .roles .when {
         font-weight: 700;
-      }
-
-      .training {
-        margin: 0.25rem 0 0;
-        padding-left: 1.05rem;
-        font-size: 0.78rem;
-      }
-
-      .training li {
-        margin-bottom: 0.22rem;
       }
 
       @page {
@@ -254,14 +235,14 @@
       <aside class="sidebar">
         <header>
           <h1>Bruno Ilponse</h1>
-          <p class="role">Fullstack Developer</p>
+          <p class="role">Senior Fullstack Software Developer</p>
           <ul class="meta">
             <li>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 7v5l3 2" />
               </svg>
-              <span>Age: 40 &nbsp;/&nbsp; Experience: 17 Years</span>
+              <span>Experience: 20 Years</span>
             </li>
             <li>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -290,20 +271,16 @@
           </h2>
           <div class="logos">
             <div class="logo">
-              <img src="/images/django.webp" alt="" />
-              Django
-            </div>
-            <div class="logo">
-              <img src="/images/java.webp" alt="" />
-              Java
-            </div>
-            <div class="logo">
-              <img src="/images/python.webp" alt="" />
-              Python
+              <img src="/images/react.webp" alt="" />
+              ReactJS
             </div>
             <div class="logo">
               <img src="/images/vuejs.webp" alt="" />
               Vue.js
+            </div>
+            <div class="logo">
+              <img src="/images/typescript.svg" alt="" />
+              TypeScript
             </div>
           </div>
         </section>
@@ -317,52 +294,24 @@
           </h2>
           <div class="skill-group">
             <h3>Development:</h3>
-            <ul>
-              <li>PHP, Drupal, ReactJS, NextJS, NodeJS, Bash, Web3.js</li>
-            </ul>
+            <p>
+              JavaScript, Python, NextJS, Bash, Django, Fastify, Java, Vert.x,
+              Drupal, PHP, Moodle, Nuxeo, Solidity, Viem, NodeJS, Angular,
+              Spring, Ruby, Ruby on Rails, C++
+            </p>
           </div>
           <div class="skill-group">
             <h3>Databases:</h3>
-            <ul>
-              <li>Elasticsearch, PostgreSQL, Nginx, Apache</li>
-            </ul>
+            <p>Elasticsearch, Oracle, PostgreSQL, LDAP</p>
           </div>
           <div class="skill-group">
             <h3>Continuous integration:</h3>
-            <ul>
-              <li>Git, Jenkins, Sonarqube</li>
-            </ul>
+            <p>TraxLRS, Jenkins, Circle, Stripe, SonarQube</p>
           </div>
           <div class="skill-group">
             <h3>System:</h3>
-            <ul>
-              <li>Red hat, Apache, Nginx, Bash, Kubernetes</li>
-            </ul>
+            <p>Kubernetes, Apache, Nginx</p>
           </div>
-          <div class="skill-group">
-            <h3>Soft skills:</h3>
-            <ul>
-              <li>Teaching</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="section" aria-labelledby="hobbies-title">
-          <h2 id="hobbies-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M3 18h18" />
-              <path d="M5 18c2-4 4.5-7 8-9l8 2-3 7H5z" />
-              <path d="M12 9V5" />
-            </svg>
-            Hobbies
-          </h2>
-          <ul class="hobbies">
-            <li>Roller Hockey</li>
-            <li>Macro economy</li>
-            <li>Video games</li>
-            <li>Blockchain</li>
-            <li>Piano</li>
-          </ul>
         </section>
       </aside>
 
@@ -376,64 +325,67 @@
             Career
           </h2>
 
+          <h3 class="employer">Freelance</h3>
+          <ul class="roles">
+            <li>
+              <span class="when">Since 2023:</span> Fullstack developer for
+              Carbonmark
+            </li>
+            <li>
+              <span class="when">2021 - 2023:</span> Front end developer for
+              KlimaDAO
+            </li>
+            <li>
+              <span class="when">2021:</span> Front end developer for OlympusDAO
+            </li>
+          </ul>
+
           <h3 class="employer">ISAE-SUPAERO</h3>
           <ul class="roles">
+            <li><span class="when">Since 2022:</span> Technical advisor</li>
             <li>
-              <span class="when">2019 - Now:</span> Fullstack developer. Design
-              and development of Ed-tech platforms. Python, Django, JAVA, VueJS,
-              Kubernetes.
+              <span class="when">2019 - 2022:</span> EdTech architect and
+              development team leader
             </li>
             <li>
-              <span class="when">2015 - 2019:</span> Fullstack developer. Design
-              and development of business applications. Python, AngularJS.
+              <span class="when">2015 - 2019:</span> Fullstack software developer
             </li>
             <li>
-              <span class="when">2014 - Now:</span> Part-time teacher. 30 hours
-              course on web development with Django.
-            </li>
-          </ul>
-
-          <h3 class="employer">Freelance</h3>
-          <ul class="roles">
-            <li>
-              <span class="when">2020 - Now:</span> Frontend developer.
-              Development of dApps on Ethereum and Polygon. Web3.js, ReactJS,
-              NextJS.
+              <span class="when">Since 2014:</span> Part time teacher in Web
+              development for master's degree level students
             </li>
           </ul>
 
-          <h3 class="employer">Quandran</h3>
+          <h3 class="employer">QUADRAN</h3>
           <ul class="roles">
             <li>
-              <span class="when">2012 - 2015:</span> Web application performance
-              expert. Design and development of a front-end performance
-              monitoring tool. Angular.js, J2EE, Elasticsearch.
+              Application performance consultant for Airbus. Architect and
+              fullstack software developer for the appYuser application
             </li>
           </ul>
 
-          <h3 class="employer">Sopra - Steria</h3>
+          <h3 class="employer">SOPRA-STERIA</h3>
           <ul class="roles">
             <li>
-              <span class="when">2010 - 2012:</span> Web developer. Development
-              of a banking application for disputes management. J2EE, Spring,
-              Hibernate.
+              <span class="when">2011:</span> JAVA/J2EE Developer (Spring,
+              Hibernate)
             </li>
           </ul>
 
-          <h3 class="employer">Silicom</h3>
+          <h3 class="employer">SILICOM</h3>
           <ul class="roles">
             <li>
-              <span class="when">2009 - 2010:</span> IT and Telecom Consultant.
-              Deployment of ITIL processes for SFR.
+              Product Line Leader — Responsible for enforcing ITIL processes
+              around networking equipment supervision tools and solving crisis
+              events at SFR. Now Neverhack France.
             </li>
           </ul>
 
-          <h3 class="employer">Freelance</h3>
+          <h3 class="employer">AIT Consulting</h3>
           <ul class="roles">
             <li>
-              <span class="when">2006 - 2009:</span> IT and Telecom consultant.
-              Deployment of a 3G Network in the French Antilles for UTS
-              Caraïbes.
+              IT and Telecom consultant for UTS Caraïbes (now Flow) and the
+              Sapphire Beach Club resort
             </li>
           </ul>
         </section>
@@ -448,19 +400,27 @@
             Education
           </h2>
 
-          <h3 class="employer">Telecom SudParis</h3>
+          <h3 class="employer">TELECOM SudParis</h3>
           <ul class="roles">
             <li>
-              <span class="when">2003 - 2006:</span> Master's degree in IT and
-              telecommunications.
+              <span class="when">2003-2006:</span> Masters degree in
+              Telecommunications with major in Information Systems Auditing.
             </li>
           </ul>
 
           <h3 class="employer">Baimbridge High School</h3>
           <ul class="roles">
             <li>
-              <span class="when">2000 - 2003:</span> Intensive fondation degree
-              in Mathematics and Physics. French classes préparatoires.
+              <span class="when">2000-2003:</span> Intensive foundation degree in
+              Mathematics and Physics for French Engineering schools.
+            </li>
+          </ul>
+
+          <h3 class="employer">Providence High School</h3>
+          <ul class="roles">
+            <li>
+              <span class="when">1998-2000:</span> Bachelor level degree with
+              Mathematics and Physics options.
             </li>
           </ul>
         </section>
@@ -474,11 +434,11 @@
             Recent training
           </h2>
           <ul class="training">
-            <li>Advanced Kubernetes Training - 14h - The Mantis</li>
-            <li>Advanced English courses - 26h - Focalpoint</li>
+            <li>Advanced Kubernetes training - 14h - TheManis</li>
+            <li>Advanced English courses - 26h - Focalpoint (C1)</li>
             <li>Machine learning for data science - 28h - INSA Toulouse</li>
-            <li>Management - 18h - Formeo</li>
-            <li>Oracle 11G - 35h - iForm</li>
+            <li>Management basics - 18.5h - FORMEO</li>
+            <li>Oracle 11G database administration - 35h - iForm</li>
           </ul>
         </section>
       </div>

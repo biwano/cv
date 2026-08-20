@@ -2,9 +2,9 @@
 name: printable-cv
 description: >-
   Builds or regenerates the printable one-page CV at public/cv.html from the
-  canonical layout and copy below. Use when the user asks to create, update,
-  refresh, or regenerate the printable CV / resume HTML, or when wiring the
-  site CV button to that file.
+  layout rules below and content in src/database/. Use when the user asks to
+  create, update, refresh, or regenerate the printable CV / resume HTML, or
+  when wiring the site CV button to that file.
 ---
 
 # Printable CV
@@ -18,136 +18,160 @@ Write a single self-contained file:
 - Standalone HTML (no Vue, no build step).
 - Opens in a new tab; designed for browser Print → PDF / paper.
 - Relative asset paths from `/images/…` (served from `public/images/`).
-- Site CV control must link to `/cv.html` with `target="_blank"` (not the PDF).
+- Site CV control must link to `/cv.html` with `target="_blank"` (not a downloadable PDF).
 
-## Layout (match the reference PDF)
+## Layout
 
-Two columns, A4-ish page:
+Self-contained two-column resume on an A4-sized sheet. This section is the only layout source of truth.
 
-| Region | Width | Background |
-| --- | --- | --- |
-| Left sidebar | ~32% | Pale yellow `#f5f0d8` |
-| Main column | ~68% | White `#fff` |
+### Page chrome
 
-- Sans-serif throughout (system UI stack is fine).
-- Section titles: uppercase, bold, with a small outline SVG icon to the left.
-- Fit **one printed page** when possible (`@page { size: A4; margin: 0 }`, compact spacing, `@media print` hides on-screen chrome).
-- On screen: full-page sheet centered with light page shadow; a **Print** control that calls `window.print()` (hidden when printing).
+- `@page { size: A4; margin: 0 }`.
+- On screen: sheet centered on a neutral gray page background, light drop shadow, width `210mm`, min-height `297mm`.
+- Sticky on-screen **Print** toolbar (`window.print()`); hide toolbar and shadow under `@media print`.
+- Prefer readable type and breathing room over forcing a single cramped page; one page is nice when it still looks open.
 
-### Left column
+### Grid
 
-1. **Header** — name, title, meta lines with icons:
-   - Name: `BRUNO ILPONSE` (large)
-   - Title: `FULLSTACK DEVELOPER`
-   - Age / experience (clock icon)
-   - Address (house icon)
-   - Phone (phone icon)
-2. **EXPERTIZE** — logos in a row: Django, Java, Python, Vue.js  
-   Images: `/images/django.webp`, `/images/java.webp`, `/images/python.webp`, `/images/vuejs.webp`  
-   Each logo: label underneath or `alt` text matching the tech name.
-3. **OTHER SKILLS** — category headings + comma-separated or bulleted lists.
-4. **HOBBIES** — bulleted list.
+| Region       | Width | Background            | Text               |
+| ------------ | ----- | --------------------- | ------------------ |
+| Left sidebar | ~32%  | Pale yellow `#f5f0d8` | Dark ink `#1a1a1a` |
+| Main column  | ~68%  | White `#fff`          | Dark ink `#1a1a1a` |
 
-### Right column
+Use CSS grid (or equivalent) so both columns share one full-height sheet.
 
-1. **CAREER** — employer name uppercase/bold; under each, dated role bullets.
-2. **EDUCATION** — school + dated description.
-3. **RECENT TRAINING** — one line per course: title – hours – provider.
+### Typography
 
-## Canonical copy
+- Clean sans-serif (system UI / Helvetica / Arial stack).
+- Body ~11.5–12pt; line-height ~1.45.
+- Name: largest type (~1.7rem), bold, uppercase.
+- Job title under name: bold, uppercase, ~0.95rem.
+- Section titles: uppercase, bold, ~0.95rem, with a hairline rule under the title row.
+- Meta / role bullets / skill lists: ~0.85–0.9rem (not micro-type).
+- Employer / school names: bold, uppercase, ~0.95rem.
+- Date prefixes in role/education lines: bold.
 
-Use this content verbatim unless the user supplies updates:
+### Section title row
 
-### Personal
+Each major section title is a single row: **outline SVG icon** (~16–18px, stroke, `currentColor`) + uppercase label. No filled/colorful icons.
 
-- Age: `40`
-- Experience: `17 Years`
+### Left column (top → bottom)
+
+1. **Header** — name, title, meta lines (clock / house / phone icons).
+2. **EXPERTIZE** — tech logos in a horizontal wrap row (image + short label).
+3. **OTHER SKILLS** — category subheadings + comma-separated or bulleted skill titles.
+4. **HOBBIES** — only if a hobbies source exists in the repo; otherwise omit the section.
+
+### Right column (top → bottom)
+
+1. **CAREER** — employer heading, then dated role bullets.
+2. **EDUCATION** — school heading + dated description.
+3. **RECENT TRAINING** — one line per course.
+
+### Spacing
+
+- Sidebar and main: ~1.5–1.8rem padding.
+- Comfortable gaps between meta lines (~0.4rem) and skill groups (~0.5rem).
+- Clear separation between employers (~0.7rem); ~0.3–0.4rem between bullets under one employer.
+- Section blocks: ~1.2rem top margin; first main section flush to the top padding.
+
+## Fixed personal fields (only exceptions)
+
+These are not in `src/database/`; use them as-is:
+
 - Address: `6 Rue Jean Dabadie, 31600 Muret, France`
 - Phone: `+33 6 76 58 13 48`
 
-### Other skills
+## Content sources
 
-- **Development:** PHP, Drupal, ReactJS, NextJS, NodeJS, Bash, Web3.js
-- **Databases:** Elasticsearch, PostgreSQL, Nginx, Apache
-- **Continuous integration:** Git, Jenkins, Sonarqube
-- **System:** Red hat, Apache, Nginx, Bash, Kubernetes
-- **Soft skills:** Teaching
+Do **not** hardcode career, education, training, skills, name, or title in this skill or invent copy. Read the repo and fill the HTML from:
 
-### Hobbies
+| Need                 | Where to read                                                           |
+| -------------------- | ----------------------------------------------------------------------- |
+| Display name         | `src/App.vue` header (e.g. `.site-name`)                                |
+| Professional title   | `src/App.vue` header (e.g. `.site-tagline`); render uppercase on the CV |
+| Career               | `src/database/jobs.js`                                                  |
+| Education + training | `src/database/studies.js`                                               |
+| Skills / logos       | `src/database/skills.js` (+ `img` paths under `public/images/`)         |
 
-Roller Hockey, Macro economy, Video games, Blockchain, Piano
+### Header meta
 
-### Career
+- **Experience:** compute whole years from the earliest start year found in `jobs.js` `date` fields through the current year; show as `Experience: N Years`.
+- **Age:** omit unless a clear age value exists elsewhere in the repo (do not invent).
+- Address / phone: use the fixed fields above.
 
-**ISAE-SUPAERO**
+### EXPERTIZE
 
-- 2019 - Now: Fullstack developer. Design and development of Ed-tech platforms. Python, Django, JAVA, VueJS, Kubernetes.
-- 2015 - 2019: Fullstack developer. Design and development of business applications. Python, AngularJS.
-- 2014 - Now: Part-time teacher. 30 hours course on web development with Django.
+Always feature these three, in order: **ReactJS**, **VueJS**, **TypeScript**.
 
-**FREELANCE**
+- Resolve **ReactJS** and **VueJS** from `skills.js` (`react`, `vuejs`): use each entry’s `title` and `img`.
+- **TypeScript:** label `TypeScript`. Prefer a `typescript` (or similar) entry in `skills.js` if present; otherwise use `/images/typescript.svg` (create a simple official-style TS mark SVG in `public/images/` if missing).
 
-- 2020 - Now: Frontend developer. Development of dApps on Ethereum and Polygon. Web3.js, ReactJS, NextJS.
+### OTHER SKILLS
 
-**QUANDRAN**
+Build groups from every entry in `skills.js` **except** those already shown under EXPERTIZE. Use each skill’s `title`. Group by `tags`:
 
-- 2012 - 2015: Web application performance expert. Design and development of a front-end performance monitoring tool. Angular.js, J2EE, Elasticsearch.
+| Subheading  | Include if `tags` contains                                                              |
+| ----------- | --------------------------------------------------------------------------------------- |
+| Development | `languages`, `frameworks`, `javascript`, `java`, `php`, `python`, `ruby`, `cms`, `web3` |
+| Databases   | `databases`                                                                             |
+| Tools       | `tools`                                                                                 |
+| Systems     | `system`                                                                                |
 
-**SOPRA - STERIA**
+- Put each skill under the **first** matching group in the table order (avoid duplicates across groups).
+- Within each group, sort by `level` (stars) **descending**; keep original `skills.js` order for ties.
+- Skip empty groups.
+- Soft skills / hobbies: only if present in database (or another dedicated data file); otherwise omit.
 
-- 2010 - 2012: Web developer. Development of a banking application for disputes management. J2EE, Spring, Hibernate.
+### CAREER
 
-**SILICOM**
+For each object in `jobs.js` (newest first by start year in `date`):
 
-- 2009 - 2010: IT and Telecom Consultant. Deployment of ITIL processes for SFR.
+- Employer heading = `title`.
+- Turn `content` into plain-text bullets: strip tags/images, keep link text, split on `<br>` / bold date prefixes into separate bullets when present.
+- Prefer per-role date prefixes from the content (`Since YYYY`, `YYYY - YYYY`, etc.); if a block has no inner dates, prefix with the entry’s `date`.
 
-**FREELANCE**
+### EDUCATION
 
-- 2006 - 2009: IT and Telecom consultant. Deployment of a 3G Network in the French Antilles for UTS Caraïbes.
+Entries in `studies.js` with a `date` field and key other than `advanced-studies`:
 
-### Education
+- Heading = `title`.
+- One bullet: **`date`:** + plain `content` (collapse whitespace).
 
-**TELECOM SUDPARIS**
+### RECENT TRAINING
 
-- 2003 - 2006: Master's degree in IT and telecommunications.
+From `studies.js` → `advanced-studies.content`:
 
-**BAIMBRIDGE HIGH SCHOOL**
-
-- 2000 - 2003: Intensive fondation degree in Mathematics and Physics. French classes préparatoires.
-
-### Recent training
-
-- Advanced Kubernetes Training - 14h - The Mantis
-- Advanced English courses - 26h - Focalpoint
-- Machine learning for data science - 28h - INSA Toulouse
-- Management - 18h - Formeo
-- Oracle 11G - 35h - iForm
+- Each `<p>` → one list item.
+- Format roughly: `Title - hours - Provider` (use link text; include hours from the bold lead-in when present).
 
 ## Icons
 
-Inline SVGs (stroke, currentColor), ~16–18px. Suggested meanings:
+Inline SVGs only (stroke, currentColor), ~16–18px:
 
-| Section / meta | Icon idea |
-| --- | --- |
-| Age/experience | clock |
-| Address | house |
-| Phone | phone handset |
-| EXPERTIZE | flexed arm / strength |
-| OTHER SKILLS | star |
-| HOBBIES | sailboat |
-| CAREER | gear |
-| EDUCATION | graduation cap |
-| RECENT TRAINING | globe |
+| Section / meta                | Icon                  |
+| ----------------------------- | --------------------- |
+| Experience (and age if shown) | clock                 |
+| Address                       | house                 |
+| Phone                         | phone handset         |
+| EXPERTIZE                     | flexed arm / strength |
+| OTHER SKILLS                  | star                  |
+| HOBBIES (if present)          | sailboat              |
+| CAREER                        | gear                  |
+| EDUCATION                     | graduation cap        |
+| RECENT TRAINING               | globe                 |
 
 ## Workflow
 
-1. Read this skill (and the reference PDF screenshot if the user attached one).
-2. Write or overwrite `public/cv.html` with the layout + copy above.
-3. Ensure `src/App.vue` CV link is `href="/cv.html"` with `target="_blank"` and `rel="noopener noreferrer"` (remove PDF `download` if present).
-4. Do not regenerate from `src/database/*` — printable CV copy is owned by this skill, not the site cards.
+1. Read this skill (layout + mapping only).
+2. Read `src/App.vue`, `src/database/jobs.js`, `studies.js`, and `skills.js`.
+3. Derive all CV copy from those sources (+ fixed address/phone).
+4. Write or overwrite `public/cv.html`.
+5. Ensure `src/App.vue` CV link is `href="/cv.html"` with `target="_blank"` and `rel="noopener noreferrer"`.
 
 ## Do not
 
-- Do not replace the printable HTML with a link to `cv.pdf` for the CV button.
-- Do not pull career/education text from `jobs.js` / `studies.js` unless the user asks to sync.
+- Do not embed a full CV transcript (jobs, schools, skill lists, etc.) inside this skill file.
+- Do not invent employers, dates, skills, age, or hobbies.
+- Do not link the site CV button to `cv.pdf`.
 - Do not add SPA routes or Vue components for the printable CV.
