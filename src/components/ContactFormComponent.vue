@@ -33,7 +33,7 @@ watch(
       status.value = "idle";
       errorMessage.value = "";
     }
-  },
+  }
 );
 
 onMounted(() => {

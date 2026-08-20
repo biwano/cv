@@ -60,7 +60,7 @@ export default {
     link: "https://gitlab.com/",
   },
   github: {
-    title: "Github",
+    title: "GitHub",
     link: "https://github.com/",
   },
   duck_typing: {

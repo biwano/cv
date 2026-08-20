@@ -1,8 +1,8 @@
 export default {
   javascript: {
     category: "skill",
-    title: "Javascript",
-    link: "https://www.javascript.com/",
+    title: "JavaScript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     img: "/images/javascript.webp",
     level: 4,
     content: `Running on browsers, running server side now with {nodejs}. A very versatile and well supported language.`,
@@ -30,7 +30,7 @@ export default {
   },
   vertx: {
     category: "skill",
-    title: "VertX",
+    title: "Vert.x",
     img: "/images/vertx.webp",
     link: "https://vertx.io/",
     level: 3,
@@ -187,10 +187,10 @@ export default {
   angular: {
     category: "skill",
     title: "Angular",
-    link: "https://angular.io/",
+    link: "https://angular.dev/",
     img: "/images/angular.webp",
     level: 2,
-    content: `Javascript framework. Angular 1 (AngularJS) was great. It was my first experience with a reactive javascript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerful, yet, it made things difficult for no reason.`,
+    content: `JavaScript framework. Angular 1 (AngularJS) was great. It was my first experience with a reactive JavaScript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerful, yet, it made things difficult for no reason.`,
     tags: ["javascript", "frameworks"],
   },
   spring: {
@@ -205,7 +205,7 @@ export default {
   react: {
     category: "skill",
     title: "ReactJS",
-    link: "https://fr.reactjs.org/",
+    link: "https://react.dev/",
     img: "/images/react.webp",
     level: 4,
     content: `A very decent web framework. I started using React in 2021 with the {web3} projects in 2021. I think it suffers from its long history but it is still very convenient. It is also very powerful with Server Side Rendering frameworks like {nextjs}`,

@@ -70,7 +70,7 @@ const mode = ref("short");
           <ul>
             <li>
               Web UI:
-              <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, <b>Typescript</b>,
+              <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>TypeScript</b>,
               <b>Vue.js</b>, <b>Angular</b>, <b>React</b>
             </li>
             <li>
@@ -78,7 +78,7 @@ const mode = ref("short");
               <b>Forge</b>/<b>Foundry</b>, plus <b>web3.js</b> and <b>viem</b>
             </li>
             <li>
-              <b>JAVA</b> with Spring and VertX; deployed on Tomcat, JBoss,
+              <b>JAVA</b> with Spring and Vert.x; deployed on Tomcat, JBoss,
               Jetty
             </li>
             <li>
@@ -101,14 +101,14 @@ const mode = ref("short");
           </p>
           <ul>
             <li>
-              Comfortable with <b>Centos 7 &amp; 8</b>; occasional
+              Comfortable with <b>CentOS 7 &amp; 8</b>; occasional
               <b>Debian</b> work
             </li>
             <li>
               Configured <b>Apache</b>, <b>Nginx</b>, Tomcat, Jenkins, and
               Sonarqube
             </li>
-            <li>CI on recent projects with <b>Jenkins</b> and <b>Github</b></li>
+            <li>CI on recent projects with <b>Jenkins</b> and <b>GitHub</b></li>
             <li>
               Ran a privately hosted <b>Kubernetes</b> cluster for a production
               microlearning app
@@ -132,7 +132,7 @@ const mode = ref("short");
           <ul>
             <li>Roller hockey</li>
             <li>Board games</li>
-            <li>Macro economy</li>
+            <li>Macroeconomics</li>
             <li>Video games</li>
           </ul>
         </div>
@@ -188,7 +188,7 @@ const mode = ref("short");
             In all my projects, I developed both the back-end and the front-end.
             This enabled me to also progress in the various Web technologies,
             ie.
-            <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, <b>Typescript</b>,
+            <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>TypeScript</b>,
             <b>Vue.js</b>, <b>Angular</b>, and lately <b>React</b>.
           </p>
           <p>
@@ -201,7 +201,7 @@ const mode = ref("short");
           <p>
             I used the <b>JAVA</b> programming language in many contexts, first
             using JSP and servlets, then <b>Spring</b> and
-            <b>VertX frameworks</b>. I also deployed applications on various
+            <b>Vert.x frameworks</b>. I also deployed applications on various
             application servers such as <b>Tomcat</b>, <b>JBoss</b> and
             <b>Jetty</b>
           </p>
@@ -230,7 +230,7 @@ const mode = ref("short");
             system administration skills to get things done.
           </p>
           <p>
-            In particular I feel confident with <b>Centos 7 &amp; 8</b> system
+            In particular I feel confident with <b>CentOS 7 &amp; 8</b> system
             administration, application installation and configuration in
             general. I also worked on some occasion on the <b>Debian</b>
             operating system.
@@ -242,7 +242,7 @@ const mode = ref("short");
           </p>
           <p>
             Moreover I worked on configuring the continuous integration systems
-            on my latest projects using <b>Jenkins</b> and <b>Github</b>.
+            on my latest projects using <b>Jenkins</b> and <b>GitHub</b>.
           </p>
           <p>
             Having installed and configured a small privately hosted
@@ -267,7 +267,7 @@ const mode = ref("short");
         <div class="one half animated bounceInRight triple-padded">
           <h1>Hobbies</h1>
           <p>
-            In no specific order: Roller hockey, Board games, Macro economy,
+            In no specific order: Roller hockey, Board games, Macroeconomics,
             Video games.
           </p>
         </div>

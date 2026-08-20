@@ -7,14 +7,14 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 1. ~~**`{web3}` placeholder is unresolved**~~ — Fixed: `web3` link entry → ethereum.org/developers.
 2. ~~**Broken training URL**~~ — Fixed: course href → [kubernetes-avance](https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance/) (dropped the old `-2` slug).
 3. ~~**Nuxeo skill link dead**~~ — Fixed: skill URL → `https://doc.nuxeo.com/`.
-4. **Stale / weak skill URLs** — React still uses `fr.reactjs.org` (prefer `https://react.dev/`); Angular still uses `angular.io` (prefer `https://angular.dev/`). Optional: replace marketing `javascript.com` with MDN.
+4. ~~**Stale / weak skill URLs**~~ — Fixed: React → react.dev, Angular → angular.dev, JavaScript → MDN.
 5. ~~**Career HTML inconsistency**~~ — Fixed: ISAE teaching line is “Since 2014”; Quadran appYuser has `target` + `rel`.
-6. **Copy polish** — Minor spelling/branding: “Javascript” → JavaScript, “Github” → GitHub, “Centos” → CentOS, “Macro economy” → Macroeconomics, “VertX” casing vs Vert.x docs.
+6. ~~**Copy polish**~~ — Fixed: JavaScript / TypeScript / GitHub / CentOS / Macroeconomics / Vert.x branding in About, skills, and links.
 
 ## Contact form & secrets
 
 7. ~~**Web3Forms key hard-coded**~~ — Fixed: reads `VITE_WEB3FORMS_ACCESS_KEY`; `.env.example` added (local `.env` gitignored). Restrict the key to your domain in the Web3Forms dashboard.
-8. **Modal a11y gaps** — Dialog has `role="dialog"` / Escape-to-close, but no focus move into the dialog on open, no focus trap, no restore-focus on close, and no `overflow: hidden` on `body` while open.
+8. ~~**Modal a11y gaps**~~ — Fixed: focus moves into dialog on open, Tab trap, restore focus on close, `body` scroll lock while open.
 
 ## SEO & sharing
 

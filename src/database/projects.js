@@ -55,7 +55,7 @@ export default {
     date: "2011 - 2015",
     link: "https://www.quadran.eu/appyuser/",
     content: `As I was working as a performance consultant at {airbus}. {quadran} wanted to launch a tool to industrialize user satisfaction evaluation {apdex}.
-    I designed a system based on a {javascript} client used to capture application performance from the browser, a {java} server to store the data in an {elasticsearch} database and a webclient written in {angular} for visualizing this data. It was my first time working with reactive Javascript technology and what a mindblower it was!
+    I designed a system based on a {javascript} client used to capture application performance from the browser, a {java} server to store the data in an {elasticsearch} database and a webclient written in {angular} for visualizing this data. It was my first time working with reactive JavaScript technology and what a mindblower it was!
     `,
   },
   litiges: {
