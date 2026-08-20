@@ -19,13 +19,13 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 ## SEO & sharing
 
 9. ~~**Relative Open Graph image**~~ — Fixed: `og:image` / `twitter:image` / `og:url` use `%VITE_SITE_URL%` (set absolute origin at build time).
-10. **Static document title** — Title never changes per route (`About` / `Projects` / …). Use `router.afterEach` or per-route `meta.title`.
-11. **No `robots.txt` / sitemap** — Fine for a tiny personal site, but worth adding if you care about search discovery.
+10. ~~**Static document title**~~ — Fixed: each route sets `meta.title`; `router.afterEach` updates `document.title`.
+11. ~~**No `robots.txt` / sitemap**~~ — Fixed: Vite plugin emits `/robots.txt` and `/sitemap.xml` from `VITE_SITE_URL` (dev middleware + production assets).
 
 ## UX / polish
 
 12. **Projects without logos** — Litiges, Mobile number portability, and Mobile number frequency licenses have no `img`; cards look uneven next to logo’d entries.
-13. **Unused assets** — `public/images/cv.webp` and `metamask.webp` are unreferenced; remove or use.
+13. ~~**Unused assets**~~ — Fixed: removed unreferenced `cv.webp` and `metamask.webp` (CV download still uses `cv.pdf`).
 14. **Skill level stars** — Star row is decorative only (no accessible name / numeric alternative). Screen readers get little from `★★★`.
 15. **Fixed footer overlap** — Footer is `position: fixed`; body `padding-bottom: 3rem` may still clip tall last cards on small viewports—verify.
 16. **Mobile header density** — Absolute jumbotron + right-aligned title + sticky nav is busy on narrow screens; worth a quick pass for overlap and tap targets.
