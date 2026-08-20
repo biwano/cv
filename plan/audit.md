@@ -18,7 +18,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 9. ~~**Card images**~~ — Fixed: cards use title as `alt`; jumbotron alt is “Bruno Ilponse”.
 10. ~~**External links**~~ — Fixed: `rel="noopener noreferrer"` on `target="_blank"` links (components + `useDatabase.js` + job/study HTML).
 11. ~~**Active route**~~ — Fixed: nav uses `router-link-active` styling in `NavComponent.vue`.
-12. **About page** — Long justified paragraphs; a shorter opening plus bullets would scan better for recruiters.
+12. ~~**About page**~~ — Fixed: “In short” (default) / “Full story” tabs in `HomeView.vue`; short view uses bullets.
 
 ## SEO & discoverability
 
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–11 and 13–15 done. Next easy picks: About scanability (#12).
+Items 1–15 done. Next easy picks: legacy stack (#16), image weight (#17), or route fade (#19).
