@@ -32,11 +32,9 @@ import NavComponent from "@/components/NavComponent.vue";
     </div>
     <div class="main content">
       <RouterView v-slot="{ Component }">
-        <div style="position: relative">
-          <Transition>
-            <component :is="Component" />
-          </Transition>
-        </div>
+        <Transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </Transition>
       </RouterView>
     </div>
     <FooterComponent></FooterComponent>
@@ -44,18 +42,12 @@ import NavComponent from "@/components/NavComponent.vue";
 </template>
 
 <style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1s ease;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
 }
-.v-enter-from,
-.v-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -78,7 +70,6 @@ import NavComponent from "@/components/NavComponent.vue";
   position: relative;
   clear: both;
   text-align: justify;
-  min-height: 300px;
   width: 100%;
 }
 .social {
