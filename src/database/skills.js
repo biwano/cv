@@ -5,7 +5,7 @@ export default {
     link: "https://www.javascript.com/",
     img: "/images/javascript.png",
     level: 4,
-    content: `Running on browers, running server side now with {nodejs}. A very versatile and well supported language.`,
+    content: `Running on browsers, running server side now with {nodejs}. A very versatile and well supported language.`,
     tags: ["languages", "javascript"],
   },
   vuejs: {
@@ -35,7 +35,7 @@ export default {
     link: "https://vertx.io/",
     level: 3,
     content:
-      "A very good {java} event driven framework. It empowers the developer with the ability to control how threads are spawn and thus optimize application resource consumption. I choosed it in the {naas} architecture to make sure we could scale to the fullest.",
+      "A very good {java} event driven framework. It empowers the developer with the ability to control how threads are spawned and thus optimize application resource consumption. I chose it in the {naas} architecture to make sure we could scale to the fullest.",
     tags: ["java", "frameworks"],
   },
   drupal: {
@@ -55,7 +55,7 @@ export default {
     img: "/images/php.png",
     level: 3,
     content: `{php} is considered by many as an abomination. 
-      I think it has come a long way with class based development and next gen frameworks such as {laravel} and CMSs like {drupal}... I use it for the {naas} centent editor and {moodle} plugin projects.`,
+      I think it has come a long way with class based development and next gen frameworks such as {laravel} and CMSs like {drupal}... I use it for the {naas} content editor and {moodle} plugin projects.`,
     tags: ["php", "languages"],
   },
   moodle: {
@@ -64,7 +64,7 @@ export default {
     link: "https://moodle.com/",
     img: "/images/moodle.png",
     level: 3,
-    content: `Moodle is the learning management system used at {isae-supaero}. I developed two modules for this application, a reporting tool called {hyrbridmeter} and a content viewer for {naas} hosted resources.`,
+    content: `Moodle is the learning management system used at {isae-supaero}. I developed two modules for this application, a reporting tool called {hybridmeter} and a content viewer for {naas} hosted resources.`,
     tags: ["php", "cms"],
   },
   nuxeo: {
@@ -82,7 +82,7 @@ export default {
     link: "https://www.elastic.co/",
     img: "/images/elasticsearch.png",
     level: 3,
-    content: `A highly and easily scalagble noSQL database backed by {lucene} which is very efficient for fulltext search for instance. I used it in the {naas} and {appyuser} projects. In particular I wrote {python} scripts to migrate data to {elasticsearch} from multiple sources like {traxlrs} or SQL databases.`,
+    content: `A highly and easily scalable noSQL database backed by {lucene} which is very efficient for fulltext search for instance. I used it in the {naas} and {appyuser} projects. In particular I wrote {python} scripts to migrate data to {elasticsearch} from multiple sources like {traxlrs} or SQL databases.`,
     tags: ["databases"],
   },
   traxlrs: {
@@ -163,7 +163,7 @@ export default {
     link: "https://rubyonrails.org/",
     img: "/images/rails.png",
     level: 1,
-    content: `The {redmine} projects was not long enough to get be opinionated about {rails}. But I am left with good memories.`,
+    content: `The {redmine} project was not long enough to get me opinionated about {rails}. But I am left with good memories.`,
     tags: ["ruby", "frameworks"],
   },
   "c++": {
@@ -181,7 +181,7 @@ export default {
     link: "https://nodejs.org/en/",
     img: "/images/nodejs.png",
     level: 2,
-    content: `{nodejs} is 'just' a javscript runtime environnement for server. I shamelessly gave training on {nodejs} and {express} without using it professionally.`,
+    content: `{nodejs} is 'just' a javascript runtime environment for server. I shamelessly gave training on {nodejs} and {express} without using it professionally.`,
     tags: ["javascript"],
   },
   angular: {
@@ -190,7 +190,7 @@ export default {
     link: "https://angular.io/",
     img: "/images/angular.png",
     level: 2,
-    content: `Javascript framework. Angular 1 was great. It was my first experience with a reactive javascript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerfurl, yet, it made things difficult for no reason.`,
+    content: `Javascript framework. Angular 1 was great. It was my first experience with a reactive javascript framework and I used it in the {appyuser} project. I used Angular 2 in the {cosinus} project and was disappointed. It is powerful, yet, it made things difficult for no reason.`,
     tags: ["javascript", "frameworks"],
   },
   spring: {
@@ -217,7 +217,7 @@ export default {
     link: "https://nextjs.org/",
     img: "/images/nextjs.png",
     level: 4,
-    content: `A server side rendering framework based on {react}. The last {web3} project I am workking on is based on {nextjs}. Once again I discovered I new nothing. Great development experience.`,
+    content: `A server side rendering framework based on {react}. The last {web3} project I am working on is based on {nextjs}. Once again I discovered I knew nothing. Great development experience.`,
     tags: ["javascript", "frameworks"],
   },
   bash: {
@@ -226,7 +226,7 @@ export default {
     link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)",
     img: "/images/bash.png",
     level: 4,
-    content: `Linux shell. I made a lot of {bash} scripts for continuous deployment, database dumping and restoration, filesystem backuping and so on since 2015.`,
+    content: `Linux shell. I made a lot of {bash} scripts for continuous deployment, database dumping and restoration, filesystem backing up and so on since 2015.`,
     tags: ["system", "languages"],
   },
   kubernetes: {

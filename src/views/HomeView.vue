@@ -7,7 +7,7 @@
           <b>Born in 1982</b> in France, I started getting interested in
           computers when I was <b>nine</b> as my older brother got an Amstrad
           CPC 6128 for his birthday. Soon after, I embarked on the 'programming'
-          journey with him soon after by shamelessly copying code found in
+          journey with him by shamelessly copying code found in
           computer magazines.
         </p>
         <p>
@@ -15,7 +15,7 @@
           mainly trying to reproduce games like Bomberman. As the 3D
           acceleration cards price started to fall in the 90s with the like of
           the Voodoo 3dfx I created some games using OpenGL and understood the
-          importance of mathematicss at a practical level with matrix calculus
+          importance of mathematics at a practical level with matrix calculus
           in particular. This led me to prepare entry for the French Engineering
           schools providing me a degree in ... Telecommunications. Indeed, it
           was all the rage at the time and I got dragged into the hype.
@@ -44,6 +44,19 @@
           languages and frameworks.
         </p>
         <p>
+          In all my projects, I developed both the back-end and the front-end.
+          This enabled me to also progress in the various Web technologies, ie.
+          <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, <b>Typescript</b>,
+          <b>Vue.js</b>, <b>Angular</b>, and lately <b>React</b>.
+        </p>
+        <p>
+          In recent years, I also worked with <b>Solidity</b> to develop smart
+          contracts on Ethereum and compatible chains, covering ERC20 tokens,
+          NFTs and DeFi. I used tools such as <b>Forge</b> and
+          <b>Foundry</b>, and integrated contracts with web apps using
+          <b>web3.js</b> and <b>viem</b>.
+        </p>
+        <p>
           I used the <b>JAVA</b> programming language in many contexts, first
           using JSP and servlets, then <b>Spring</b> and
           <b>VertX frameworks</b>. I also deployed applications on various
@@ -56,7 +69,7 @@
           Apache and Nginx.
         </p>
         <p>
-          I also developped modules for Redmine which allowed me to dip my toes
+          I also developed modules for Redmine which allowed me to dip my toes
           into <b>Ruby and Rails</b>.
         </p>
         <p>
@@ -64,12 +77,6 @@
           sometimes django-rest-framework for the backend and Vue.js for the
           frontend. Consequently, I acquired serious experience with
           <b>Python</b> in general.
-        </p>
-        <p>
-          In all my projects, I developed both the back-end and the front-end.
-          This enabled me to also progress in the various Web technologies, ie.
-          <b>HTML</b>, <b>CSS</b>, <b>Javascript</b>, <b>Typescript</b>,
-          <b>Vue.js</b>, <b>Angular</b>, and lately <b>React</b>.
         </p>
       </div>
     </div>
@@ -111,7 +118,7 @@
         <p>
           Most recently, as the technical lead of my latest project. I crafted a
           tailored <b>Agile</b> framework inspired from <b>Scrum</b> but adapted
-          to the very specific environnement the team is working in.
+          to the very specific environment the team is working in.
         </p>
       </div>
       <div class="one half animated bounceInRight triple-padded">

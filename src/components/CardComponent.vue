@@ -17,8 +17,6 @@ const isRight = computed(() => position.value == "right");
 
 const imgClass = computed(() => {
   return {
-    "pull-left": isLeft.value,
-    "pull-right": isRight.value,
     "pad-left": isRight.value,
     "pad-right": isLeft.value,
   };
@@ -76,6 +74,12 @@ img {
 }
 .img-container {
   min-width: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animated.triple-padded {
+  align-items: center;
 }
 .subContainer {
   display: table-cell;

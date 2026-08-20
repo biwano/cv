@@ -51,7 +51,7 @@ export default {
     title: "Perl",
     link: "https://www.perl.org/",
   },
-  hyrbridmeter: {
+  hybridmeter: {
     title: "HybridMeter",
     link: "https://online.isae.fr/resources/hybridmeter/",
   },

@@ -16,7 +16,7 @@ export default {
     position: "right",
     date: "2000-2003",
     link: "https://lgtbaimbridge.fr/",
-    content: `Intensive fondation degree in Mathematics and Physics for French
+    content: `Intensive foundation degree in Mathematics and Physics for French
       Engineering schools.`,
   },
   providence: {

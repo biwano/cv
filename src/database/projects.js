@@ -2,13 +2,13 @@ export default {
   carbonmark: {
     category: "project",
     title: "Carbonmark",
-    img: "/images/carbonmark.jpg",
+    img: "/images/carbonmark.png",
     link: "https://app.carbonmark.com",
     position: "left",
     date: "2023 - now",
     content: `Carbonmark is an innovative marketplace enabling the trading of carbon credits leveraging a blockchain infrastructure. 
-    Here, I developped the frontend in {nextjs}, designed the backend architecture using {fastify} and implemented the blockchain infrastructure in {solidity}.
-    I also integratede various third party systems like {circle} for wallet abstraction and {stripe} for payment processing.
+    Here, I developed the frontend in {nextjs}, designed the backend architecture using {fastify} and implemented the blockchain infrastructure in {solidity}.
+    I also integrated various third party systems like {circle} for wallet abstraction and {stripe} for payment processing.
     `,
   },
   naas: {
@@ -63,7 +63,7 @@ export default {
     title: "Litiges",
     position: "right",
     date: "2010 - 2011",
-    content: `I took part on the development of Litiges, an application written in {spring} by a team of five. The main thing I learned from this experience is to carefully choose your development tools to have fast compilation cycles. Web developers should not be waiting for code to compile.`,
+    content: `I took part in the development of Litiges, an application written in {spring} by a team of five. The main thing I learned from this experience is to carefully choose your development tools to have fast compilation cycles. Web developers should not be waiting for code to compile.`,
   },
   "mobile-number-portability": {
     category: "project",
