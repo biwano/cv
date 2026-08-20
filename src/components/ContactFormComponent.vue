@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from "vue";
+import { ref, watch, nextTick, onMounted, onUnmounted } from "vue";
 
 const props = defineProps({
   open: { type: Boolean, default: false },
@@ -14,27 +14,90 @@ const botcheck = ref(false);
 const status = ref("idle"); // idle | sending | success | error
 const errorMessage = ref("");
 
+const dialogRef = ref(null);
+const nameInputRef = ref(null);
+const closeButtonRef = ref(null);
+let previouslyFocused = null;
+
 const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]):not(.botcheck), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+function focusables() {
+  const root = dialogRef.value;
+  if (!root) return [];
+  return [...root.querySelectorAll(FOCUSABLE)].filter(
+    (el) => el.getClientRects().length > 0,
+  );
+}
+
+function setBodyScrollLocked(locked) {
+  document.body.style.overflow = locked ? "hidden" : "";
+}
 
 function close() {
   emit("close");
 }
 
 function onKeydown(event) {
-  if (event.key === "Escape" && props.open) {
+  if (!props.open) return;
+
+  if (event.key === "Escape") {
+    event.preventDefault();
     close();
+    return;
+  }
+
+  if (event.key !== "Tab") return;
+
+  const items = focusables();
+  if (items.length === 0) {
+    event.preventDefault();
+    dialogRef.value?.focus();
+    return;
+  }
+
+  const first = items[0];
+  const last = items[items.length - 1];
+  const active = document.activeElement;
+  const inside = dialogRef.value?.contains(active);
+
+  if (event.shiftKey && (active === first || !inside)) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (active === last || !inside)) {
+    event.preventDefault();
+    first.focus();
   }
 }
 
 watch(
   () => props.open,
-  (isOpen) => {
+  async (isOpen) => {
     if (isOpen) {
+      previouslyFocused =
+        document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null;
       status.value = "idle";
       errorMessage.value = "";
+      setBodyScrollLocked(true);
+      await nextTick();
+      nameInputRef.value?.focus();
+    } else {
+      setBodyScrollLocked(false);
+      previouslyFocused?.focus?.();
+      previouslyFocused = null;
     }
-  }
+  },
 );
+
+watch(status, async (value) => {
+  if (!props.open || value !== "success") return;
+  await nextTick();
+  closeButtonRef.value?.focus();
+});
 
 onMounted(() => {
   window.addEventListener("keydown", onKeydown);
@@ -42,6 +105,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("keydown", onKeydown);
+  setBodyScrollLocked(false);
 });
 
 async function onSubmit() {
@@ -107,14 +171,17 @@ async function onSubmit() {
       @click.self="close"
     >
       <div
+        ref="dialogRef"
         class="contact-dialog"
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-title"
+        tabindex="-1"
       >
         <div class="contact-header">
           <h2 id="contact-title">Contact</h2>
           <button
+            ref="closeButtonRef"
             type="button"
             class="contact-close"
             aria-label="Close contact form"
@@ -132,6 +199,7 @@ async function onSubmit() {
           <label>
             Name
             <input
+              ref="nameInputRef"
               v-model="name"
               type="text"
               name="name"
@@ -210,6 +278,10 @@ async function onSubmit() {
   border-radius: 4px;
   padding: 1.25rem 1.35rem 1.35rem;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.contact-dialog:focus {
+  outline: none;
 }
 
 .contact-header {
