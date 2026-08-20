@@ -26,7 +26,7 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 
 12. **Projects without logos** — Litiges, Mobile number portability, and Mobile number frequency licenses have no `img`; cards look uneven next to logo’d entries.
 13. ~~**Unused assets**~~ — Fixed: removed unreferenced `cv.webp` and `metamask.webp` (CV download still uses `cv.pdf`).
-14. **Skill level stars** — Star row is decorative only (no accessible name / numeric alternative). Screen readers get little from `★★★`.
+14. ~~**Skill level stars**~~ — Fixed: star row uses `role="img"` + `aria-label` (“Skill level: N out of 5”); glyphs are `aria-hidden`.
 15. ~~**Fixed footer overlap**~~ — Fixed: `--footer-space` (4.5rem + safe-area) on `body` / `scroll-padding-bottom`; footer gets safe-area padding and `z-index`.
 16. **Mobile header density** — Absolute jumbotron + right-aligned title + sticky nav is busy on narrow screens; worth a quick pass for overlap and tap targets.
 
@@ -34,14 +34,14 @@ Fresh review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20 (evening). P
 
 17. ~~**History-mode hosting**~~ — Fixed: README documents SPA fallback (`try_files` / `FallbackResource` / Netlify `_redirects` / host SPA mode).
 18. ~~**README is still the Vue template**~~ — Fixed: project README covers setup, scripts, env vars, and history-mode deploy notes (`.env.example` restored).
-19. **AIT Consulting employer link** — Points at a third-party directory (`listcompany.org`), not an official company site. Prefer a better source or no link.
+19. ~~**AIT Consulting employer link**~~ — Fixed: removed the `listcompany.org` link; title is plain text.
 
 ## Nice-to-haves
 
 20. ~~**Per-route meta description**~~ — Fixed: each route sets `meta.description`; `router.afterEach` updates `description` / `og:description` / `twitter:description` (and titles).
 21. ~~**Contact success → auto-close**~~ — Won’t do: keep success visible until the user closes; see [AGENTS.md](../AGENTS.md).
 22. ~~**Dead-code comments**~~ — Fixed: removed abandoned empty-star and tags markup from `CardComponent.vue` (and unused `tags` prop wiring).
-23. **Lint in CI** — `npm run lint` exists locally; no CI config in-repo yet.
+23. ~~**Lint in CI**~~ — Won’t do: keep lint local only; see [AGENTS.md](../AGENTS.md).
 
 ## Suggested quick wins
 

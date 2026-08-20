@@ -92,7 +92,6 @@ export default {
     category: "job",
     title: "AIT Consulting",
     img: "/images/ait.webp",
-    link: "https://www.listcompany.org/Ait_Consulting_Ltd_Info.html",
     date: "2006 – 2009",
     content: `IT and Telecom consultant for
       <a

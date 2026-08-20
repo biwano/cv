@@ -35,6 +35,11 @@ const subContainerClass = computed(() => {
     bounceInRight: isRight.value,
   };
 });
+
+const MAX_LEVEL = 5;
+const levelLabel = computed(() =>
+  props.level ? `Skill level: ${props.level} out of ${MAX_LEVEL}` : "",
+);
 </script>
 
 <template>
@@ -56,8 +61,17 @@ const subContainerClass = computed(() => {
         </h3>
         <b v-if="date">{{ date }}<br /></b>
         <slot></slot>
-        <div v-if="level" class="level">
-          <span v-for="i in [...Array(level).keys()]" :key="i"> &#9733; </span>
+        <div
+          v-if="level"
+          class="level"
+          role="img"
+          :aria-label="levelLabel"
+        >
+          <span aria-hidden="true">
+            <span v-for="i in [...Array(level).keys()]" :key="i">
+              &#9733;
+            </span>
+          </span>
         </div>
       </div>
     </div>
