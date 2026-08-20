@@ -1,9 +1,21 @@
 export default {
+  carbonmark: {
+    category: "project",
+    title: "Carbonmark",
+    img: "/images/carbonmark.jpg",
+    link: "https://app.carbonmark.com",
+    position: "left",
+    date: "2023 - now",
+    content: `Carbonmark is an innovative marketplace enabling the trading of carbon credits leveraging a blockchain infrastructure. 
+    Here, I developped the frontend in {nextjs}, designed the backend architecture using {fastify} and implemented the blockchain infrastructure in {solidity}.
+    I also integratede various third party systems like {circle} for wallet abstraction and {stripe} for payment processing.
+    `,
+  },
   naas: {
     category: "project",
     title: "Nuggets as a Service",
     img: "/images/naas.png",
-    position: "left",
+    position: "right",
     link: "https://online.isae.fr/resources/naas/index.html",
     date: "2019 - now",
     content: `The {naas} ecosystem is a set of applications designed to enable the creation and publication of reusable educational content.
@@ -12,17 +24,6 @@ export default {
     a PHP content editor based on {drupal}, a {moodle} activity plugin that facilitates importing the content,
     a statistics server leveraging {elasticsearch} for providing content usage statistics.<br/>
     For this project, I designed and developed the software architecture (based on the technologies above), the hosting infrastructure based on a private dedicated {kubernetes} cluster, the continuous integration and deployment tools with {jenkins} and {sonarqube} and as the project grew, I also led a team of 5 developers.
-    `,
-  },
-  web3: {
-    category: "project",
-    title: "Web3",
-    img: "/images/metamask.png",
-    link: "https://fr.wikipedia.org/wiki/Web3",
-    position: "right",
-    date: "2021 - now",
-    content: `I started studying blockchains during the rise of decentralized finance in 2020. I submitted bug fixes or small features for some of the web3 applications I was trying and naturally got involved with the development teams.
-    These pieces of code are usually produced with {react} and or {nextjs}. Some of the works I have done include developing web interfaces to smart contracts, implementing localization with {lingui} and {translationio}, setting up the {sentry} error logging frameworks.
     `,
   },
   cosinus: {
