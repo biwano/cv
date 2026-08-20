@@ -39,6 +39,11 @@ import { RouterLink } from "vue-router";
   background-color: var(--color-primary);
   color: black;
 }
+.nav a.router-link-active {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: 700;
+}
 a img {
   height: 32px;
   transition: height 0.4s;

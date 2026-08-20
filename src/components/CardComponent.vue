@@ -42,11 +42,17 @@ const subContainerClass = computed(() => {
   <div :class="containerClass">
     <div class="animated bounceInLeft triple-padded" :class="subContainerClass">
       <div class="img-container">
-        <img :src="img" :class="imgClass" />
+        <img :src="img" :alt="title" :class="imgClass" />
       </div>
       <div class="content">
         <h3>
-          <a v-if="link" :href="link" target="_blank">{{ title }}</a>
+          <a
+            v-if="link"
+            :href="link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ title }}</a
+          >
           <span v-else>{{ title }}</span>
         </h3>
         <b v-if="date">{{ date }}<br /></b>

@@ -35,14 +35,17 @@ const items = computed(() => {
     <div class="row">
       <div class="one animated bounceInRight triple-padded">
         <h1>Skills</h1>
-        <span
+        <button
           v-for="tag in getCategoryTags('skill')"
           :key="tag"
+          type="button"
           class="button"
           :class="buttonClass(tag)"
+          :aria-pressed="selected_tag === tag"
           @click="click(tag)"
-          >{{ tag }}</span
         >
+          {{ tag }}
+        </button>
       </div>
     </div>
     <CardListComponent :elems="items"> </CardListComponent>
@@ -54,5 +57,6 @@ const items = computed(() => {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: smaller;
+  cursor: pointer;
 }
 </style>

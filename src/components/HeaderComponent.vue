@@ -2,7 +2,7 @@
 <template>
   <div class="jumbotron wrapper">
     <img
-      alt="Jumbotron"
+      alt="Bruno Ilponse"
       src="/images/jumbotron.jpg"
       class="jumbotron image row"
     />

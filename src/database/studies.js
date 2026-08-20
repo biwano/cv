@@ -39,15 +39,25 @@ export default {
         <a
           href="https://themanis.fr/formations/informatique/virtualisation/kubernetes-avance-2/"
           target="_blank"
+          rel="noopener noreferrer"
           >Advanced Kubernetes training</a
         >
-        by <a href="https://themanis.fr/" target="_blank">TheManis</a>
+        by
+        <a
+          href="https://themanis.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TheManis</a
+        >
       </p>
 
       <!-- Anglais -->
       <p>
         <b>2021, 26h</b> : Advanced English courses by
-        <a href="https://focalpoint-languages.com/" target="_blank"
+        <a
+          href="https://focalpoint-languages.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           >Focalpoint</a
         >
         concluded with <b>C1 level</b> evaluation
@@ -59,6 +69,7 @@ export default {
         <a
           href="https://www.insa-toulouse.fr/fr/index.html"
           target="_blank"
+          rel="noopener noreferrer"
           >INSA Toulouse</a
         >
       </p>
@@ -66,13 +77,20 @@ export default {
       <!-- Formeo management -->
       <p>
         <b>2020, 18.5h </b> : Management basics by
-        <a href="https://formeo.fr" target="_blank">FORMEO</a>
+        <a href="https://formeo.fr" target="_blank" rel="noopener noreferrer"
+          >FORMEO</a
+        >
       </p>
 
       <!-- Formeo oracle -->
       <p>
         <b>2016, 35h </b> : Oracle 11G database administration by
-        <a href="https://www.iform.fr/" target="_blank">iForm</a>
+        <a
+          href="https://www.iform.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >iForm</a
+        >
       </p>`,
   },
 };

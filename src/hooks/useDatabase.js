@@ -5,7 +5,7 @@ function highlightTextFromSource(text) {
     for (const key in database) {
       var replace;
       if (database[key].link) {
-        replace = `<a target="_blank" href="${database[key].link}">${database[key].title}</a>`;
+        replace = `<a target="_blank" rel="noopener noreferrer" href="${database[key].link}">${database[key].title}</a>`;
       } else {
         replace = database[key].title;
         //console.log(`key ${key} has no link`);

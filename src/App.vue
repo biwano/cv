@@ -45,6 +45,7 @@ onBeforeUnmount(() => {
           class="social"
           href="https://www.linkedin.com/in/bruno-ilponse-502414196"
           target="_blank"
+          rel="noopener noreferrer"
           ><i class="fa-brands fa-linkedin-in"></i
         ></a>
         <a

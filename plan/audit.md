@@ -14,10 +14,10 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 ## UX / polish
 
 7. **Sticky nav** — Two `NavComponent` instances plus scroll JS in `App.vue`; `position: sticky` would be simpler and more reliable.
-8. **Skills filters** — Tag chips are `<span @click>` in `SkillsView.vue`; use `<button>` for keyboard accessibility.
-9. **Card images** — No meaningful `alt` text on cards (`CardComponent.vue`); jumbotron only has a generic alt.
-10. **External links** — Add `rel="noopener noreferrer"` on `target="_blank"` links (components + generated content in `useDatabase.js`).
-11. **Active route** — No clear “current page” style on nav links (`NavComponent.vue`).
+8. ~~**Skills filters**~~ — Fixed: tag chips are `<button type="button">` with `aria-pressed` in `SkillsView.vue`.
+9. ~~**Card images**~~ — Fixed: cards use title as `alt`; jumbotron alt is “Bruno Ilponse”.
+10. ~~**External links**~~ — Fixed: `rel="noopener noreferrer"` on `target="_blank"` links (components + `useDatabase.js` + job/study HTML).
+11. ~~**Active route**~~ — Fixed: nav uses `router-link-active` styling in `NavComponent.vue`.
 12. **About page** — Long justified paragraphs; a shorter opening plus bullets would scan better for recruiters.
 
 ## SEO & discoverability
@@ -42,4 +42,4 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 ## Suggested quick wins
 
-Items 1–6 done. Next easy picks: sticky nav (#7), skills filter buttons (#8), `rel="noopener"` (#10), meta/title (#13–15).
+Items 1–6 and 8–11 done. Next easy picks: sticky nav (#7), About scanability (#12), meta/title (#13–15).

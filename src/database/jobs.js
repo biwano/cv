@@ -18,7 +18,12 @@ export default {
     link: "https://www.quadran.eu/",
     date: "2011 - 2015",
     content: ` Application performance consultant for
-      <a href="https://www.airbus.com/en" target="_blank">Airbus</a><br />
+      <a
+        href="https://www.airbus.com/en"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Airbus</a
+      ><br />
       Architect and fullstack software developer for the
       <a href="https://www.quadran.eu/appyuser/">appYuser</a> application<br />`,
   },
@@ -38,9 +43,17 @@ export default {
     link: "https://www.silicom.fr",
     date: "2010 - 2011",
     content: `Product Line Leader - Responsible for enforcing
-      <a href="https://www.itlibrary.org/" target="_blank">ITIL</a> processes
-      around networking equipment supervision tools and solving crisis events
-      at <a href="https://sfr.fr" target="_blank">SFR</a>.`,
+      <a
+        href="https://www.itlibrary.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >ITIL</a
+      >
+      processes around networking equipment supervision tools and solving
+      crisis events at
+      <a href="https://sfr.fr" target="_blank" rel="noopener noreferrer"
+        >SFR</a
+      >.`,
   },
   "ait-consulting": {
     category: "job",
@@ -50,9 +63,17 @@ export default {
     link: "https://www.listcompany.org/Ait_Consulting_Ltd_Info.html",
     date: "2006 - 2009",
     content: `IT and Telecom consultant for
-      <a href="https://discoverflow.co/" target="_blank">UTS Caraïbes</a> (now
-      Flow) and the
-      <a href="https://www.sbcwi.com/" target="_blank"
+      <a
+        href="https://discoverflow.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >UTS Caraïbes</a
+      >
+      (now Flow) and the
+      <a
+        href="https://www.sbcwi.com/"
+        target="_blank"
+        rel="noopener noreferrer"
         >Sapphire Beach Club resort</a
       >`,
   },
@@ -62,10 +83,18 @@ export default {
     img: "/images/anonymous.png",
     position: "right",
     content: ` <b>Since 2021</b> : Front end developer for
-      <a target="_blank" href="https://www.klimadao.finance/">KlimaDAO&nbsp;</a
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.klimadao.finance/"
+        >KlimaDAO&nbsp;</a
       ><img src="/images/klimadao.png" class="miniImage" /><br />
       <b>2021</b> : Front end developer for
-      <a target="_blank" href="https://www.olympusdao.finance/">OlympusDAO</a
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.olympusdao.finance/"
+        >OlympusDAO</a
       >&nbsp;<img src="/images/olympusdao.png" class="miniImage" /><br />`,
   },
 };
