@@ -37,7 +37,7 @@ Review of the Vue CV site (`/opt/biwano/cv`) as of 2026-08-20. Prioritized for i
 
 20. Contact CTA (email / Calendly) in the header.
 21. Career as a simple timeline instead of alternating cards.
-22. `prefers-reduced-motion` to tone down bounce animations.
+22. ~~**`prefers-reduced-motion`**~~ — Fixed: near-instant animations/transitions in `main.css` when the OS preference is set.
 23. Vite 3 / Vue 3.2 are dated — upgrade when convenient (not urgent for a CV site).
 
 ## Suggested quick wins
