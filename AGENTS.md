@@ -18,3 +18,7 @@
 ## Design
 
 - Link colors: see [.cursor/rules/link-colors.mdc](.cursor/rules/link-colors.mdc)
+
+## Printable CV photo
+
+When regenerating `public/images/cv-photo.png`, use `sharp` (install temporarily, do not leave it as a dependency). Portrait layout rules: [.cursor/skills/printable-cv/SKILL.md](.cursor/skills/printable-cv/SKILL.md).

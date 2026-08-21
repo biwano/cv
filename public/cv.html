@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -86,11 +86,21 @@
       }
 
       .role {
-        margin: 0.35rem 0 1rem;
+        margin: 0.35rem 0 0.75rem;
         font-size: 0.95rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.03em;
+      }
+
+      .portrait {
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin: 0 0 1rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
       }
 
       .meta {
@@ -103,7 +113,7 @@
 
       .meta li {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.5rem;
         margin-bottom: 0.45rem;
       }
@@ -113,7 +123,6 @@
         flex: 0 0 auto;
         width: 1.1rem;
         height: 1.1rem;
-        margin-top: 0.15rem;
       }
 
       .section {
@@ -244,25 +253,57 @@
     <article class="sheet" aria-label="Curriculum Vitae">
       <aside class="sidebar">
         <header>
-          <h1>Bruno Ilponse</h1>
+          <img
+            class="portrait"
+            src="/images/cv-photo.png"
+            width="96"
+            height="96"
+            alt="Bruno Ilponse"
+          />
+          <h2>BRUNO ILPONSE</h2>
           <p class="role">Senior Fullstack Software Developer</p>
           <ul class="meta">
             <li>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 7v5l3 2" />
               </svg>
               <span>Experience: 20 Years</span>
             </li>
             <li>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z" />
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"
+                />
               </svg>
               <span>6 Rue Jean Dabadie, 31600 Muret, France</span>
             </li>
             <li>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M7 3.5h3.2l1.1 4.2-2 1.2a12.5 12.5 0 0 0 5.8 5.8l1.2-2 4.2 1.1V17a2.5 2.5 0 0 1-2.5 2.5A14.5 14.5 0 0 1 4.5 6 2.5 2.5 0 0 1 7 3.5z" />
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 3.5h3.2l1.1 4.2-2 1.2a12.5 12.5 0 0 0 5.8 5.8l1.2-2 4.2 1.1V17a2.5 2.5 0 0 1-2.5 2.5A14.5 14.5 0 0 1 4.5 6 2.5 2.5 0 0 1 7 3.5z"
+                />
               </svg>
               <span>+33 6 76 58 13 48</span>
             </li>
@@ -271,8 +312,17 @@
 
         <section class="section" aria-labelledby="expertize-title">
           <h2 id="expertize-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M8.5 14.5c-2 .2-3.5 1.2-3.5 3.2V20h6v-2.3c0-1.6-1-2.7-2.5-3.2z" />
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path
+                d="M8.5 14.5c-2 .2-3.5 1.2-3.5 3.2V20h6v-2.3c0-1.6-1-2.7-2.5-3.2z"
+              />
               <path d="M10 14.2V9.5a2.5 2.5 0 0 1 5 0v1" />
               <path d="M15 11.2c1.8.3 3 1.4 3 3.2V20h-5" />
               <path d="M8.2 9.2c-.8-1.6.1-3.4 1.8-3.7" />
@@ -297,8 +347,17 @@
 
         <section class="section" aria-labelledby="skills-title">
           <h2 id="skills-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="m12 3 2.2 4.6 5 .7-3.6 3.5.9 5.1L12 14.8 7.5 16.9l.9-5.1L4.8 8.3l5-.7L12 3z" />
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path
+                d="m12 3 2.2 4.6 5 .7-3.6 3.5.9 5.1L12 14.8 7.5 16.9l.9-5.1L4.8 8.3l5-.7L12 3z"
+              />
             </svg>
             Other skills
           </h2>
@@ -326,7 +385,14 @@
 
         <section class="section" aria-labelledby="hobbies-title">
           <h2 id="hobbies-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
               <path d="M3 18h18" />
               <path d="M5 18c2.5-3 5.5-4.5 9-4.5 1.8 0 3.4.4 4.8 1.1" />
               <path d="M12 13.5V6.8L18 9" />
@@ -344,11 +410,24 @@
       </aside>
 
       <div class="main">
-        <section class="section" aria-labelledby="career-title" style="margin-top: 0">
+        <section
+          class="section"
+          aria-labelledby="career-title"
+          style="margin-top: 0"
+        >
           <h2 id="career-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
               <circle cx="12" cy="12" r="3" />
-              <path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" />
+              <path
+                d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"
+              />
             </svg>
             Career
           </h2>
@@ -376,7 +455,8 @@
               development team leader
             </li>
             <li>
-              <span class="when">2015 - 2019:</span> Fullstack software developer
+              <span class="when">2015 - 2019:</span> Fullstack software
+              developer
             </li>
             <li>
               <span class="when">Since 2014:</span> Part time teacher in Web
@@ -425,7 +505,14 @@
 
         <section class="section" aria-labelledby="education-title">
           <h2 id="education-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
               <path d="m3 10 9-5 9 5-9 5-9-5z" />
               <path d="M7 12.2v4.3c0 .2 2.2 2 5 2s5-1.8 5-2v-4.3" />
               <path d="M21 10v6" />
@@ -444,8 +531,8 @@
           <h3 class="employer">Baimbridge High School</h3>
           <ul class="roles">
             <li>
-              <span class="when">2000-2003:</span> Intensive foundation degree in
-              Mathematics and Physics for French Engineering schools.
+              <span class="when">2000-2003:</span> Intensive foundation degree
+              in Mathematics and Physics for French Engineering schools.
             </li>
           </ul>
 
@@ -460,9 +547,18 @@
 
         <section class="section" aria-labelledby="training-title">
           <h2 id="training-title" class="section-title">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
               <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18M12 3c2.5 2.8 3.8 5.8 3.8 9s-1.3 6.2-3.8 9c-2.5-2.8-3.8-5.8-3.8-9S9.5 5.8 12 3z" />
+              <path
+                d="M3 12h18M12 3c2.5 2.8 3.8 5.8 3.8 9s-1.3 6.2-3.8 9c-2.5-2.8-3.8-5.8-3.8-9S9.5 5.8 12 3z"
+              />
             </svg>
             Recent training
           </h2>

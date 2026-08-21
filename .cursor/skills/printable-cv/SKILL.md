@@ -57,10 +57,17 @@ Each major section title is a single row: **outline SVG icon** (~16–18px, stro
 
 ### Left column (top → bottom)
 
-1. **Header** — name, title, meta lines (clock / house / phone icons).
+1. **Header** — name, title, portrait photo, meta lines (clock / house / phone icons).
 2. **EXPERTIZE** — tech logos in a horizontal wrap row (image + short label).
 3. **OTHER SKILLS** — category subheadings + comma-separated or bulleted skill titles.
 4. **HOBBIES** — only if a hobbies source exists in the repo; otherwise omit the section.
+
+### Portrait photo
+
+- Use `public/images/cv-photo.png` as-is (`img` `src="/images/cv-photo.png"`).
+- Place **directly under** the professional title (after name + title, before meta).
+- Display at about **88–100px** wide (≈24–28mm), circular (`border-radius: 50%`) or lightly rounded square; `object-fit: cover`; short alt (e.g. the display name).
+- To regenerate the asset from `photo2.png`, see [AGENTS.md](../../../AGENTS.md) (Printable CV photo).
 
 ### Right column (top → bottom)
 
@@ -93,12 +100,14 @@ Do **not** hardcode career, education, training, skills, name, or title in this 
 | Career               | `src/database/jobs.js`                                                  |
 | Education + training | `src/database/studies.js`                                               |
 | Skills / logos       | `src/database/skills.js` (+ `img` paths under `public/images/`)         |
+| Portrait             | `public/images/cv-photo.png`                                            |
 
 ### Header meta
 
 - **Experience:** compute whole years from the earliest start year found in `jobs.js` `date` fields through the current year; show as `Experience: N Years`.
 - **Age:** omit unless a clear age value exists elsewhere in the repo (do not invent).
 - Address / phone: use the fixed fields above.
+- Contact / meta row icons (clock, house, phone): **vertically center** each icon with its text (e.g. `align-items: center` on the meta row; do not top-align or nudge with `margin-top`).
 
 ### EXPERTIZE
 
@@ -165,7 +174,7 @@ Inline SVGs only (stroke, currentColor), ~16–18px:
 
 1. Read this skill (layout + mapping only).
 2. Read `src/App.vue`, `src/database/jobs.js`, `studies.js`, and `skills.js`.
-3. Derive all CV copy from those sources (+ fixed address/phone).
+3. Derive all CV copy from those sources (+ fixed address/phone + `/images/cv-photo.png`).
 4. Write or overwrite `public/cv.html`.
 5. Ensure `src/App.vue` CV link is `href="/cv.html"` with `target="_blank"` and `rel="noopener noreferrer"`.
 
