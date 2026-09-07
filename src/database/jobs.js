@@ -31,12 +31,12 @@ export default {
     title: "ISAE-SUPAERO",
     img: "/images/isae.webp",
     link: "https://www.isae-supaero.fr/en/",
-    date: "2014 – present",
+    date: "Since 2014",
     content: `
     <b>Since 2022</b> : Technical advisor<br />
     <b>2019 - 2022</b> : EdTech architect and development team leader<br />
       <b>2015 - 2019</b> : Fullstack software developer<br />
-      <b>Since 2014</b> : Part time teacher in Web development for master's degree level students<br />
+      <b>2014 - 2025</b> : Part time teacher in Web development for master's degree level students<br />
       `,
   },
   quadran: {

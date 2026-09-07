@@ -19,6 +19,9 @@ Edit `.env` with your values (see below). `.env` is gitignored.
 | `npm run build` | Production build → `dist/` |
 | `npm run preview` | Preview the production build |
 | `npm run lint` | ESLint |
+| `npm run cv` | Regenerate printable CVs (`public/cv.html`, `cv-fr.html`, `cv.pdf`, `cv-fr.pdf`) |
+| `npm run cv:html` | HTML only |
+| `npm run cv:pdf` | PDF only (HTML must already exist) |
 
 ## Environment variables
 
@@ -26,6 +29,7 @@ Edit `.env` with your values (see below). `.env` is gitignored.
 | --- | --- | --- |
 | `VITE_SITE_URL` | For production builds | Absolute site origin **without** a trailing slash (e.g. `https://example.com`). Substituted into Open Graph / Twitter meta tags in `index.html` at build time. |
 | `VITE_WEB3FORMS_ACCESS_KEY` | For the contact form | [Web3Forms](https://web3forms.com/) access key. Restrict the key to your domain in the Web3Forms dashboard. |
+| `CV_EMAIL` | For `npm run cv` | Email printed on the ATS CV / PDF (optional override of `scripts/cv/config.mjs`). Read from the environment or repo-root `.env` when running `npm run cv`. Not shown on the site contact form. |
 
 ## Deploy
 

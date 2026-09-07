@@ -19,6 +19,7 @@
 
 - Link colors: see [.cursor/rules/link-colors.mdc](.cursor/rules/link-colors.mdc)
 
-## Printable CV photo
+## Printable CV
 
-When regenerating `public/images/cv-photo.png`, use `sharp` (install temporarily, do not leave it as a dependency). Portrait layout rules: [.cursor/skills/printable-cv/SKILL.md](.cursor/skills/printable-cv/SKILL.md).
+- Regenerate with `npm run cv` (see [.cursor/skills/printable-cv/SKILL.md](.cursor/skills/printable-cv/SKILL.md)).
+- When regenerating `public/images/cv-photo.png`, use `sharp` (install temporarily, do not leave it as a dependency).

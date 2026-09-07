@@ -132,8 +132,7 @@ const mode = ref("short");
           <ul>
             <li>Roller hockey</li>
             <li>Board games</li>
-            <li>Macroeconomics</li>
-            <li>Video games</li>
+            <li>CrossFit</li>
           </ul>
         </div>
       </div>
@@ -267,8 +266,7 @@ const mode = ref("short");
         <div class="one half animated bounceInRight triple-padded">
           <h2>Hobbies</h2>
           <p>
-            In no specific order: Roller hockey, Board games, Macroeconomics,
-            Video games.
+            In no specific order: Roller hockey, Board games, CrossFit.
           </p>
         </div>
       </div>

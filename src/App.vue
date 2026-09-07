@@ -24,7 +24,7 @@ const contactOpen = ref(false);
       <div class="title-row">
         <a
           class="social cv-download"
-          href="https://www.linkedin.com/in/bruno-ilponse-502414196"
+          href="https://www.linkedin.com/in/bruno-ilponse/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
