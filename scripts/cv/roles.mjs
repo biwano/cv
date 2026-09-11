@@ -72,10 +72,10 @@ export const experience = [
     dates: { en: "2019 – 2022", fr: "2019 – 2022" },
     details: {
       en: [
-        "Designed the NaaS EdTech architecture, led five developers, and ran private Kubernetes hosting with Jenkins CI/CD.",
+        "Designed the NaaS EdTech architecture, led five developers, and ran private Kubernetes hosting with Jenkins CI/CD (Java, Vert.x, Vue.js).",
       ],
       fr: [
-        "Conception de l’architecture EdTech NaaS, management de cinq développeurs, et hébergement Kubernetes privé avec CI/CD Jenkins.",
+        "Conception de l’architecture EdTech NaaS, management de cinq développeurs, et hébergement Kubernetes privé avec CI/CD Jenkins (Java, Vert.x, Vue.js).",
       ],
     },
   },
