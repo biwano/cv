@@ -2,6 +2,7 @@
   "name": "cv",
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

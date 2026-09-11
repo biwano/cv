@@ -7,7 +7,7 @@
 ## Don't do
 
 - Contact form: do not auto-close the modal after a successful send (and do not add a “Done” control that only closes). Leave the success message visible until the user closes the dialog themselves.
-- Lint in CI: do not add CI that runs `npm run lint` (or other lint jobs). Lint stays local only.
+- Lint in CI: do not add CI that runs `pnpm lint` (or other lint jobs). Lint stays local only.
 - Projects without logos: do not add logos for Litiges / mobile-number projects, and do not collapse the empty image column to “fix” uneven cards.
 - Unused `links.js` entries: do not remove `lingui`, `translationio`, `perl`, or `sentry` just because they are unused as `{…}` placeholders.
 - Web3Forms key in `.env.example`: do not scrub or rotate it; the access key is a public client-side key (restrict by domain in the Web3Forms dashboard if needed).
@@ -21,5 +21,5 @@
 
 ## Printable CV
 
-- Regenerate with `npm run cv` (see [.cursor/skills/printable-cv/SKILL.md](.cursor/skills/printable-cv/SKILL.md)).
-- When regenerating `public/images/cv-photo.png`, use `sharp` (install temporarily, do not leave it as a dependency).
+- Regenerate with `pnpm cv` (see [.cursor/skills/printable-cv/SKILL.md](.cursor/skills/printable-cv/SKILL.md)).
+- When regenerating `public/images/cv-photo.png`, use `sharp` (install temporarily with `pnpm add -D sharp`, do not leave it as a dependency).

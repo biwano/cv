@@ -5,7 +5,7 @@ Personal CV / portfolio site built with Vue 3 and Vite.
 ## Recommended IDE Setup
 
 ```sh
-npm install
+pnpm install
 cp .env.example .env
 ```
 
@@ -15,13 +15,13 @@ Edit `.env` with your values (see below). `.env` is gitignored.
 
 | Command | Description |
 | --- | --- |
-| `npm run dev` | Dev server (Vite `--host`) |
-| `npm run build` | Production build → `dist/` |
-| `npm run preview` | Preview the production build |
-| `npm run lint` | ESLint |
-| `npm run cv` | Regenerate printable CVs (`public/cv.html`, `cv-fr.html`, `cv.pdf`, `cv-fr.pdf`) |
-| `npm run cv:html` | HTML only |
-| `npm run cv:pdf` | PDF only (HTML must already exist) |
+| `pnpm dev` | Dev server (Vite `--host`) |
+| `pnpm build` | Production build → `dist/` |
+| `pnpm preview` | Preview the production build |
+| `pnpm lint` | ESLint |
+| `pnpm cv` | Regenerate printable CVs (`public/cv.html`, `cv-fr.html`, `cv.pdf`, `cv-fr.pdf`) |
+| `pnpm cv:html` | HTML only |
+| `pnpm cv:pdf` | PDF only (HTML must already exist) |
 
 ## Environment variables
 
@@ -29,10 +29,10 @@ Edit `.env` with your values (see below). `.env` is gitignored.
 | --- | --- | --- |
 | `VITE_SITE_URL` | For production builds | Absolute site origin **without** a trailing slash (e.g. `https://example.com`). Substituted into Open Graph / Twitter meta tags in `index.html` at build time. |
 | `VITE_WEB3FORMS_ACCESS_KEY` | For the contact form | [Web3Forms](https://web3forms.com/) access key. Restrict the key to your domain in the Web3Forms dashboard. |
-| `CV_EMAIL` | For `npm run cv` | Email printed on the ATS CV / PDF (optional override of `scripts/cv/config.mjs`). Read from the environment or repo-root `.env` when running `npm run cv`. Not shown on the site contact form. |
+| `CV_EMAIL` | For `pnpm cv` | Email printed on the ATS CV / PDF (optional override of `scripts/cv/config.mjs`). Read from the environment or repo-root `.env` when running `pnpm cv`. Not shown on the site contact form. |
 
 ## Deploy
 
 1. Set env vars in the build environment (at least `VITE_SITE_URL` for correct social previews).
-2. Run `npm run build`.
+2. Run `pnpm build`.
 3. Serve the contents of `dist/` as a static site.

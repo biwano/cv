@@ -2,19 +2,19 @@
 name: printable-cv
 description: >-
   Updates printable CV content data and regenerates EN/FR HTML+PDF via
-  npm run cv. Use when creating, updating, or regenerating the printable
+  pnpm cv. Use when creating, updating, or regenerating the printable
   CV/resume, French CV, PDF exports, or wiring the site CV link.
 ---
 
 # Printable CV
 
-Generation is implemented by `scripts/cv/` (`npm run cv`). This skill tells the
+Generation is implemented by `scripts/cv/` (`pnpm cv`). This skill tells the
 agent **what content to edit** and **when to regenerate** — not how to render HTML/PDF.
 
 ## Workflow
 
 1. Update content sources below (do not invent employers, dates, skills, email, or hobbies).
-2. Run `npm run cv` (or `cv:html` / `cv:pdf`).
+2. Run `pnpm cv` (or `cv:html` / `cv:pdf`).
 3. Confirm outputs: `public/cv.html`, `cv-fr.html`, `cv.pdf`, `cv-fr.pdf`.
 4. Do **not** hand-edit those four files; change sources and regenerate.
 
@@ -32,7 +32,7 @@ Site CV control stays `href="/cv.html"` with `target="_blank"` `rel="noopener no
 | Hobbies on the site (keep in sync) | `src/views/HomeView.vue` |
 | Portrait asset | `public/images/cv-photo.png` |
 
-When `jobs.js` / `studies.js` change: sync facts into `roles.mjs`, then `npm run cv`.
+When `jobs.js` / `studies.js` change: sync facts into `roles.mjs`, then `pnpm cv`.
 
 ### `roles.mjs` ATS content rules
 
